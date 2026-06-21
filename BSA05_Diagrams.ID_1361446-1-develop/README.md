@@ -1,278 +1,268 @@
-# Modelings and diagrams
+# Модели и диаграммы
 
-Summary:
-You will be introduced to the concept of requirements modeling, basic models and representations, learn how to build a data flow diagram, a swimlane diagram, and a state diagram, how to use decision tables.
+Резюме:
+Ты познакомишься с понятием «моделирование требований», основными моделями и представлениями. Научишься строить диаграмму потоков данных (DFD), межфункциональную диаграмму с дорожками и диаграмму состояний. А также узнаешь, как применять таблицы решений.
 
-💡 [Tap here](https://new.oprosso.net/p/4cb31ec3f47a4596bc758ea1861fb624) **to leave your feedback on the project**. It's anonymous and will help our team make your educational experience better. We recommend completing the survey immediately after the project.
+💡 [Нажми сюда](https://new.oprosso.net/p/4cb31ec3f47a4596bc758ea1861fb624), **чтобы поделиться с нами обратной связью на этот проект**. Это анонимно и поможет нашей команде сделать обучение лучше. Рекомендуем заполнить опрос сразу после выполнения проекта.
 
-## Contents
+## Содержание
 
-1. [Chapter I](#chapter-i) \
-   1.1. [Preamble](#11)
-2. [Chapter II](#chapter-ii) \
-   2.1. [General Rules](#21)
-3. [Chapter III](#chapter-iii) \
-   3.1. [Models and Requirements Modeling](#31) \
-   3.2. [Data Flow Diagram](#32) \
-   3.3. [Swimlane Diagram](#33) \
-   3.4. [Swimlane Diagram Extension](#34) \
-   3.5. [State Diagram](#35)
-4. [Chapter IV](#chapter-iv) \
-   4.1. [Task 1. Haircut Appointement](#41) \
-   4.2. [Task 2. Delivery of Orders](#42)
-5. [Chapter V](#chapter-v) \
-   5.1. [Exercise 00 — Building DFD, Level 0](#51) \
-   5.2. [Exercise 01 — Building a Swimlane Diagram](#52) \
-   5.3. [Exercise 02 — Extending the Swimlane Diagram](#53) \
-   5.4. [Exercise 03 — State Diagram](#54) \
-   5.5. [Exercise 04 — State Table](#55)
+1. [Глава I](#chapter-i) \
+    1.1. [Введение](#11)
+2. [Глава II](#chapter-ii) \
+    2.1. [Общие правила](#21)
+3. [Глава III](#chapter-iii) \
+    3.1. [Модели и моделирование требований](#31) \
+    3.2. [Диаграмма потоков данных](#32) \
+    3.3. [Диаграмма «плавательные дорожки»](#33) \
+    3.4. [Расширение диаграммы с дорожками](#34) \
+    3.5. [Диаграмма состояний](#35)
+4. [Глава IV](#chapter-iv) \
+    4.1. [Задача 1. Запись на стрижку](#41) \
+    4.2. [Задача 2. Доставка заказов](#42)
+5. [Глава V](#chapter-v) \
+    5.1. [Упражнение 00 — Построение диаграммы потоков данных, уровень 0](#51) \
+    5.2. [Упражнение 01 — Построение диаграммы «плавательные дорожки»](#52) \
+    5.3. [Упражнение 02 — Дополнение диаграммы «плавательные дорожки»](#53) \
+    5.4. [Упражнение 03 — Диаграмма состояний](#54) \
+    5.5. [Упражнение 04 — Таблица состояний](#55)
 
-## Chapter I <div id="chapter-i"></div>
+## Глава I <div id="chapter-i"></div>
 
 ![](misc/images/Illustration_05.jpg)
 
-### Preamble <div id="11"></div>
+### Введение <div id="11"></div>
 
-The first module introduced you to the basic concepts that IT analysts work with, such as stakeholders, requirements, requirements classification, and the concept of domain. 
+В первом модуле ты познакомился с основными понятиями, с которыми работают аналитики в ИТ — заинтересованными сторонами, требованиями, классификацией требований и понятием предметной области.
 
-In this module, you will learn techniques that allow analysts to describe requirements so that they can be understood more quickly, both by the system builders and by others. Requirements are presented in a variety of ways, including graphical diagrams, tables, and textual descriptions. 
+В этом модуле ты познакомишься с методами, которые позволяют аналитикам описывать требования для быстрейшего их понимания — как создателями системы, так и окружающими. Способы представления требований различны — это и графические диаграммы, и таблицы, и текстовые описания.
 
-In this project, you will learn about diagrams, their purpose and how to create a data flow and swimlane diagram, a state diagram and a state table.
+В этом проекте ты узнаешь о диаграммах, их назначении и способах их создания. Научишься создавать диаграмму потоков данных и «плавательных дорожек», диаграмму и таблицу состояний.
 
-### Literature
+### Литература
 
-1. Karl Wiegers, Joy Beatty, "Software Requirements" 3rd edition, amplified. 
-2. Martin Fowler, Kendall Scott "UML Distilled: A Brief Guide to the Standard Object Modeling Language (2nd Edition)".
-3. Craig Larman "Applying UML and Design Patterns — An Introduction to Object-Oriented Analysis".
-4. BABOK v3 "A Guide to the Business Analysis Body of Knowledge" IIBA.
-5. Dean Leffingwell, Don Widrig "Managing Software Requirements".
+1. Карл Вигерс, Джой Битти, «Разработка требований к программному обеспечению», издание третье, дополненное.
+2. Мартин Фаулер, Кендалл Скотт «UML основы. Второе издание. Краткое руководство по унифицированному языку моделирования».
+3. Крэг Ларман «Применение UML и шаблонов проектирования. Введение в объектно-ориентированный анализ».
+4. BABOK v3 «Руководство к своду знаний по бизнес-анализу» IIBA.
+5. Дин Леффингуэлл, Дон Уидриг «Принципы работы с требованиями к программному обеспечению».
 
-## Chapter II <div id="chapter-ii"></div>
+## Глава II <div id="chapter-ii"></div>
 
-### General Rules <div id="21"></div>
+### Общие правила <div id="21"></div>
 
-1. Along the way, you may feel a sense of uncertainty and a severe lack of information: that's OK. Remember, the information in the repository and on Google is always with you. So are your peers and Rocket.Chat. Communicate. Search. Use common sense. Don't be afraid to make mistakes.
-2. Pay attention to sources of information. Check. Think. Analyse. Compare. 
-3. Look at the text of each assignment. Read it several times. 
-4. Read the examples carefully. There may be something in them that is not explicitly stated in the task itself.
-5. You may find inconsistencies where something new in the terms of the task or examples conflicts with something you already know. If you come across such an inconsistency, try to work it out. If not, write it down as an open question and find out as you work. Do not leave open questions unanswered. 
-6. If a task seems confusing or impossible, it only seems that way. Try to break it down. It is likely that some parts will become clear. 
-7. There will be several tasks. Those marked with an asterisk (\*) are for the more meticulous students. These tasks are more difficult and are not compulsory. But doing them will give you extra experience and knowledge.
-8. Don't try to fool the system or the people around you. You will fool yourself first.
-9. Got a question? Ask your neighbour to the right. If that doesn't help, ask your neighbour on the left.
-10. When you use help, you should always understand why and how. Otherwise the help is useless.
-11. Always push only to the develop branch! The master branch will be ignored. Work in the src directory.
-12. There should be no files in your directory other than those specified in the tasks.
+1. На протяжении всего курса тебя будет сопровождать чувство неопределенности и острого дефицита информации — это нормально. Не забывай, что информация в репозитории и Google всегда с тобой. Как и пиры, и Rocket.Chat. Общайся. Ищи. Опирайся на здравый смысл. Не бойся ошибиться.
+2. Будь внимателен к источникам информации. Проверяй. Думай. Анализируй. Сравнивай.
+3. Внимательно читай задания. Перечитай несколько раз.
+4. Читать примеры тоже лучше внимательно. В них может быть что-то, что не указано в явном виде в самом задании.
+5. Тебе могут встретиться несоответствия, когда что-то новое в условиях задачи или примере противоречит уже известному. Если встретилось такое — попробуй разобраться. Если не получилось — запиши вопрос в открытые вопросы и выясни в процессе работы. Не оставляй открытые вопросы неразрешенными.
+6. Если задание кажется непонятным или невыполнимым — так только кажется. Попробуй его декомпозировать. Скорее всего, отдельные части станут понятными.
+7. На пути тебе встретятся самые разные задания. Те, что помечены звездочкой (\*) — подходят для более дотошных. Они повышенной сложности и необязательны к выполнению. Но если ты их сделаешь, то получишь дополнительный опыт и знания.
+8. Не пытайся обмануть систему и окружающих. В первую очередь ты обманешь себя.
+9. Есть вопрос? Спроси своего соседа справа. Если это не помогло — соседа слева.
+10. Когда пользуешься помощью — всегда разбирайся до конца: почему, как и зачем. Иначе помощь не будет иметь смысла.
+11. Всегда делай push только в ветку develop! Ветка master будет проигнорирована. Работай в директории src.
+12. В твоей директории не должно быть иных файлов, кроме тех, что обозначены в заданиях.
 
-## Chapter III <div id="chapter-iii"></div>
+## Глава III <div id="chapter-iii"></div>
 
-<p>“All models are wrong, some are useful.”</p>
-<p>George Box</p>
+<p>«Все модели неверны, но некоторые полезны».</p>
+<p>Джордж Бокс</p>
 
-### 1. Models and Requirements Modeling <div id="31"></div>
+### 1. Модели и моделирование требований <div id="31"></div>
+История создания успешных ИТ-проектов (и не только ИТ) говорит о том, что представление требований к проекту в одном виде не дает их полной картины (Алан Девис). Следует предоставить не только текстовое описание текущего состояния и функциональных требований, но и графическое представление (диаграммы разного рода), табличное (например, состояние различных артефактов в зависимости от условий), прототипы пользовательского интерфейса, отчетов и пр. Каждое такое представление показывает требования в каком-то отдельном разрезе и полностью освещает этот разрез. А сопоставление разных представлений позволяет выявить несоответствия, нестыковки, пропуски и просчеты. Поэтому необходимо осветить задуманную систему в разных моделях.
 
-The history of successful IT projects (and not only IT projects) shows that presenting project requirements in one form does not give a complete picture (Alan Davis). It is necessary to provide not only a textual description of the current state and functional requirements, but also a graphical representation (diagrams of various kinds), tabular (for example, the state of various artifacts depending on conditions), prototypes of the user interface, reports, etc. Each of these representations shows the requirements in a separate section and fully covers this section. And comparing different representations allows to find inconsistencies, omissions and errors. Therefore, it is necessary to view the planned system in different models. 
+**Модель** — упрощенное описание действительности, позволяющее исследовать или обрабатывать объект, содержит существенные свойства моделируемого объекта. Модель всегда проще системы и подсвечивает отдельные ее аспекты, например:
 
-A **Model** is a simplified description of reality that allows an object to be studied or processed, containing the essential properties of the object. A model is always simpler than a system and emphasizes one or more aspects of the system:
+|     Артефакт                            |     Модели                                               |     Компоненты (аспекты) моделей        |
+|-----------------------------------------|----------------------------------------------------------|-----------------------------------------|
+|     Люди, организации, ИТ-системы       |     Контекстная диаграмма,    Диаграмма потоков данных    |     Внешние системы, внешние объекты    |
+|                                         |     Диаграммы вариантов использования                    |     Действующие лица                    |
+|                                         |     Диаграммы «сущность-связь»                           |     Сущности или их атрибуты            |
+|                                         |     Диаграмма swimlane                                   |     Дорожки                             |
+|                                         |     Диаграмма переходов состояний, таблица состояний     |     Объекты с состояниями               |
+|     Передаваемые и хранимые данные      |     Контекстная диаграмма,    Диаграмма потоков данных    |     Потоки и хранилища данных           |
+|                                         |     Диаграмма «сущность-связь»                           |     Сущности или их атрибуты            |
+|                                         |     Диаграмма swimlane                                   |     Дорожки                             |
 
-| Artifact                          | Models                                      | Components (aspects) of models     |
-| --------------------------------- | ------------------------------------------- | ---------------------------------- |
-| People, organizations, IT systems | Context diagram,     Data flow diagram       | External systems, external objects |
-|                                   | Use case diagrams                           | Actors                             |
-|                                   | ER diagram                                  | Entities or their attributes       |
-|                                   | Swimlane diagram                            | Lanes                              |
-|                                   | State & Transition diagram, table of states | Objects with states                |
-| Transmitted and stored data       | Context diagram,     Data flow diagram       | Data flows and data stores         |
-|                                   | ER diagram                                  | Entities or their attributes       |
-|                                   | Swimlane diagram                            | Lanes                              |
+Строгость применения нотаций при моделировании определяется договоренностью в команде. В зависимости от целей, с которыми строим модели, назначения диаграммы, уровня участников, тех, кто будет читать, комментировать диаграмму. Диаграмму для обсуждения с заказчиком допустимо нарисовать проще, чем для применения внутри команды. Важно, чтобы команда была согласна (были приняты договоренности) и важно выполнять эти договоренности.
 
-The strictness of the application of notation in modeling is determined by the agreement within the team, depending on the purposes for which we build models, the purpose of the diagram, the level of participants, those who will read, comment on the diagram. It is acceptable to draw a simpler diagram for discussion with the customer than for application within the team. It is important that the team agrees and it is important to fulfill these agreements.
+Более полный список артефактов в привязке к моделям и их компонентам приведен в главе 12 книги К. Вигерса «Разработка требований к программному обеспечению», издание 3, табл.12-1. Принципы выбора наиболее подходящих моделей приведены в таблице 12-2.
 
-A more complete list of artifacts related to models and their components is given in Chapter 12 К. Wiegers "Software Requirements" 3rd edition, Table.12-1. The principles of selection of the most suitable models are summarized in Table 12-2.
+Мы рассмотрим несколько моделей визуального представления, показывающих систему в том или ином разрезе:
 
-We consider several visual representation models, which represent the system in one way or another:
+- диаграмма потоков данных;
+- диаграмма «плавательные дорожки»;
+- диаграмма состояний (или таблица состояний);
+- диаграмма бизнес-процессов в нотации BPMN;
+- а также ты уже рассмотрел контекстную диаграмму (модуль 1), которая является упрощенной диаграммой потоков данных.
 
-- Data flow diagram;
-- Swimlane diagram;
-- State diagram (or state table);
-- Business process diagram in BPMN notation;
-- and you've already seen the context diagram (Module 1), which is a simplified data flow diagram.
+Надо понимать, что диаграммы могут отражать как текущее состояние as is для выявления проблем (область проблем в терминологии инженерии требований), так и будущее, проектируемое состояние to be (область решений). При создании диаграммы ты должен всегда понимать, к какой области относится то, что ты создаешь.
 
-It should be understood that diagrams can show both the current As-Is state for requirements identification (problem domain in requirements engineering terminology) and the future, projected To-Be state (solution domain). When creating a diagram, you should always understand which domain what you are creating relates to.
+Итак, перед тем, как приступать к построению диаграммы, следует определить:
 
-Therefore, before starting the diagram, it is necessary to define the following:
+1. Цель построения диаграммы;
+2. Область рассмотрения: as is (область проблем) или to be (область решений);
+3. Метод (вид диаграммы).
 
-1. Purpose of the diagram;
-2. Area of consideration: As-Is (problem area) or To-Be (solution area);
-3. Method (diagram type).
+### 2. Диаграмма потоков данных <div id="32"></div>
+Диаграмма потоков данных (data flow diagrams, DFD) дает представление о том, как данные движутся внутри системы и между системой и внешним миром, отражает хранилища и потоки данных и материалов (строго говоря, информации о материалах, т. е. тоже потоки данных), которыми система управляет. Движение данных и материалов между внешней средой и системой (система как черный ящик) — это контекстная диаграмма, крайний случай диаграммы потоков данных. Далее в процессе разработки может быть построена более детальная диаграмма потоков данных, потоки между процессами или подсистемами внутри системы между собой и с внешними системами. Диаграмму потоков данных можно строить для уровня 0 и глубже, декомпозируя потоки и действия. Диаграмма потоков данных уровня 0 соответствует контекстной диаграмме, но с расширением до функций внутри системы.
 
-### 2. Data Flow Diagram <div id="32"></div>
+На диаграмме DFD могут отражаться люди или организации, являющиеся инициаторами передачи данных или получателями данных. Это наши стейкхолдеры (заинтересованные стороны). То есть диаграмма потоков данных должна коррелировать с каталогом заинтересованных сторон и с луковичной диаграммой — мы должны проверить эти соответствия и при необходимости устранить нестыковки. Но диаграмма не отражает последовательность процессов и действий. Не стремись отразить последовательность процессов на DFD!
 
-A data flow diagram (DFD) provides a view of how data moves within the system and between the system and the outside world, reflecting the stores and flows of data and materials (technically, information about materials, i.e., also data flows) that the system manages. The movement of data and materials between the external environment and the system (the system as a black box) is a context diagram, an extreme case of a data flow diagram. In addition, a more detailed data flow diagram can be built during the development process, showing the flows between processes or subsystems within the system, among themselves, and with external systems. A data flow diagram can be created for level 0 and deeper, decomposing flows and actions. The level 0 data flow diagram corresponds to the context diagram, but with an extension to functions within the system.
+Данные, содержащиеся в DFD — это те же данные, которые описаны в словаре данных. Поэтому также сравниваем, проверяем и исправляем их при необходимости.
 
-A DFD diagram can show the people or organizations that are the initiators of the data transfer or the recipients of the data. These are our stakeholders. That is, the data flow diagram should correlate with the stakeholder directory and with the onion diagram — we should check these correspondences and, if necessary, eliminate inconsistencies. But the diagram does not show the sequence of processes and activities. Do not try to show the sequence of processes on the DFD!
+И еще: все данные, которые входят в систему, должны для чего-то этой системой использоваться. Если они не используются, то они не нужны. И все данные, которые передаются системой наружу и используются внутри, должны откуда-то появиться (поступить в систему или быть созданными внутри системы) — это тоже подлежит проверке.
 
-The data contained in the DFD is the same data described in the Data Dictionary. Therefore, we also compare, check, and correct it if necessary.
+Детально построение DFD описано в книге К. Вигерса, издание 3, глава 12, раздел «Диаграмма потоков данных».
 
-One more thing: all data that goes into a system must be used by that system for something. If it is not used, it is not needed. And all data that the system sends out and uses internally must come from somewhere (enter the system or be created within the system) — this is also something that needs to be checked. 
+### 3. Диаграмма «плавательные дорожки» (swimlane) <div id="33"></div>
+Диаграмма swimlane (межфункциональная диаграмма, «плавательные дорожки») применяется для изучения и демонстрации бизнес-процессов, выполняемых пользователями и системой, взаимодействия пользователей между собой и/или отражения последовательности бизнес-процессов или действий в бизнес-процессе. Это то, что происходит внутри процесса в диаграмме потоков данных. Диаграмма разделена на дорожки, и в каждой из них действует та или иная роль, участвующая в работе системы, сама система или внешняя система. Иногда рассматривают только роли пользователей или подразделения, если требуется разобрать только их взаимодействие. Детально построение диаграммы описано в главе 12 К. Вигерса «Разработка требований к программному обеспечению», раздел «Диаграмма swimlane».
 
-The detailed construction of a DFD is described in the book by K. Wiegers, edition 3, chapter 12, section "Data Flow Diagram".
+Диаграмма позволяет проверить полноту ролевой модели — роли и выполняемые ими действия, взаимодействие с внешними системами, порядок выполнения действий. Иногда в диаграмму добавляют применяемые/порождаемые в каждом процессе/действии данные. И тогда есть возможность сверить с диаграммой потоков данных, выявить несоответствие, при необходимости — провести дополнительное обследование и устранить неточности.
 
-### 3. Swimlane Diagram <div id="33"></div>
+На рисунке — ЖЦ разработки ПО, представленное диаграммой «плавательные дорожки». Показаны основные функции каждой роли и более детально — функции аналитика, как дополнение к ролику BSA00, рассказывающем о функциях аналитика в разработке ПО.
 
-A swimlane diagram (cross-functional diagram) is used to examine and illustrate the business processes performed by users and the system, the interaction of users with each other, and/or the sequence of business processes or actions in a business process. This is what happens within the process in a data flow diagram. The diagram is divided into lanes, and in each lane there is a role involved in the system, the system itself, or an external system. Sometimes only the roles of users or departments are considered when only their interaction is required. The construction of the diagram is described in detail in chapter 12 of K. Wiegers "Requirements Development", section "Swimlane Diagram".
+Для примера к ролику, содержащему описание роли и функций аналитика в разработке ПО построена диаграмма ЖЦ разработки ПО (рис.1):
 
-The diagram allows to check the completeness of the role model — roles and actions performed by them, interaction with external systems, order of execution of actions. Sometimes data used/generated in each process/action is added to the diagram. And then there is an opportunity to check with the data flow diagram, to identify inconsistencies, and if necessary — to conduct additional research and eliminate inaccuracies. 
+1. Цель построения диаграммы: познакомить студентов ветки Системный анализ в ИТ. Beginner с жизненным циклом разработки ПО, ролью аналитика в разработке ПО и его функциями;
+2. Область рассмотрения: as is;
+3. Вид диаграммы: диаграмма дорожек.
 
-The figure shows the software development life cycle in a swimlane diagram. It shows the main functions of each role and, in more detail, the functions of an analyst, as a supplement to the BSA 00 video on the functions of an analyst in software development.
+*Рисунок 1*
+![](misc/images/img1.png)
 
-For example, a diagram of the software development life cycle (Fig. 1) is constructed to describe the role and functions of an analyst in software development:
+### 4. Расширение диаграммы swimlane <div id="34"></div>
+Часто диаграмму «плавательные дорожки» расширяют, добавляя артефакты (документы, запросы, объекты, создаваемые представителями той или иной роли во время выполнения действий бизнес-процесса. На рисунке 2 показаны артефакты, создаваемые каждой ролью в процессе разработки и внедрения ИТ-системы, указаны действия или процессы, во время которых создается этот артефакт. Для облегчения чтения диаграммы, артефакты и их связи с действиями/процессами выделены синим, но это необязательная опция. Кроме того, на диаграмме разными элементами показаны процессы (прямоугольник с двумя линиями на вертикальных сторонах) и действия (прямоугольник). Процесс содержит несколько действий, не указанных на текущей диаграмме, но может быть расписан более детально на диаграмме следующего уровня.
 
-1. The purpose of the diagram is to familiarize students with systems analysis in IT. Beginners with the software development life cycle, the role of the analyst in software development and his/her functions.
-2. Area of consideration: As-Is.
-3. Diagram type: swimlane diagram.
+В данном случае нельзя сказать, что первая диаграмма — неправильная, хотя на ней не указаны процессы. Такое изображение процесса (простой прямоугольник, без двойных вертикальных сторон) достаточно распространено. Важно, чтобы вся команда это понимала.
 
-*Figure 1*
-![](misc/images/img1_eng.png)
+*Рисунок 2*
+![](misc/images/img2.png)
 
-### 4. Swimlane Diagram Extension <div id="34"></div>
+### 5. Диаграмма состояний <div id="35"></div>
+Диаграмма состояний показывает поведение конкретного объекта (класса) в системе, изменение состояний этого объекта под влиянием событий, происходящих в системе или внешних факторов. Диаграммы состояний обычно строят относительно одного или нескольких наиболее важных объектов системы. С помощью диаграммы для каждого состояния можно отследить:
 
-Often the swimlane diagram is extended by adding artifacts (documents, queries, objects) created by representatives of a role during the execution of business process actions. Figure 2 shows the artifacts created by each role during the IT system design and implementation process, indicating the actions or processes during which the artifact is created. Artifacts and their relationships to actions/processes are highlighted in blue to make the diagram easier to read, but this is optional. The diagram also shows processes (rectangles with two lines on the vertical sides) and actions (rectangles) by different elements. A process may contain several actions that are not shown in the current diagram, but can be described in more detail in the next level diagram.  
+- возможные состояния объекта в системе;
+- предыдущее состояние (состояние до события);
+- событие (действие), переводящее объект в другое состояние;
+- роль, инициирующая переход;
+- условия перехода в новое состояние (возможно, переход в несколько состояний, в зависимости от условий);
+- состояние после события.
 
-In this case, we cannot say that the first diagram is wrong, even though it does not show the processes. Such a representation of the process (a simple rectangle, without double vertical sides) is quite common. It is important that the entire team understands it.
+На рисунке показана диаграмма состояний объекта Заявка из Задачи 1.
 
-*Figure 2*
-![](misc/images/img2_eng.png)
+![](misc/images/img3.png)
 
-### 5. State diagram <div id="35"></div>
+Эту же информацию можно представить и в таблице (показана частично).
 
-A state diagram shows the behavior of a particular object (class) in the system, the change of states of this object under the influence of events occurring in the system or external factors. State diagrams are usually constructed for one or more of the main objects in the system. Using the diagram for each state, it is possible to trace:
+![](misc/images/img4.png)
 
-- possible states of the object in the system;
-- previous state (state before the event);
-- an event (action) that changes the state of the object;
-- a role that initiates the transition;
-- conditions of transition to a new state (transition to several states is possible, depending on the conditions);
-- the state after the event.
+## Глава IV <div id="chapter-iv"></div>
 
-The following figure shows the state diagram of the Request object from Task 1.  
+### Описание задач
 
-![](misc/images/img3_eng.png)
-
-The same information can also be presented in the table (shown partially).
-
-![](misc/images/img4_eng.png)
-
-## Chapter IV <div id="chapter-iv"></div>
-
-### Description of tasks
-
-### Task 1. Haircut Appointment <div id="41"></div>
-
-The management of a chain of barbershops decided to implement an online booking system. The main objective is to develop the business by expanding the customer base through the possibility of online registration, as well as to reduce employee labour costs and manual labour by automatically informing customers through communication channels. 
-
-Both registered and unregistered visitors can book an appointment on the website. When making an appointment, they can select the type of service: hairdressing or cosmetology, as well as the service itself, the master and the time from the available intervals. The system should provide automatic sending of reminders to clients through the communication channel chosen by the client (Telegram, WhatsApp, VK, SMS) according to the schedule set by the manager. After receiving a service, the system offers the client to evaluate the service and write suggestions on how to improve the work.
-
-The schedule of masters and the services provided by each master should be entered by the manager, who may be more than one person. This person is also responsible for keeping the schedule up to date and adjusting it if necessary, communicating with customers manually, marking the service, charging and accepting payment, sending the payment data to the accounting department. The manager can also receive reports on completed services and view customer feedback.
-
-Each master has the ability to view the schedule and appointments for their services, as well as customer reviews.
-
-### Task 2. Delivery of Orders <div id="42"></div>
-
-During the lockdown, many grocery stores and food companies dramatically increased their online sales and the need for quick delivery of small quantities to individual customers increased. 
-
-A group of students got together and decided to create a delivery service startup. The idea is to quickly receive information about orders, pickup location and time, delivery location, desired delivery dates, and distribute this information to couriers who will pick up the order at the pickup location and deliver it to the delivery location. They decided to develop an online system where orders could be collected and quickly sorted for delivery by couriers.
-
-The first step was to collect orders from stores and caterers in any way possible and have the operator enter them into the system in a consistent format, as well as developing a mobile application for the courier. The courier should be able to view order information, select an order from those available, book it, pick it up at the collection point and deliver it to the customer. The result of the courier's actions should be immediately reflected in the system via a mobile application. The system should also include a dispatcher who controls the couriers and reassigns orders if necessary. Information on received orders should be sent to the accounting department (to another IT system) to calculate delivery charges with order suppliers. Order delivery information should also be sent to the accounting department to calculate payment to couriers. Accrued payment should be transferred to the system and displayed in the courier's personal account. And there should also be an administrator's workstation, where couriers are registered and access rights are assigned to all of them.
-
-## Chapter V <div id="chapter-v"></div>
-
-### Exercise 00 — Building DFD, Level 0 <div id="51"></div>
-
-**For each task:**
-Build a Level 0 Data flow diagram:
-
-1. Specify the purpose of the diagram.
-2. Specify the area of consideration: As-Is or To-Be.
-3. Show the external entities that interact with the system in the rectangles on the diagram.
-4. Show the processes (stakeholder actions on the data) in ovals.
-5. Show the content of the information flows on the arrows.
-6. Show the data stores and the content of the information stored in the system in parallel line segments.
-7. Follow the rules:
-   1. All processes (ovals) must be numbered. On a level 0 diagram — in whole numbers.
-   2. The processes are named: verb+object.
-   3. Comprehensible domain names (not technical names of system database entities) are used to identify the object.
-   4. Processes do not interact with each other directly, but through data stores.
-   5. Data flows between stores and external entities or between each other through a process (not directly).
-   6. The diagram does not show the sequence of processes and actions.
-   7. The diagram must be readable.
-8. Indicate your answers in the turn-in file ex00\_<product prefix>\_dfd.xxx (xxx is an extension).
-
-### Exercise 01 — Building a Swimlane Diagram <div id="52"></div>
-
-**For each task:**
-
-Build a swimlane diagram:
-
-1. Specify the purpose of the diagram.
-2. Specify the area of consideration: As-Is or To-Be.
-3. Select roles for the diagram: stakeholders, divisions, external systems. 
-4. Show the lanes for the roles in the diagram.
-5. Show the process steps as rectangles.
-6. Show the process steps performed by the role on the corresponding track.
-7. Show transitions between process steps with arrows.
-8. Show the solutions in rhombuses.
-9. Show the solutions on the arrows coming out of the rhombus.
-10. Show the beginning and end of the process with a start/finish circle.
-11. Indicate your answers in the turn-in file ex01\_<product prefix>\_swd.xxx (xxx is an extension).
-
-### Exercise 02 — Extending the Swimlane Diagram <div id="53"></div>
-
-**For each task** add the created artifacts to the swimlane diagram:
-
-1. Copy the swimlane diagram, change the name.
-2. Specify the purpose of the diagram.
-3. Specify the area of consideration: As-Is or To-Be.
-4. Add to each role in the swimlane diagram the artifacts it creates: documents, developed code, logged bugs, queries, etc.
-   1. Show artifacts for each role on the lane that are developed or adjusted by the role representatives, show it on the role lane;
-   2. Specify with a dotted line for each artifact the relationship to the source where the artifact is created/corrected;
-   3. It is acceptable to group artifacts, i.e., to specify multiple artifacts in the same pool if they are created by the same role in the same process (or when performing the same action).
-5. Indicate your answers in the turn-in file ex02\_<product prefix>\_adswd.(xxx is an extension).
-
-### Exercise 03 — State Diagram <div id="54"></div>
-
-**For each task:**
-
-1. Select an object (domain entity) that has a life cycle. In task 1 — excluding the object Service request.
-2. Specify the purpose of the diagram.
-3. Specify the area of consideration: As-Is or To-Be.
-4. Build a state diagram of the selected object:
-   1. Select the names of the object states;
-   2. Indicate each state of the object in the diagram;
-   3. Connect the previous and next object states with arrows;
-   4. Indicate the event (action) next to the arrow that transforms the object from one state to another;
-   5. Specify the initiator of each event (action);
-   6. Specify conditions if there are branches;
-   7. Specify the beginning and end of the object life cycle.
-5. Indicate your answers in the turn-in file ex03\_<product prefix>\_dst.xxx (xxx is an extension).
-
-### Exercise 04 — State table <div id="55"></div>
-
-**For each task** build a table of object states:
-
-1. Select objects (domain entities) that have a life cycle.
-
-For an object for which no complete state diagram of the object has been built:
-
-1. Specify the object.
-2. Specify the purpose of the diagram.
-3. Specify the area of consideration: As-Is or To-Be.
-4. Build a state table:
-   1. Select names of object states.
-   2. Specify in the table row:
-      1. previous and subsequent states of the object;
-      2. an event (action) that transforms an object from a previous state to a subsequent state;
-      3. the initiator of each event (action);
-      4. conditions, if there are branches.
-   3. Specify the beginning and end of the object life cycle.
-5. Indicate your answers in the turn-in file ex04\_<product prefix>\_tst.xxx (xxx is an extension).
+### Задача 1. Запись на стрижку <div id="41"></div>
+Руководство сети барбершопов приняло решение о внедрении системы, обеспечивающей онлайн-запись на прием. Основная цель — развитие бизнеса путем расширения клиентской базы за счет возможности онлайн-записи, а также снижение трудозатрат сотрудников и уменьшение ручного труда за счет автоматического информирования клиентов по каналам связи.
+
+Запись может осуществлять как зарегистрированный, так и незарегистрированный посетитель сайта. При записи можно выбрать тип услуги: парикмахерские или косметологические, а также саму услугу, мастера и время из свободных интервалов. Система должна обеспечивать автоматическую отправку напоминаний клиентам через выбранный клиентом канал связи (Telegram, WahtsApp, VK, СМС) по настроенному менеджером расписанию. После получения услуги система предлагает клиенту оценить услугу и написать предложения по улучшению работы.
+
+Расписание мастеров и выполняемые каждым мастером услуги должен вводить менеджер, возможно, это будет не один человек. Он же отвечает за актуальность расписания и при необходимости корректирует его, осуществляет связь с клиентами в ручном режиме, проставляет отметку о выполнении услуги, начисляет и принимает оплату, передает данные об оплате в бухгалтерию. Также менеджер может получать отчеты о выполненных услугах и просматривать отзывы клиентов.
+
+Любой мастер имеет возможность посмотреть расписание и запись на свои услуги, отзывы клиентов.
+
+### Задача 2. Доставка заказов <div id="42"></div>
+В локдаун многие продуктовые магазины и предприятия питания резко увеличили объемы онлайн-продаж, и возросла потребность в быстрой доставке мелких партий товаров индивидуальным клиентам.
+
+Компания студентов собрались и решила создать стартап службы доставки.
+
+Идея состоит в том, чтобы оперативно получать информацию о заказах, месте и сроке комплектации, месте доставки, желаемых сроках доставки и раздавать инфо курьерам, которые будут получать заказ в месте комплектации и доставлять в место доставки. Решили развернуть онлайн-систему, куда стекаются заказы и откуда курьеры оперативно разбирают заказы для выполнения. На первом этапе решили собирать заказы от магазинов и предприятий питания любым доступным способом и вводить в систему в едином формате силами оператора, но разработать мобильное приложение для курьеров.
+
+Курьер должен иметь возможность просматривать информацию о заказах, выбирать заказ из свободных, бронировать его, забирать в точке выдачи и доставлять клиенту. Результат своих действий курьер должен оперативно отражать в системе через мобильное приложение. Также в системе должен работать диспетчер, который контролирует курьеров и при необходимости переназначает заказы. Информация о поступивших заказах должна направляться в бухгалтерию (в другую ИТ-систему) для расчета с поставщиками заказов за доставку. Также в бухгалтерию должна направляться информация о доставке заказа, где будет производиться расчет оплаты курьеров. Начисленная оплата должна передаваться в систему и отражаться в личном кабинете курьера. И еще запланировано рабочее место администратора, регистрирующего курьеров и назначающего всем права доступа.
+
+## Глава V <div id="chapter-v"></div>
+
+### Упражнение 00 — Построение диаграммы потоков данных, уровень 0 <div id="51"></div>
+
+**Для каждой задачи:**
+Построй диаграмму потоков данных уровня 0:
+1. Укажи цель построения диаграммы.
+2. Укажи область рассмотрения: as is или to be.
+3. Отрази в прямоугольниках на диаграмме внешние сущности, взаимодействующие с системой.
+4. Отрази в овалах процессы (действия заинтересованных сторон над данными).
+5. Отрази на стрелках содержание потоков информации.
+6. Отрази в отрезках параллельных прямых хранилища данных и содержание хранимой в системе информации.
+7. Выполни следующие правила:
+   1. Все процессы (овалы) должны быть пронумерованы. На диаграмме уровня 0 — целыми числами;
+   2. Процессы названы: глагол+ объект;
+   3. Для обозначения объекта применяются понятные названия предметной области (нетехнические названия сущностей БД системы);
+   4. Процессы взаимодействуют не напрямую между собой, а через хранилища данных;
+   5. Потоки данных передаются между хранилищами и внешним сущностям или между собой через процесс (не напрямую);
+   6. Диаграмма не отражает последовательность процессов и действий;
+   7. Диаграмма должна быть читаемой.
+8. Укажи свои ответы в turn-in файле ex00\_<префикс продукта>\_dfd.xxx (xxx — расширение файла).
+
+### Упражнение 01 — Построение диаграммы «плавательные дорожки» <div id="52"></div>
+**Для каждой задачи:**
+
+Построй диаграмму «плавательные дорожки»:
+
+1. Укажи цель построения диаграммы.
+2. Укажи область рассмотрения: as is или to be.
+3. Выбери действующие роли для диаграммы: заинтересованные стороны, подразделения, внешние системы.
+4. Отрази на диаграмме дорожки для ролей.
+5. Покажи шаги процесса в виде прямоугольников.
+6. Отобрази шаги процесса, выполняемые ролью, на соответствующей дорожке.
+7. Покажи переходы между шагами процесса стрелками.
+8. Решения отрази ромбами.
+9. Отрази варианты решений на стрелках, выходящих из ромба.
+10. Отрази начальным/завершающим кружком начало и конец процесса.
+11. Запиши свои ответы в turn-in файле ex01\_<префикс продукта>\_swd.xxx (xxx — расширение файла).
+
+### Упражнение 02 — Дополнение диаграммы «плавательные дорожки» <div id="53"></div>
+**Для каждой задачи** дополни диаграмму «плавательные дорожки» создаваемыми артефактами:
+
+1. Скопируй диаграмму «плавательные дорожки», изменить наименование.
+2. Укажи цель построения диаграммы.
+3. Обозначь область рассмотрения: as is или to be.
+4. Добавь на диаграмму «плавательные дорожки» для каждой роли создаваемые ей артефакты: документы, разработанный код, зарегистрированные ошибки, запросы и т. д.
+   1. Для каждой роли на дорожке покажи артефакты, которые разрабатывают или корректируют представители роли, отрази на дорожке роли;
+   2. Для каждого артефакта укажи пунктирной линией связь с источником, где создается/корректируется артефакт;
+   3. Допустимо группировать артефакты, т. е. указывать несколько артефактов в одном пуле, если они создаются одной ролью в одном процессе (или при выполнении одного действия).
+5. Запиши свои ответы в turn-in файле ex02\_<префикс продукта>\_adswd.(xxx — расширение файла).
+
+### Упражнение 03 — Диаграмма состояний <div id="54"></div>
+**Для каждой задачи:**
+
+1. Выбери объект (сущность предметной области), имеющий жизненный цикл. В задаче 1 — исключая объект Заявка на услугу.
+2. Укажи цель построения диаграммы.
+3. Обозначь область рассмотрения: as is или to be.
+4. Построй диаграмму состояний выбранного объекта:
+   1. Выбери названия состояний объекта;
+   2. Укажи на диаграмме каждое состояние объекта;
+   3. Соедини стрелками предыдущее и последующее состояния объектов;
+   4. Обозначь рядом со стрелкой событие (действие), переводящее объект из одного состояния в другое;
+   5. Укажи инициатора каждого события (действия);
+   6. При наличии развилок укажи условия;
+   7. Обозначь начало и окончание жизненного цикла объекта.
+5. Запиши свои ответы в turn-in файле ex03\_<префикс продукта>\_dst.xxx (xxx — расширение файла).
+
+### Упражнение 04 — Таблица состояний <div id="55"></div>
+**Для каждой задачи** построй таблицу состояний объектов:
+
+1. Выбери объекты (сущности предметной области), имеющие жизненный цикл.
+
+Для объекта, по которому не построена полная диаграмма состояний объекта:
+
+1. Укажи объект.
+2. Укажи цель построения таблицы.
+3. Обозначь область рассмотрения: as is или to be.
+4. Построй таблицу состояний:
+   1. Выбери названия состояний объекта;
+   2. Укажи в строке таблицы:
+      1. предыдущее и последующее состояния объекта;
+      2. событие (действие), переводящее объект из предыдущего состояния в последующее;
+      3. инициатора каждого события (действия);
+      4. при наличии развилок укажи условия;
+   3. Укажи начало и окончание жизненного цикла объекта.
+5. Запиши свои ответы в turn-in файле ex04\_<префикс продукта>\_tst.xxx (xxx — расширение файла).

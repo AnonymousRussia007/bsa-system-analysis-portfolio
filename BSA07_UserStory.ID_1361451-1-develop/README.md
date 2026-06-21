@@ -1,219 +1,217 @@
-# User Stories
+# Пользовательские истории
 
-Summary:
-In this project, you will study User Stories (US), understand their benefits, learn how to create them and their associated acceptance criteria and test scenarios. You will also discuss user stories with others involved in the development process and understand the positive outcome of the discussion.
+Резюме:
+В текущем проекте ты рассмотришь User Story (US, пользовательские истории), поймешь пользу US, научишься создавать их и сопутствующие им критерии приёмки и тестовые сценарии. А также обсудишь пользовательские истории с другими участниками процесса разработки и поймешь положительный результат обсуждения.
 
-💡 [Tap here](https://new.oprosso.net/p/4cb31ec3f47a4596bc758ea1861fb624) **to leave your feedback on the project**. It's anonymous and will help our team make your educational experience better. We recommend completing the survey immediately after the project.
+💡 [Нажми сюда](https://new.oprosso.net/p/4cb31ec3f47a4596bc758ea1861fb624), **чтобы поделиться с нами обратной связью на этот проект**. Это анонимно и поможет нашей команде сделать обучение лучше. Рекомендуем заполнить опрос сразу после выполнения проекта.
 
-## Contents
+## Содержание
 
-1. [Chapter I](#chapter-i) \
-   1.1. [Preamble](#11)
-2. [Chapter II](#chapter-ii) \
-   2.1. [General Rules](#21)
-3. [Chapter III](#chapter-iii) \
-   3.1. [User Stories](#31)
-4. [Chapter IV](#chapter-iv) \
-   4.1. [Task 1. Haircut Appointment](#41) \
-   4.2. [Task 2. Delivery of Orders)](#42)
-5. [Chapter V](#chapter-v) \
-   5.1. [Exercise 00 — Description of User Stories](#51) \
-   5.2. [Exercise 01 — Description of User Stories](#52) \
-   5.3. [Exercise 02 — User Stories Coordination](#53)
+1. [Глава I](#chapter-i) \
+    1.1. [Введение](#11)
+2. [Глава II](#chapter-ii) \
+    2.1. [Общие правила](#21)
+3. [Глава III](#chapter-iii) \
+    3.1. [Пользовательские истории (User Story)](#31)
+4. [Глава IV](#chapter-iv) \
+    4.1. [Задача 1. Запись на стрижку](#41) \
+    4.2. [Задача 2. Доставка заказов](#42)
+5. [Глава V](#chapter-v) \
+    5.1. [Упражнение 00 — Описание пользовательских историй](#51) \
+    5.2. [Упражнение 01 — Описание пользовательских историй](#52) \
+    5.3. [Упражнение 02 — Согласование пользовательских историй](#53)
 
-## Chapter I <div id="chapter-i"></div>
+## Глава I <div id="chapter-i"></div>
 
 ![](misc/images/Illustration_07.jpg)
 
-### Preamble <div id="11"></div>
+### Введение <div id="11"></div>
 
-A user story is a short, concise description of a value to the user and the functionality (or quality of the system) required to achieve the desired value. User stories can be used as a basis for identifying user needs in a system. They are also used for:
+Пользовательская история представляет собой небольшую сжатую формулировку некоторой ценности для пользователя и краткое описание функциональности (или качества системы), позволяющее достичь желаемой ценности. Пользовательские истории могут служить основой для выявления потребностей пользователей в системе. Также применяются для:
 
-- documenting;
-- prioritization of functionality;
-- evaluating and planning the solution supply;
-- a framework for creating acceptance tests.
+- документирования;
+- приоритизации функциональности;
+- оценки и планирования поставки решения;
+- основы для создания приемочных тестов.
 
-### Literature
+### Литература
 
-1. Jeff Patton "User Stories. The Art of Agile Software Development".
-2. Mike Cohn “User Stories Applied. For Agile Software Development”.
-3. Karl Wiegers, Joy Beatty, "Software Requirements" 3rd edition, amplified.
-4. BABOK v3 "A Guide to the Business Analysis Body of Knowledge" IIBA.
-5. Dean Leffingwell, Don Widrig "Managing Software Requirements".
+1. Джефф Паттон «Пользовательские истории. Искусство гибкой разработки ПО».
+2. Майк Кон «Пользовательские истории. Гибкая разработка программного обеспечения».
+3. Карл Вигерс, Джой Битти, «Разработка требований к программному обеспечению» издание третье, дополненное.
+4. BABOK v3 «Руководство к своду знаний по бизнес-анализу» IIBA.
+5. Дин Леффингуэлл, Дон Уидриг «Принципы работы с требованиями к программному обеспечению».
 
-## Chapter II <div id="chapter-ii"></div>
+## Глава II <div id="chapter-ii"></div>
 
-### General Rules <div id="21"></div>
+### Общие правила <div id="21"></div>
 
-1. Along the way, you may feel a sense of uncertainty and a severe lack of information: that's OK. Remember, the information in the repository and on Google is always with you. So are your peers and Slack. Communicate. Search. Use common sense. Don't be afraid to make mistakes.
-2. Pay attention to sources of information. Check. Think. Analyse. Compare. 
-3. Look at the text of each assignment. Read it several times. 
-4. Read the examples carefully. There may be something in them that is not explicitly stated in the task itself.
-5. You may find inconsistencies where something new in the terms of the task or examples conflicts with something you already know. If you come across such an inconsistency, try to work it out. If not, write it down as an open question and find out as you work. Do not leave open questions unanswered. 
-6. If a task seems confusing or impossible, it only seems that way. Try to break it down. It is likely that some parts will become clear. 
-7. There will be several tasks. Those marked with an asterisk (\*) are for the more meticulous students. These tasks are more difficult and are not compulsory. But doing them will give you extra experience and knowledge.
-8. Don't try to fool the system or the people around you. You will fool yourself first.
-9. Got a question? Ask your neighbour to the right. If that doesn't help, ask your neighbour on the left.
-10. When you use help, you should always understand why and how. Otherwise the help is useless.
-11. Always push only to the develop branch! The master branch will be ignored. Work in the src directory.
-12. There should be no files in your directory other than those specified in the tasks.
+1. На протяжении всего курса тебя будет сопровождать чувство неопределенности и острого дефицита информации — это нормально. Не забывай, что информация в репозитории и Google всегда с тобой. Как и пиры, и RocketChat. Общайся. Ищи. Опирайся на здравый смысл. Не бойся ошибиться.
+2. Будь внимателен к источникам информации. Проверяй. Думай. Анализируй. Сравнивай.
+3. Внимательно читай задания. Перечитай несколько раз.
+4. Читать примеры тоже лучше внимательно. В них может быть что-то, что не указано в явном виде в самом задании.
+5. Тебе могут встретиться несоответствия, когда что-то новое в условиях задачи или примере противоречит уже известному. Если встретилось такое — попробуй разобраться. Если не получилось — запиши вопрос в открытые вопросы и выясни в процессе работы. Не оставляй открытые вопросы неразрешенными.
+6. Если задание кажется непонятным или невыполнимым — так только кажется. Попробуй его декомпозировать. Скорее всего, отдельные части станут понятными.
+7. На пути тебе встретятся самые разные задания. Те, что помечены звездочкой (\*) — подходят для более дотошных. Они повышенной сложности и необязательны к выполнению. Но если ты их сделаешь, то получишь дополнительный опыт и знания.
+8. Не пытайся обмануть систему и окружающих. В первую очередь ты обманешь себя.
+9. Есть вопрос? Спроси своего соседа справа. Если это не помогло — соседа слева.
+10. Когда пользуешься помощью — всегда разбирайся до конца: почему, как и зачем. Иначе помощь не будет иметь смысла.
+11. Всегда делай push только в ветку develop! Ветка master будет проигнорирована. Работай в директории src.
+12. В твоей директории не должно быть иных файлов, кроме тех, что обозначены в заданиях.
 
-## Chapter III <div id="chapter-iii"></div>
+## Глава III <div id="chapter-iii"></div>
 
-### 1. User Stories <div id="31"></div>
+### 1. Пользовательские истории (User Story) <div id="31"></div>
 
-***UserStory*** (US) is a method for quickly understanding and briefly documenting the needs of the users of a system. A brief description of the functionality and/or quality required by a particular stakeholder to achieve expected benefits. 
+***Пользовательская история*** (UserStory, US) — метод, позволяющий быстро понять и кратко зафиксировать потребности пользователей в системе. Краткое описание функциональности и/или качества, необходимых конкретной заинтересованной
+стороне для получения ожидаемой пользы.
 
-US is one or two sentences on a small card (sticker). US does not contain everything there is to know about a stakeholder's need. US helps to identify the most important stories and to prioritize the results of the functionality. It becomes clear what should be discussed, worked on in detail, and developed first. Information is added during the discussion and implementation process.
-Tools used: stickerboard, miro, trello, … jira, confluence, any text editor.
+US — это одно-два предложения на небольшой карточке (стикере).
+US не отражает всё, что нужно знать о потребности заинтересованной стороны. US помогают выделить наиболее важные истории и приоритизировать результаты выполнения функциональности. Становится понятным, что следует обсудить, проработать детально и разработать в первую очередь. По мере обсуждения и реализации информация дополняется.
+Применяемые инструменты: стикерная доска, Miro, Trello, <…> Jira, Confluence, любой текстовый редактор.
+US должен быть:
+- кратким,
+- простым,
+- ценным (соответствовать потребности),
+- атомарным (одна функция или одно качество),
+- бизнесовым (описано бизнес- или пользовательским языком).
+Более расширенно про US можно прочитать в книгах Джеффа Паттона «Пользовательские истории. Искусство гибкой разработки ПО» и Майка Кона «Пользовательские истории. Гибкая разработка программного обеспечения».
 
-US must be:
-- short,
-- simple,
-- valuable (fill a need), 
-- atomic (a feature or quality),
-- business-like (described in business or user terms).
-  You can read more about US in Jeff Patton's book "User Stories. The Art of Agile Software Development" and Mike Cohn's "User Stories Applied. For Agile Software Development.
+***Описание US***\
+Состав US:
+- заголовок,
+- тело,
+- критерии приёмки,
+- тестовые сценарии.
 
-***US Description***\
-US Composition:
+*Заголовок* описывает действия, которые пользователь хочет выполнить с помощью системы. Как правило, это активное глагольное выражение цели.
+*Формат тела US:* **Как** [*роль пользователя*] **я хочу/могу** [*сделать то-то и то-то*], **чтобы** [*получить какую-то выгоду*].\
+*Пример:* «Мне, как зрителю кинотеатра, нужно купить билет посредством онлайн заранее, чтобы посмотреть кинофильм в удобное время».
 
-- header,
-- body,
-- acceptance criteria,
-- test scenarios.
+***Критерии приемки (Acceptance Criteria):***
+US обычно сопровождается разработкой критериев приёмки. Критерии приёмки определяют границы истории и дают понимание, какое поведение или качество должно обеспечивать решение, чтобы принести ценность заинтересованной стороне.
 
-*Header* describes the action the user wants to perform using the system. It is usually an active verb phrase of the goal.
+*Состав:*
+- *Предусловие (Given)* — роль пользователя, обстоятельства;
+- *Действие (триггер) (When)* — выполнение действий пользователем с помощью системы;
+- *Результат (Then)* — для чего, какую ценность получить.
 
-* US Body Format:* **As** [*user role*], **I want/can** [*do this and that*] **to** [*gain some benefit*].\
-  *Example:* "I, as a cinema viewer, want to buy a ticket online in advance to see the movie at a convenient time."
+*Формат:*
+Учитывая [*предусловие*], когда [*выполняется конкретное действие*], тогда [*должен произойти результат*]. \
+Например: «Когда я покупаю билет в кинотеатр онлайн, то могу купить билет на сеанс с учетом своего свободного времени».
 
-***Acceptance Criteria:***
-US is usually accompanied by the development of acceptance criteria. Acceptance criteria define the boundaries of the story and provide insight into what behavior or quality the solution must provide in order to deliver value to the stakeholder. 
+***Тестовые сценарии (Test Scenarios):***
+Тестовый сценарий — это описание того, что должно быть проверено. На каких данных, какие установки, какие действия следует применить при тестировании, и какой ожидается результат. \
+Например:
+- *Предусловие:* пользователь зарегистрирован в сети кинотеатров (есть учетная запись). Пользователь выбрал кинофильм, дату.
+- *Действие:* система показывает доступные сеансы. Пользователь выбирает сеанс, просматривает доступные места и выбирает свободное место в кинозале.
+- *Ожидаемый результат:* система предлагает оплатить билет.
 
-*Composed of:*
-- *Preсondition (Given)* — the user's role, circumstances;
-- *Action (Trigger) (When)* — some action is carried out by the user with the help of the system;
-- *Result (Then)* — why, what value to get.
+***Преимущества US:***
+- Небольшие реализуемые и тестируемые части функциональности;
+- Легко понимать заинтересованными сторонами;
+- Фокус на пользе, ценности, позволяет улучшать понимание процесса.
 
-*Format:*
-Given [*precondition*], when [*a specific action is performed*], then [*a result must occur*].\ 
-For example: "When I buy a cinema ticket online, then I can buy a ticket for a session given my free time".
+***Ограничения US:***
+- Требует понимания контекста и видения общей картины;
+- Как правило, не могут дать документацию, достаточную для реализации;
+- Предназначены для быстрой и краткосрочной фиксации, не для длительного хранения.
 
-***Test Scenarios:***
-A test scenario is a description of what is supposed to be tested. What data, what settings, what actions should be performed during the test. And what is the expected result. \
-For example:
-- *Precondition:* the user is registered in the cinema network (has an online account). The user has selected a movie and date.
-- *Action:* the system displays available sessions. The user selects a session, views the available seats, and selects an available seat in the cinema.
-- *Expected result:* the system prompts the user to pay for the ticket.
+***Рекомендации к применению US:***
+1. Описывай US в следующем порядке:
+   1. роль пользователя, предусловия,
+   2. ценность для пользователя,
+   3. выполняемые действия в определенных условиях.
+2. Применяй 3 С ([Гайд по User Stories](https://habr.com/ru/post/577420)):
+   1. Card — компактность, «помещается на карточке»;
+   2. Conversation — обсуждение US;
+   3. Confirmation — подтверждение пользователем и командой разработки.
+3. Проверяй US по критериям INVEST ([Основы пользовательских историй](https://habr.com/ru/company/luxoft/blog/84030/)):
+   1. Independent (независимость): стремись к независимости US;
+   2. Negotiable (обсуждаемость): оставляй возможность обсудить с пользователем, заказчиком, командой;
+   3. Valuable (ценность): выявляй пользу действий пользователей, описанных в US;
+   4. Estimable (оценка трудозатрат): оценка затрат — работы специалистов компетенции middle и выше);
+   5. Small (компактность): автономность и небольшой размер;
+   6. Testable (тестируемость): применяй:
+      1. Критерии приёмки,
+      2. Тестовые сценарии.
 
-***US Advantages:***
+## Глава IV <div id="chapter-iv"></div>
 
-- Small implementable and testable pieces of functionality;
-- Easy for stakeholders to understand;
-- Focus on benefit, value, allows for better process understanding.
+### Описание задач
 
-***US Disadvantages:***
+### Задача 1. Запись на стрижку <div id="41"></div>
 
-- Requires understanding of context and seeing the big picture;
-- Generally cannot provide documentation sufficient for implementation;
-- Intended for quick and short-term fixes, not for long-term storage.
+Руководство сети барбершопов приняло решение о внедрении системы, обеспечивающей онлайн-запись на прием. Основная цель — развитие бизнеса путем расширения клиентской базы за счет возможности онлайн-записи, а также снижение трудозатрат сотрудников и уменьшение ручного труда за счет автоматического информирования клиентов по каналам связи.
 
-***Recommendations for US:***
+Запись может осуществлять как зарегистрированный, так и незарегистрированный посетитель сайта. При записи можно выбрать тип услуги: парикмахерские или косметологические, а также саму услугу, мастера и время из свободных интервалов. Система должна обеспечивать автоматическую отправку напоминаний зарегистрированным клиентам через выбранный клиентом канал связи (Telegram, WhatsApp, VK, СМС) по настроенному менеджером расписанию. После получения услуги система предлагает зарегистрированному клиенту оценить услугу и написать предложения по улучшению работы.
 
-1. Describe US in the following order:
-   1. user role, preconditions,
-   2. value to a user,
-   3. actions carried out under certain conditions.
-2. Apply the 3 C's ([User Stories Guide](https://habr.com/ru/post/577420)):
-   1. Card — compactness, "fits on a card";
-   2. Conversation — discussion of US;
-   3. Confirmation — confirmation by the user and the development team.
-3. Check the INVEST criteria ([Basics of user stories](https://habr.com/ru/company/luxoft/blog/84030/)):
-   1. Independent: seek US independence;
-   2. Negotiable: ability to discuss with the user, the customer, the team;
-   3. Valuable: identify the usefulness of user actions described in the US;
-   4. Estimable: estimate costs and work of middle and higher level specialists
-   5. Small: autonomy and small size;
-   6. Testable: apply:
-      1. Acceptance criteria,
-      2. Test scenarious.
+Расписание мастеров и выполняемые каждым мастером услуги должен вводить менеджер, возможно, это будет не один человек. Он же отвечает за актуальность расписания и при необходимости корректирует его, осуществляет связь с клиентами в ручном режиме, проставляет отметку о выполнении услуги, начисляет и принимает оплату, передает данные об оплате в бухгалтерию. Также менеджер может получать отчеты о выполненных услугах и просматривать отзывы клиентов.
 
-## Chapter IV <div id="chapter-iv"></div>
+Любой мастер имеет возможность посмотреть расписание и запись на свои услуги, отзывы клиентов.
 
-### Description of tasks
+### Задача 2. Доставка заказов <div id="42"></div>
 
-### Task 1. Haircut Appointment <div id="41"></div>
+В локдаун многие продуктовые магазины и предприятия питания резко увеличили объемы онлайн-продаж, и возросла потребность в быстрой доставке мелких партий товаров индивидуальным клиентам.
 
-The management of a chain of barbershops decided to implement an online booking system. The main objective is to develop the business by expanding the customer base through the possibility of online registration, as well as to reduce employee labour costs and manual labour by automatically informing customers through communication channels. 
+Компания студентов собрались и решила создать стартап службы доставки.
 
-Both registered and unregistered visitors can book an appointment on the website. When making an appointment, they can select the type of service: hairdressing or cosmetology, as well as the service itself, the master and the time from the available intervals. The system should provide automatic sending of reminders to clients through the communication channel chosen by the client (Telegram, WhatsApp, VK, SMS) according to the schedule set by the manager. After receiving a service, the system offers the client to evaluate the service and write suggestions on how to improve the work.
+Идея состоит в том, чтобы оперативно получать информацию о заказах, месте и сроке комплектации, месте доставки, желаемых сроках доставки и раздавать инфо курьерам, которые будут получать заказ в месте комплектации и доставлять в место доставки. Решили развернуть онлайн-систему, куда стекаются заказы и откуда курьеры оперативно разбирают заказы для выполнения. На первом этапе решили собирать заказы от магазинов и предприятий питания любым доступным способом и вводить в систему в едином формате силами оператора, но разработать мобильное приложение для курьеров.
 
-The schedule of masters and the services provided by each master should be entered by the manager, who may be more than one person. This person is also responsible for keeping the schedule up to date and adjusting it if necessary, communicating with customers manually, marking the service, charging and accepting payment, sending the payment data to the accounting department. The manager can also receive reports on completed services and view customer feedback.
+Курьер должен иметь возможность просматривать информацию о заказах, выбирать заказ из свободных, бронировать его, забирать в точке выдачи и доставлять клиенту. Результат своих действий курьер должен оперативно отражать в системе через мобильное приложение. Также в системе должен работать диспетчер, который контролирует курьеров и при необходимости переназначает заказы. Информация о поступивших заказах должна направляться в бухгалтерию (в другую ИТ-систему) для расчета с поставщиками заказов за доставку. Также в бухгалтерию должна направляться информация о доставке заказа, где будет производиться расчет оплаты курьеров. Начисленная оплата должна передаваться в систему и отражаться в личном кабинете курьера. И еще запланировано рабочее место администратора, регистрирующего курьеров и назначающего всем права доступа.
 
-Each master has the ability to view the schedule and appointments for their services, as well as customer reviews.
+## Глава V <div id="chapter-v"></div>
 
-### Task 2. Delivery of Orders <div id="42"></div>
+### Упражнение 00 — Описание пользовательских историй <div id="51"></div>
 
-During the lockdown, many grocery stores and food companies dramatically increased their online sales and the need for quick delivery of small quantities to individual customers increased. 
+Построй для роли менеджера задачи 1 не менее двух US:
 
-A group of students got together and decided to create a delivery service startup. The idea is to quickly receive information about orders, pickup location and time, delivery location, desired delivery dates, and distribute this information to couriers who will pick up the order at the pickup location and deliver it to the delivery location. They decided to develop an online system where orders could be collected and quickly sorted for delivery by couriers.
+1. Определи не менее двух потребностей менеджера в нашей системе.
+2. Для каждой потребности напиши US:
+   1. укажи идентификатор US;
+   2. укажи заголовок US — активное глагольное выражение цели пользователя;
+   3. опиши US:
+      1. укажи роль пользователя,
+      2. укажи пользу (ценность) для роли,
+      3. укажи требуемое(-ые) действие (-я).
+3. Для одного US разработай критерии приемки, опиши:
+   1. предусловие — обстоятельства, роль пользователя;
+   2. выполняемые пользователем действия в системе;
+   3. результат — ценность для пользователя.
+4. Для второго US разработай тестовый сценарий, опиши:
+   1. предусловия: на каких данных проверять, какие настройки, какие действия должны предшествовать;
+   2. действия: что должно выполняться пользователем и системой;
+   3. ожидаемый результат: что подтвердит правильность выполнения.
+5. Распиши свои ответы в файле ex00\_<префикс продукта>\_us\_<роль>.docx.
 
-The first step was to collect orders from stores and caterers in any way possible and have the operator enter them into the system in a consistent format, as well as developing a mobile application for the courier. The courier should be able to view order information, select an order from those available, book it, pick it up at the collection point and deliver it to the customer. The result of the courier's actions should be immediately reflected in the system via a mobile application. The system should also include a dispatcher who controls the couriers and reassigns orders if necessary. Information on received orders should be sent to the accounting department (to another IT system) to calculate delivery charges with order suppliers. Order delivery information should also be sent to the accounting department to calculate payment to couriers. Accrued payment should be transferred to the system and displayed in the courier's personal account. And there should also be an administrator's workstation, where couriers are registered and access rights are assigned to all of them.
+### Упражнение 01 — Описание пользовательских историй <div id="52"></div>
 
-## Chapter V <div id="chapter-v"></div>
+Для задачи 1 построй еще не менее четырех US.
 
-### Exercise 00 — Description of User Stories <div id="51"></div>
+1. В задаче 1 выбери две роли, отличные от роли менеджера.
+2. Определи для каждой роли не менее двух потребностей в нашей системе.
+3. Для каждой потребности опиши US, применив требования п.2 ex.00.
+4. Для каждой выбранной роли по одному US опиши критерии приемки, применив требования п.3 ex.00.
+5. Для каждой выбранной роли по второму US опиши сценарий тестирования, применив требования п.4 ex.00.
+6. Укажи свои ответы в файле ex01\_<префикс продукта>\_us\_<роль>.docx.
 
-Create at least 2 US for a manager for task 1:
+### Упражнение 02 — Согласование пользовательских историй <div id="53"></div>
 
-1. Define at least two of the manager's needs in our system.
-2. Write a US for each need:
-   1. specify the US identifier;
-   2. specify the US header — an active verb expression of the user's goal;
-   3. describe US:
-      1. specify the user role, 
-      2. specify the benefit (value) to the role,
-      3. specify the required action(s).
-3. Develop acceptance criteria for one of the US, describe:
-   1. precondition — the circumstances, the role of the user;
-   2. actions performed by the user in the system;
-   3. result — value to the user.
-4. Develop a test scenario for the second US, describe:
-   1. preconditions: on what data to check, what settings, what actions should precede;
-   2. actions: what should be done by the user and the system;
-   3. expected result: what will confirm the correctness of the execution.
-5. Indicate your answers in the file ex00\_<product prefix>\_us\_<role>.docx.
+Обсуди и согласуй разработанные US.
 
-### Exercise 01 — User Stories Coordination <div id="52"></div>
-
-Create at least 4 more US's for task 1.
-
-1. Select two roles other than manager in task 1.
-2. Identify at least two needs for each role in our system.
-3. Describe the US for each need by applying the requirements of paragraph 2 ex.00.
-4. Describe the acceptance criteria for each selected role, one US at a time, applying the requirements of paragraph 3 ex.00.
-5. Describe a test scenario for each selected role applying the requirements of paragraph 4 ex.00.
-6. Indicate your answers in the file ex01\_<product prefix>\_us\_<role>.docx.
-
-### Exercise 02 — User Stories Coordination <div id="53"></div>
-
-Discuss and agree on the US developed.
-
-1. Find one or more people among your fellow students or friends with whom you can discuss US by playing the roles of "user", "customer", "developer" one by one or together. 
-2. During the discussion, make sure that the conditions of 3 Cs are met:
-   1. Card: if the US doesn't fit enough, then split it into two or more or rework the US differently;
-   2. Conversation: Discuss each of the US with each role. Refine the US if necessary;
-   3. Confirmation: as a result of discussion and refinement, harmonize US with each role;
-   4. Write a minutes of the discussion, specify:
-      1. Who participated in the discussion;
-      2. What role they played;
-      3. What changes have been made to the US;
-      4. Reasons for the changes.
-3. When discussing check the three characteristics of INVEST:
-   1. independence of each US; if there is a dependency — make them independent. If not — specify the dependency: which US depends on which (this will be needed for prioritization — in what order to implement US, in what order to check);
-   2. negotiability of each US: whether it was discussed with "user", "customer", "developer" — indicate what conclusions were reached;
-   3. value — confirm that the business value of each US is understood; if the business value is not understood, it is a reason to enlarge the US or rework it.
-4. Identify each change, explain the reason for the change, record it.
-5. Indicate your answers in the file ex02\_<product prefix>\_us.docx.
+1. Найди среди своих сокурсников или друзей одного или несколько человек, с которыми ты можешь обсудить US, играя роли «пользователя», «заказчика», «разработчика» по очереди или совместно.
+2. При обсуждении проверь выполнение условий 3 С:
+   1. Card (компактность, «помещается на карточке»): если US достаточно не умещается, то раздели его на два или несколько или переработай US по-другому.
+   2. Conversation (обсуждение): обсуди каждый из US с каждой ролью. При необходимости — уточни US.
+   3. Confirmation (согласование): в результате обсуждения и уточнения добейся согласования US каждой ролью.
+   4. Напиши протокол обсуждения, отражающий:
+      1. Кто участвовал в обсуждении;
+      2. Какую роль играл;
+      3. Какие изменения были внесены в US;
+      4. Причины внесенных изменений.
+3. При обсуждении проверь три характеристики INVEST:
+   1. Независимость каждого US, если есть зависимость — сделай их независимыми. Если не получилось — укажи зависимость: какой US от какого зависит (это понадобится при приоритизации — в каком порядке реализовывать US, в каком проверять);
+   2. Обсуждаемость каждого US: получилось ли обсудить с «пользователем», «заказчиком», «разработчиком» — укажи, к каким выводам вы пришли;
+   3. Ценность (valuable) — подтверди, что понятна бизнес-ценность каждого US, если бизнес-ценность непонятна — это повод укрупнить US или переработать.
+4. Идентифицируй каждое изменение, поясни причину изменения, отрази в протоколе.
+5. Распиши свои ответы в файле ex02\_<префикс продукта>\_us.docx.

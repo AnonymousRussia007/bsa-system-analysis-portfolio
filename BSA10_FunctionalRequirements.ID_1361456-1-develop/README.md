@@ -1,404 +1,426 @@
-# Designing functional requirements
+# Проектирование функциональных требований
 
-Summary:
-In the current project, you will continue to design the functionality of the system and learn what aspects should be specified so that the developers can implement the functionality correctly.
+Резюме:
+В текущем проекте ты продолжишь проектирование функциональности системы и узнаешь, какие аспекты следует указать для того, чтобы разработчики корректно реализовали функциональность.
 
-💡 [Tap here](https://new.oprosso.net/p/4cb31ec3f47a4596bc758ea1861fb624) **to leave your feedback on the project**. It's anonymous and will help our team make your educational experience better. We recommend completing the survey immediately after the project.
+💡 [Нажми сюда](https://new.oprosso.net/p/4cb31ec3f47a4596bc758ea1861fb624), **чтобы поделиться с нами обратной связью на этот проект**. Это анонимно и поможет нашей команде сделать обучение лучше. Рекомендуем заполнить опрос сразу после выполнения проекта.
 
-## Contents
+## Содержание
 
-1. [Chapter I](#chapter-i) \
-   1.1. [Preamble](#11)
-2. [Chapter II](#chapter-ii) \
-   2.1. [Operations with an Object (Object Instance)](#21) \
-   2.2. [Specifics of Operations](#22) \
-   2.3. [Example Analysis](#23) \
-   2.4. [Roles, Role Model, Access Rights](#24) \
-   2.5. [Life Cycle of an Entity](#25) \
-   2.6. [Checks](#26)
-3. [Chapter III](#chapter-iii) \
-   3.1. [Task 1. Haircut Apointment](#31)
-4. [Chapter IV](#chapter-iv) \
-   4.1. [Exercise 00 — Identifying Objects that have a Status Model](#41) \
-   4.2. [Exercise 01 — Life Cycle of the Service Slots](#42) \
-   4.3. [Exercise 02 — Status Models of Entities](#43) \
-   4.4. [Exercise 03 — Description of Actions on References](#44) \
-   4.5. [Exercise 04 — CRUD Operations on the Service Slots Object](#45) \
-   4.6. [\*Exercise 05 — Detailed Operations on the Service Slot Object](#46) \
-   4.7. [\*Exercise 06 — Role Access Rights](#47)
+1. [Глава I](#chapter-i) \
+    1.1. [Введение](#11)
+2. [Глава II](#chapter-ii) \
+    2.1. [Операции над объектом (экземпляром объекта)](#21) \
+    2.2. [Особенности операций](#22) \
+    2.3. [Разбор примера](#23) \
+    2.4. [Роли, ролевая модель, права доступа](#24) \
+    2.5. [Жизненный цикл сущности](#25) \
+    2.6. [Проверки](#26)
+3. [Глава III](#chapter-iii) \
+    3.1. [Задача 1. Запись на стрижку](#31)
+4. [Глава IV](#chapter-iv) \
+    4.1. [Упражнение 00 — Выделение объектов, имеющих статусную модель](#41) \
+    4.2. [Упражнение 01 — Жизненный цикл объекта «Слоты обслуживания»)](#42) \
+    4.3. [Упражнение 02 — Статусные модели сущностей](#43) \
+    4.4. [Упражнение 03 — Описание действий над справочниками)](#44) \
+    4.5. [Упражнение 04 — Действия CRUD над объектом «Слоты обслуживания»](#45) \
+    4.6. [Упражнение 05 — Детализация действий над объектом Слоты обслуживания](#46) \
+    4.7. [Упражнение 06 — Права доступа ролей](#47)
 
-## Chapter I <div id="chapter-i"></div>
+## Глава I <div id="chapter-i"></div>
 
 ![Illustration](misc/images/IMG_1718.jpg)
 
-### Preamble <div id="11"></div>
+### Введение <div id="11"></div>
 
-In the previous projects, BSA03 and BSA09, you identified domain entities, created database objects (classes), basic attributes of classes, and their properties. You specified relationships between classes, built a logical data model, and described a data dictionary. In the current project, you will describe operations on the objects. System users perform their tasks by performing operations on the data they contain (on instances of classes).
+В предыдущих проектах BSA03 и BSA09 ты выделил сущности домена и построил объекты базы данных (классы), основные атрибуты классов и их характеристики. Кроме того, ты указал связи между классами, построил логическую модель данных и описал словарь данных. В текущем проекте ты опишешь операции над объектами. Используя действия над данными, содержащимися в них (над экземплярами классов), пользователи системы выполняют свои функции.
 
-### Literature
+### Литература
 
-1. Karl Wiegers, Joy Beatty, "Software Requirements" 3rd edition, amplified.
-2. Alan Cooper, Robert Reimann, David Cronin “About face. The essentials of interaction design”.
-3. Y. Kupriyanov "[Requirements don't change, you're the one who failed to identify them. 10 techniques for checking the completeness of requirements](https://conf.uml2.ru/class/trebovaniya-ne-menyayutsya-eto-vy-ikh-nedovyyavili--10-tekhnik-proverki-polnoty-trebovanii.html)" LAF, 2018.
-4. https://rutube.ru/video/c8eacc767b438bc228cca1a5708dd43e/?ysclid=m0m8lolag1812195071
+1. Карл Вигерс, Джой Битти, «Разработка требований к программному обеспечению» издание третье, дополненное.
+2. Алан Купер, Роберт Рейман, Девид Кронин «Об интерфейсе. Основы проектирования взаимодействия».
+3. Ю. Куприянов «[Требования не меняются, это вы их недовыявили. 10 техник проверки полноты требований](https://conf.uml2.ru/class/trebovaniya-ne-menyayutsya-eto-vy-ikh-nedovyyavili--10-tekhnik-proverki-polnoty-trebovanii.html)», ЛАФ, 2018 г.
+4. <https://www.youtube.com/watch?v=5z2GE2oYWd4&t=30s>.
 
-## Chapter II <div id="chapter-ii"></div>
+## Глава II <div id="chapter-ii"></div>
 
-### General Rules <div id="21"></div>
+### Общие правила <div id="21"></div>
 
-1. Along the way, you may feel a sense of uncertainty and a severe lack of information: that's OK. Remember, the information in the repository and on Google is always with you. So are your peers and Rocket.Chat. Communicate. Search. Use common sense. Don't be afraid to make mistakes.
-2. Pay attention to sources of information. Check. Think. Analyse. Compare. 
-3. Look at the text of each assignment. Read it several times. 
-4. Read the examples carefully. There may be something in them that is not explicitly stated in the task itself.
-5. You may find inconsistencies where something new in the terms of the task or examples conflicts with something you already know. If you come across such an inconsistency, try to work it out. If not, write it down as an open question and find out as you work. Do not leave open questions unanswered. 
-6. If a task seems confusing or impossible, it only seems that way. Try to break it down. It is likely that some parts will become clear. 
-7. There will be several tasks. Those marked with an asterisk (\*) are for the more meticulous students. These tasks are more difficult and are not compulsory. But doing them will give you extra experience and knowledge.
-8. Don't try to fool the system or the people around you. You will fool yourself first.
-9. Got a question? Ask your neighbour to the right. If that doesn't help, ask your neighbour on the left.
-10. When you use help, you should always understand why and how. Otherwise the help is useless.
-11. Always push only to the develop branch! The master branch will be ignored. Work in the src directory.
-12. There should be no files in your directory other than those specified in the tasks.
+1. На протяжении всего курса тебя будет сопровождать чувство неопределенности и острого дефицита информации — это нормально. Не забывай, что информация в репозитории и Google всегда с тобой. Как и пиры, и Rocket.Chat. Общайся. Ищи. Опирайся на здравый смысл. Не бойся ошибиться.
+2. Будь внимателен к источникам информации. Проверяй. Думай. Анализируй. Сравнивай.
+3. Внимательно читай задания. Перечитай несколько раз.
+4. Читать примеры тоже лучше внимательно. В них может быть что-то, что не указано в явном виде в самом задании.
+5. Тебе могут встретиться несоответствия, когда что-то новое в условиях задачи или примере противоречит уже известному. Если встретилось такое — попробуй разобраться. Если не получилось — запиши вопрос в открытые вопросы и выясни в процессе работы. Не оставляй открытые вопросы неразрешенными.
+6. Если задание кажется непонятным или невыполнимым — так только кажется. Попробуй его декомпозировать. Скорее всего, отдельные части станут понятными.
+7. На пути тебе встретятся самые разные задания. Те, что помечены звездочкой (\*) — подходят для более дотошных. Они повышенной сложности и необязательны к выполнению. Но если ты их сделаешь, то получишь дополнительный опыт и знания.
+8. Не пытайся обмануть систему и окружающих. В первую очередь ты обманешь себя.
+9. Есть вопрос? Спроси своего соседа справа. Если это не помогло — соседа слева.
+10. Когда пользуешься помощью — всегда разбирайся до конца: почему, как и зачем. Иначе помощь не будет иметь смысла.
+11. Всегда делай push только в ветку develop! Ветка master будет проигнорирована. Работай в директории src.
+12. В твоей директории не должно быть иных файлов, кроме тех, что обозначены в заданиях.
 
-## Chapter III <div id="chapter-iii"></div>
+## Глава III <div id="chapter-iii"></div>
+### Теория
+Каждая группа пользователей (роль) выполняет свойственные ей действия. Мнение пользователей о поведении системы в ответ на их действия описаны в UC, указаны в US. Например, менеджер заносит в систему расписание мастеров («Слот обслуживания»), а клиент из этого расписания выбирает определенную запись (экземпляр) этого объекта для бронирования услуги. То есть, система позволяет менеджеру добавлять/редактировать расписание, сохраняет его, показывает клиенту, клиент выбирает слот для получения услуги. Аналитик на основании схем и описаний бизнес-процессов, UC, US описывает функциональность. Именно это ты и выполнишь в текущем проекте.
 
-### Theory
+### 1. Операции над объектом (экземпляром объекта) <div id="21"></div>
 
-Each user group (role) performs its own actions. The user's view of the system's behavior in response to their actions is described in UC, specified in US. For example, a manager enters a master schedule ("service slot") into the system, and a client selects a particular record (instance) of this object from the schedule to book a service. That is, the system allows the manager to add/edit the schedule, save it, show it to the client, and the client selects a slot. Analyst based on business process diagrams and descriptions, UC and US describe the functionality. This is what you will do in the current project.
+При рассмотрении и описании операций над объектом следует рассмотреть:
 
-### 1. Operations with an Object (Object Instance) <div id="21"></div>
+1) создание (CREATE) новой записи;
+2) редактирование (UPDATE) существующей записи или запрет редактирования;
+3) чтение (READ) записи, в том числе использование объекта для выбора значения из списка (из справочника или классификатора) при создании/редактировании другой сущности;
+4) удаление (DELETE) или запрет удаления.
 
-When considering and describing operations with an object, you should consider:
+Кроме того, следует рассмотреть, выбрать и описать то, что необходимо:
 
-1) creating (CREATE) a new record;
-2) editing (UPDATE) an existing record or prohibiting editing;
-3) reading (READ) a record, including using the object to select a value from a list (from a reference or classifier) when creating/editing another entity;
-4) deleting (DELETE) or prohibiting deletion.
+1) подтверждение выполнения, откат операции (нужно ли, при каких условиях);
+2) форму визуализации объекта (список и/или карточка);
+3) участие объекта в интеграции (импорт или экспорт из/в другую систему);
+4) сохранение истории изменений (в каких случаях и что сохранять);
+5) перевод записей в архив (кто переводит, при каких условиях);
+6) другие операции над объектом (расчеты, проверки);
+7) операции над объектом, порождающие изменения в других частях системы (отправка СМС или других сообщений, изменение статуса другого объекта, логирование);
+8) операции над другими объектами, которые изменяют что-то в нашем.
 
-In addition, you should consider, select and describe what is needed:
+Следующей таблицей можно убедиться, что описаны все операции над объектами:
 
-1) confirmation of execution, rollback of the operation (if it is necessary, under what conditions); 
-2) form of visualization of the object (list and/or card);
-3) participation of the object in integration (import or export from/to another system);
-4) saving the history of changes (when and what to save);
-5) transfer of records to the archive (who transfers them, under what conditions);
-6) other operations (calculations, checks);
-7) operations that cause changes in other parts of the system (sending SMS or other messages, changing the status of another object, logging);
-8) operations with other objects that change something in ours.
+|                      | С Создание |     | R Чтение |     | U Редактирование |     | D Удаление |     |
+|----------------------|------------|-----|----------|-----|------------------|-----|------------|-----|
+|                      | Роль       | UC  | Роль     | UC  | Роль             | UC  | Роль       | UC  |
+| Клиенты              |            |     |          |     |                  |     |            |     |
+| Сотрудники           |            |     |          |     |                  |     |            |     |
+| Роли   сотрудника    |            |     |          |     |                  |     |            |     |
+| Услуги               |            |     |          |     |                  |     |            |     |
+| Услуги   мастера     |            |     |          |     |                  |     |            |     |
+| Слоты   обслуживания |            |     |          |     |                  |     |            |     |
 
-Use the following table to make sure that all operations with objects are described:
+Если нет роли, которая получает информацию (читает), то проверь: возможно, этот объект лишний.
 
-|                 | CREATE |      | READ |      | UPDATE |      | DELETE |      |
-| --------------- | ------ | ---- | ---- | ---- | ------ | ---- | ------ | ---- |
-|                 | Role   | UC   | Role | UC   | Role   | UC   | Role   | UC   |
-| Clients         |        |      |      |      |        |      |        |      |
-| Employees       |        |      |      |      |        |      |        |      |
-| Employee Roles  |        |      |      |      |        |      |        |      |
-| Services        |        |      |      |      |        |      |        |      |
-| Master Services |        |      |      |      |        |      |        |      |
-| Service Slots   |        |      |      |      |        |      |        |      |
+Эту же таблицу можно продолжить на другие действия над объектами:
 
-If there is no role that receives information (reads), then check, maybe this object is unnecessary.
+1. форму визуализации сущности (список и/или карточка),
+2. подтверждение выполнения,
+3. откат операции,
+4. сортировка,
+5. фильтр,
+6. поиск,
+7. логирование операций,
+8. отправка сообщений.
 
-The same table can be continued for other actions with objects:
+Дополнительные параметры по этим операциям смотри в докладе Ю. Куприянова «[Требования не меняются, это вы их недовыявили. 10 техник проверки полноты требований](https://conf.uml2.ru/class/trebovaniya-ne-menyayutsya-eto-vy-ikh-nedovyyavili--10-tekhnik-proverki-polnoty-trebovanii.html)», ЛАФ, 2018 г.
 
-1. form of visualization of the entity (list and/or card),
-2. confirmation of execution,
-3. rollback of the operation,
-4. sorting,
-5. filter,
-6. search,
-7. logging of operations,
-8. sending messages.
+### 2. Особенности операций <div id="22"></div>
 
-For additional parameters on these operations, see the Y. Kupriyanov's speech "[Requirements don't change, you're the one who failed to identify them. 10 techniques for checking the completeness of requirements](https://conf.uml2.ru/class/trebovaniya-ne-menyayutsya-eto-vy-ikh-nedovyyavili--10-tekhnik-proverki-polnoty-trebovanii.html)", ЛАФ, 2018 г.  
+**Удаление, редактирование**
 
-### 2. Specifics of Operations <div id="22"></div>
+Следует осторожно относиться к операции удаления/редактирования записи. В некоторых случаях удаление записи в одном объекте может привести к некорректности в других объектах. Например, если мастер уволился, то что делать с экземплярами объектов «Сотрудник», «Услуги мастера»? Можно ли их удалить? Какие изменения должны случиться с экземпляром объекта «Слот обслуживания»? В случае замены мастера в расписании — что делать с записью клиента, уже записавшегося к нужному ему мастеру? Подобные вопросы следует рассмотреть, в первую очередь, с точки зрения бизнеса и поведения пользователей, определить, какие изменения должны произойти в сущности в предметном мире. При необходимости — внести изменения в схемы бизнес-процессов, US и UC. И после этого уточнить операции над объектом. Чтобы разобраться с проблемой — изучи тему о каскадном удалении/редактировании в реляционной БД https://habr.com/ru/post/194738/.
 
-**Deletion, editing**
+**Использование справочников**
 
-You should be careful with the deleting/editing of a record. In some cases, deleting a record in one object can cause errors in other objects. For example, if a master has resigned, what should happen to the instances of the Employee and Master Services objects? Can they be deleted? What changes should be made to the instance of the Service Slot object? In case of replacing the master in the schedule — what to do with the record of the client who has already registered with the required master? Such questions should be considered, first of all, from the point of view of business and user behavior to determine what changes should occur in the entity in the subject world. If necessary — make changes in business process diagrams, US and UC. And then clarify the operations on the entity. To understand the problem — study cascading delete / edit in relational database https://habr.com/ru/post/194738/.
+Есть важный нюанс использования справочников. Иногда записи справочника становятся неактуальными, но их всё равно нельзя удалять. Как в примере выше — мастер уволился, и на него больше нельзя назначать услугу. Если удалить запись о нем из справочника «Сотрудник», то потеряем информацию об оказанных ранее услугах этим мастером. Чтобы не потерять информацию, применяют один из двух приемов или их комбинацию:
 
-**Use of References**.
+1. Добавляем в справочник признак «Архив», который показывает, что эту запись справочника нельзя использовать для назначения услуг или выбора мастера в будущем, и действует только на уже назначенные услуги.
+2. Указываем дату начала и окончания актуальности записи. Именно в этот период можно использовать запись для указания в услугах.
 
-There is an important nuance to using references. Sometimes reference records become irrelevant, but they still cannot be deleted. As in the example above, a master has left his job and can no longer be assigned a service. If you delete the record about him from the employee reference, you will lose the information about the services previously performed by this master. In order not to lose this information, one of the two methods or a combination of them is used:
+Если этих атрибутов (архив или даты начала и окончания актуальности записи) нет в сущности справочника, то их следует добавить в зависимости от выбранного варианта реализации.
 
-1. Add the Archive feature to the references, which indicates that this reference record cannot be used for assigning services or selecting a master in the future, and is valid only for the services already assigned.
-2. Specify the start and end date of the record's relevancy. This is the period during which the record can be used for assigning services.
+Как же не пропустить такие случаи, когда следует рассмотреть неявные случаи? Как минимум — в случае наличия связи с другой сущностью с помощью внешнего ключа.
 
-If these attributes (archive or start and end date of record relevance) are not present in the reference entity, they should be added depending on the chosen implementation option.
+### 3. Разбор примера <div id="23"></div>
 
-So how do we not miss those cases where implicit cases should be considered? At least — when there is a relationship with another entity using a foreign key.
+Рассмотрим пример увольнения мастера. Расписание его работы давно внесено в «Слот обслуживания». К нему уже записаны клиенты.
 
-### 3. Example Analysis <div id="23"></div>
+Поскольку мастер увольняется, он не сможет уже оказывать услуги. Т. е. из объекта «Услуги мастера» и объекта «Слот обслуживания» должны быть удалены соответствующие этому мастеру записи (или отмечены как недействующие). Но в объекте «Слот обслуживания» уже существуют записи клиентов на определенное время к увольняющемуся мастеру. Удаление записей мастера приведет к потере визита клиента, записанного на определенное время. Т. е. перед тем как удалить запись мастера из объекта «Сотрудник» (или пометить как уволенный), нам нужно связаться с клиентом и обсудить перенос оказания услуги на другого мастера и/или другое время. Или заменить в слоте указание мастера (заменить мастера в расписании) и направить клиенту сообщение о замене мастера.
 
-Let's look at the example of a master leaving. His work schedule has been entered in the Service Slot for a long time. Clients have already been registered to him.
+Все указанные выше действия должны быть добавлены в UC и, если есть потребность, добавлены атрибуты в соответствующие классы БД. Например, дату увольнения в объект «Сотрудник» или характеристики атрибутов, обязательность атрибута ID мастера в объекте «Слот обслуживания». 
 
-Since the master is retiring, it can no longer provide services. That is, the records corresponding to this master should be deleted (or marked inactive) from the master's Services object and the Service Slot object. However, the Service Slot object already contains records of clients who have been with the retiring master for some time. Deleting the master's records will result in the loss of the client visit recorded for some time. This means that before deleting a master record from the Employee object (or marking it as quit), we need to contact the client and discuss rescheduling the service to another master and/or another time. Or, replace the master's designation in the slot (replace the master in the schedule) and send a message to the client about replacing the master.
+### 4. Роли, ролевая модель, права доступа <div id="24"></div>
 
-All of the above actions should be added to UC and, if necessary, attributes should be added to the corresponding database classes. For example, the date of resignation in the Employee object or attribute characteristics, mandatory attribute ID of the master in the Service Slot object.
+Список ролей пользователей, взаимодействующих с системой, был разработан тобой в луковичной и контекстной диаграммах и собран в проекте BSA02. Возможно, в дальнейшем при разработке диаграмм, US или UC что-то изменилось, были добавлены, удалены или переименованы роли. Поэтому следует проверить и при необходимости актуализировать роли, указать действия ролей над объектами системы. Таблица ниже (показана в усеченном виде) содержит описание прав доступа ролей к объектам в соответствии с функциями. Например, если в функции роли входит создание, чтение и корректировка справочника, то роль должна обладать правом создания экземпляра объекта, чтения и его корректировки. Пример указания прав доступа пользователя в роли «Клиент» к объекту «Клиенты» приведен в таблице ниже.
 
-### 4. Roles, Role Model, Access Rights <div id="24"></div>
+|     Объекты    |                           |     Роли                                                                   |                 |               |              |
+|----------------|---------------------------|----------------------------------------------------------------------------|-----------------|---------------|--------------|
+|                |                           |     Клиент                                                                 |     Менеджер    |     Мастер    |     Админ    |
+|     Клиенты    |     С (создание)          |     только личная запись                                                   |                 |               |              |
+|                |     R (чтение)            |     только личная запись                                                   |                 |               |              |
+|                |     U (редактирование)    |     только личная запись                                                   |                 |               |              |
+|                |     D (удаление)          |     Только личная запись и если нет и не было записей на   обслуживание    |                 |               |              |
 
-The list of user roles that interact with the system was developed by you in the onion and context diagrams and created in the BSA02 project. It is possible that during the development of the diagrams, US or UC, something has changed, roles have been added, deleted or renamed. Therefore, you should check and update the roles if necessary, and specify the actions of the roles through the system objects. The following table (short version) describes the access rights of roles to objects according to their functions. For example, if the role functions include creating, reading, and correcting references, the role should have the right to create, read, and correct an object instance. An example of specifying the access rights of a user in the Client role to the Clients object is shown in the table below. 
+### 5. Жизненный цикл сущности <div id="25"></div>
 
-| Objects |            | Roles                                                        |         |        |       |
-| ------- | ---------- | ------------------------------------------------------------ | ------- | ------ | ----- |
-|         |            | client                                                       | Manager | Master | Admin |
-| Clients | С (CREATE) | record only in person                                        |         |        |       |
-|         | R (READ)   | record only in person                                        |         |        |       |
-|         | U (UPDATE) | record only in person                                        |         |        |       |
-|         | D (DELETE) | record only in person and if there are no service appointments |         |        |       |
+Некоторые объекты системы проходят сложный жизненный путь в одном или нескольких бизнес-процессах. Для удобства работы с такими объектами применяют понятие жизненного цикла. Каждый экземпляр этого объекта проходит ряд состояний, от создания до завершения, через развитие, зрелость, упадок. Названия этим состояниям (статусам) обычно присваивают в терминах предметной области. Формат описания статусной модели может быть как диаграммой перехода состояний, так и в табличном виде (К. Вигерс, «Разработка требований к ПО», изд. 3, глава 12). В производственных регламентах встречается описание текстом.
 
-### 5. Life Cycle of an Entity <div id="25"></div>
+Диаграмма обладает тем преимуществом, что легче визуально просмотреть, увидеть неточности. Но не всегда на диаграмме удобно указать всё, что требуется для разработки. Поэтому при необходимости описывают дополнительно. Важно, чтобы разработчикам было понятно:
 
-Some system objects have a complex life cycle in one or more business processes. To make it easier to work with such objects, the concept of life cycle is used. Each instance of this object passes through a number of states, from creation to completion, through development, maturity, and retirement. The names of these states (statuses) are usually assigned in terms of the domain. The format of the status model description can be either a state transition diagram or a table (K. Wiegers, "Software Requirements" 3rd edition, chapter 12). A textual description is found in production rules. 
+1. исходное состояние;
+2. кто инициатор/исполнитель;
+3. какие действия выполняются;
+4. есть ли условия, нужны ли проверки;
+5. в какое состояние переходит (при каких условиях).
 
-A diagram has the advantage of being easier to visualize and to detect inaccuracies. However, it is not always convenient to specify everything needed for development on the diagram. Therefore, if necessary, they are described additionally. This is important for developers to understand:
+### 6. Проверки <div id="26"></div>
 
-1. the initial state;
-2. who the initiator/executor is;
-3. what actions are being performed;
-4. if there are conditions, if checks are required; 
-5. what state is being transitioned to (under what conditions).
+Часто в бизнес-процессе присутствуют проверки. Они могут потребоваться при вводе данных (в ручном режиме или при импорте), перед передачей в другую систему, при изменении в другом объекте. Проверки могут быть указаны как в описании бизнес-процесса, так и в UC или могут быть выявлены аналитиком отдельно. Описание проверок должно содержать:
 
-### 6. Checks <div id="26"></div>
+1. операцию и привязку к ней (перед или после), которой выполняется проверка;
+2. проверяемый атрибут или комбинация атрибутов;
+3. описание проверки;
+4. критичность;
+5. сообщение об ошибке, куда вывести;
+6. что следует сделать (прекратить обработку, продолжить проверку, сформировать и записать сообщение об ошибке, изменить статус записи и пр.).
 
-Checks are often needed in a business process. They may be required when data is entered (manually or imported), before transferring to another system, or when changes are made in another object. The checks can be specified both in the business process description and in the UC or can be identified separately by the analyst. The description of checks should contain:
+## Глава IV <div id="chapter-iv"></div>
 
-1. the operation and its relationship (before or after) which the check is performed;
-2. the attribute or combination of attributes to be checked;
-3. a description of the check;
-4. criticality;
-5. error message, where to output;
-6. what should be done (stop processing, continue checking, generate and record an error message, change the record status, etc.).
+### Описание задач
 
-## Chapter IV <div id="chapter-iv"></div>
+### Задача 1. Запись на стрижку <div id="31"></div>
 
-### Description of tasks
+Руководство сети барбершопов приняло решение о внедрении системы, обеспечивающей онлайн-запись на прием. Основная цель — развитие бизнеса путем расширения клиентской базы за счет возможности онлайн-записи, а также снижение трудозатрат сотрудников и уменьшение ручного труда за счет автоматического информирования клиентов по каналам связи.
 
-### Task 1. Haircut Appointment <div id="31"></div>
+Запись может осуществлять как зарегистрированный, так и незарегистрированный посетитель сайта. При записи можно выбрать услугу, мастера и время из свободных интервалов. Система должна обеспечивать автоматическую отправку напоминаний клиентам через выбранный клиентом канал связи (Telegram, WhatsApp, VK, СМС) по настроенному менеджером расписанию. После получения услуги система предлагает клиенту оценить услугу и написать предложения по улучшению работы.
 
-The management of the barbershop chain decided to implement a system that would allow online booking of appointments. The main goal is to develop the business by expanding the client base through the possibility of online registration, as well as to reduce the cost of employee labor and manual labor by automatically informing clients through communication channels.  
+Расписание мастеров и выполняемые каждым мастером услуги должен вводить менеджер, возможно, это будет не один человек. Он же отвечает за актуальность расписания и при необходимости корректирует его, осуществляет связь с клиентами в ручном режиме, проставляет отметку о выполнении услуги, начисляет и принимает оплату, передает данные об оплате в бухгалтерию. Также менеджер может получать отчеты о выполненных услугах и просматривать отзывы клиентов.
 
-Both registered and unregistered visitors can book an appointment on the website. When making an appointment, you can select the type of service: hairdressing or cosmetology, as well as the service itself, the master and the time from the available intervals. The system should provide automatic sending of reminders to clients through the communication channel chosen by the client (Telegram, WhatsApp, VK, SMS) according to the schedule set by the manager. After receiving a service, the system offers the client to evaluate the service and write suggestions on how to improve the work.
+Любой мастер имеет возможность посмотреть расписание и запись на свои услуги, отзывы клиентов.
 
-The schedule of masters and the services provided by each master should be entered by the manager, who may be more than one person. This person is also responsible for keeping the schedule up to date and adjusting it if necessary, communicating with clients manually, marking the service, charging and accepting payment, sending payment data to the accounting department. The manager can also receive reports on completed services and view client feedback.
+**Сокращения**
 
-Each master has the possibility to view the schedule and appointment for his services, client reviews. 
+**Слот**: период времени длительностью 1 час, указано начальное время.
 
+**UC01 Зарегистрироваться клиенту (саморегистрация)**
 
-**Terms**
+**Контекст использования:** Клиент регистрируется, чтобы записаться на обслуживание.
 
-**Slot**: 1 hour time period, initial time is indicated.
+**Область действия:** барбершоп, оказание услуг клиентам.
 
-**UC01 Register a client (self-registration)**
+**Уровень:** цель пользователя.
 
-**Use context:** Client registers to sign up for service.
+**Основное действующее лицо:** клиент.
 
-**Scope:** Barbershop, providing services.
+**Предусловия:** Клиент зашел на сайт.
 
-**Level:** User goal.
+**Основной сценарий:**
 
-**Main Actor:** Client.
+1. Клиент открывает страницу регистрации.
+2. Клиент вводит номер телефона и имя (отчество).
+3. Система подтверждает, что телефон не зарегистрирован в системе.
+4. Клиент вводит предпочитаемый пароль.
+5. Система сообщает уровень пароля (слабый, средний, высокий).
+6. Система регистрирует клиента, направляет СМС по телефону клиента о регистрации с указанием имени и логина.
 
-**Preconditions:** The client has entered the website.
+**Альтернативный сценарий:**
 
-**Main scenario:**
+1. Введенный номер телефона зарегистрирован в системе:
+   1. Система сообщает, что такой номер телефона зарегистрирован в системе.
+   2. Клиент вводит другой номер телефона (2.) или отказывается от регистрации.
 
-1. The client opens the registration page.
-2. The client enters the phone number and name (patronymic).
-3. The system confirms that the phone is not registered in the system.
-4. The client enters the preferred password.
-5. The system informs the password level (weak, medium, high).
-6. The system registers the client, sends SMS to the client about registration with name and login.
+**UC04 Зарегистрировать клиента (менеджер)**
 
-**Alternative scenario:**
+**Контекст использования:** Менеджер, при общении с клиентом по телефону, регистрирует клиента, чтобы записать на обслуживание.
 
-1. The entered phone number is registered in the system:
-   1. The system reports that such a phone number is registered in the system.
-   2. The client enters another phone number (2.) or refuses to register.
+**Область действия:** барбершоп, оказание услуг клиентам.
 
-**UC02 Create master schedule**
+**Уровень:** цель пользователя.
 
-**Use context:** Manager creates a master schedule in the form of slots for clients to select.
+**Основное действующее лицо:** менеджер.
 
-**Scope:** barbershop, providing services to clients.
+**Предусловия:** Клиент позвонил менеджеру. Менеджер зашел на сайт барбершопа.
 
-**Level:** User goal.
+**Основной сценарий:**
 
-**Main actor:** manager.
+1. Менеджер открывает страницу регистрации клиента.
+2. Менеджер вводит номер телефона и имя, которое клиент сообщил по телефону.
+3. Система подтверждает, что телефон не зарегистрирован в системе.
+4. Система регистрирует клиента, генерирует временный пароль, направляет СМС по телефону клиента о регистрации с указанием имени, логина, временного пароля.
 
-**Prerequisites:** The manager received a schedule of masters. The manager accessed the website.
+**Альтернативный сценарий:**
 
-**Main scenario:**
+1. Введенный телефон зарегистрирован в системе:
+   1. Система сообщает, что такой номер телефона зарегистрирован в системе.
+   2. Клиент вводит другой номер телефона (2.) или отказывается от регистрации.
 
-1. Manager opens the page for entering master slots.
-2. The manager selects a date and a slot (a time period of 1 hour, the start time is indicated), selects a master from the Employees entity, to which the Master role is indicated in the Employee Role entity.
-3. The system confirms that the selected slot is not booked in the system by the client.
-4. The manager confirms that the time is reserved for the master.
-5. The system assigns the slot: date, time, master.
 
-**Alternative scenario:**
+**UC02 Сформировать расписание мастера**
 
-1. The selected slot is booked in the system by the client:
-   1. The system reports that the selected slot is booked in the system by the client. 
-   2. The manager contacts the client by phone and arranges to reschedule the visit to another time or to another master, enters the information into the system. 
-   3. The system sends an SMS to the client about the change of time and/or master of the visit.
+**Контекст использования:** менеджер создает расписание работы мастера в виде слотов для выбора клиентами.
 
-**UC03 Book a slot**
+**Область действия:** барбершоп, оказание услуг клиентам.
 
-**Use context:** Client wants to book a barbershop visit.
+**Уровень:** цель пользователя.
 
-**Scope:** barbershop, providing services to clients.
+**Основное действующее лицо:** менеджер.
 
-**Level:** User goal.
+**Предусловия:** Менеджер получил график работы мастеров. Менеджер зашел на сайт.
 
-**Main actor:** client.
+**Основной сценарий:**
 
-**Preconditions:** The client has logged into the website.
+1. Менеджер открывает страницу ввода слотов мастеров на обслуживание.
+2. Менеджер выбирает дату и слот (период времени длительностью 1 час, указано начальное время), выбирает мастера из сущности «Сотрудники», которым указана роль «Мастер» в сущности «Роль сотрудника».
+3. Система подтверждает, что выбранный слот не забронирован в системе клиентом.
+4. Менеджер подтверждает закрепление времени за мастером.
+5. Система закрепляет слот: дата, время, мастер.
 
-**Main scenario:**
+**Альтернативный сценарий:**
 
-1. The client opens the slot selection page.
-2. The system generates a list of free slots.
-3. The client selects a time service slot (date, time) from the free slots.
-4. The system generates a list of services that can be selected.
-5. The client selects a service from the selectable ones.
-6. The system generates a list of masters allowed for selection.
-7. The client selects a master from the selectable ones.
-8. The system confirms that the selected slot is not booked in the system by another client.
-9. The client confirms the slot reservation.
-10. The system assigns the slot: date, time, master, service.
-11. The system sends a sms to the client about service booking to the phone number specified during registration.
+1. Выбранный слот забронирован в системе клиентом:
+   1. Система сообщает, что выбранный слот забронирован в системе клиентом.
+   2. Менеджер связывается по телефону с клиентом и договаривается о переносе визита на другое время или к другому мастеру, вносит информацию в систему.
+   3. Система направляет СМС по телефону клиента об изменении времени и/или мастера визита.
 
-**Alternative scenarios:**
+**UC03 Забронировать слот на обслуживание**
 
-1. Selecting a slot by service:
-   1. The client selects a service from the list of services provided by the masters from the Employee Role entity.
-   2. The client selects a free service slot by master.
-   3. The system shows the free slots in the master's schedule.
-   4. The client can view the schedule.
-   5. Client selects a slot from the free slots.
-   6. The system sends an SMS to the client's phone number about the slot reservation.
+**Контекст использования:** клиент хочет забронировать визит в барбершоп для получения услуги.
 
-## Chapter V <div id="chapter-v"></div>
+**Область действия:** барбершоп, оказание услуг клиентам.
 
-### Exercise 00 — Identifying Objects that have a Status Model <div id="41"></div>
+**Уровень:** цель пользователя.
 
-For Task 1, identify entities that require a life cycle description.
+**Основное действующее лицо:** клиент.
 
-1. Identify entities that change their state during the course of working with the system.
-2. Identify entities that depend on their state to work with the system. 
-3. Identify entities for which it makes sense to monitor life cycle stages.
-4. Provide a rationale for each entity for which you plan to monitor the lifecycle.
-5. Add a Status attribute to each entity, and update the entity attribute description.
-6. Present the result in a tabular format.
+**Предусловия:** Клиент зашел на сайт.
 
-### Exercise 01 — Life Cycle of the Service Slots <div id="42"></div>
+**Основной сценарий:**
 
-For Task 1, develop a status model of the Service Slots object.
+1. Клиент открывает страницу выбора слотов.
+2. Система формирует список свободных слотов.
+3. Клиент выбирает слот обслуживания по времени (дата, время) из свободных.
+4. Система формирует список допустимых к выбору услуг.
+5. Клиент выбирает услугу из допустимых к выбору.
+6. Система формирует список мастеров, допустимых к выбору.
+7. Клиент выбирает мастера из допустимых к выбору.
+8. Система подтверждает, что выбранный слот не забронирован в системе другим клиентом.
+9. Клиент подтверждает бронирование слота.
+10. Система закрепляет слот: дата, время, мастер, услуга.
+11. Система направляет клиенту СМС о бронировании услуги по номеру телефона, указанному при регистрации.
 
-1. Define object states from creation to service fulfillment according to UCs. 
-2. Form the names of the object statuses with verbal nouns or participles.
-3. Provide the state of canceling the service at the initiative of the client.
-4. Provide the state of not providing the service at the initiative of the barbershop.
-5. Verify that UCs have client-initiated canceling and barbershop-initiated failure to provide service. 
-6. Refine UCs in terms of specifying the change of object status, place it in the task.
-7. Develop a diagram of the states of the object Service Slot.
-8. Specify on the diagram the executor, actions to be performed and conditions when changing the status of the object.
-9. Place the diagram in the task. 
+**Альтернативные сценарии:**
 
-### Exercise 02 — Status Models of Entities <div id="43"></div>
+1. Выбор слота по услуге:
+   1. Клиент выбирает услугу из списка услуг, которые оказывают мастера из сущности Роли сотрудника.
+   2. Клиент выбирает свободный слот обслуживания по мастеру.
+   3. Система показывает свободные слоты в расписании мастера.
+   4. Клиент может посмотреть расписание.
+   5. Клиент выбирает слот из свободных.
+   6. Система направляет СМС по телефону клиента о бронировании слота.
 
-For Task 1, develop status models for the objects defined in Ex.00, except for the Service Slots object.
+## Глава V <div id="chapter-v"></div>
+### Упражнение 00 — Выделение объектов, имеющих статусную модель <div id="41"></div>
 
-1. Define the statuses during the life cycle.
-2. For each status, specify:
-   1. name (verbal noun or participle);
-   2. initial state / status;
-   3. initiator / executor / initiating event;
-   4. what actions are being performed;
-   5. whether there are conditions, whether checks are needed; 
-   6. what state is transitioned to (under what conditions).
-3. Specify the beginning and end of the lifecycle.
-4. Present in tabular form, possibly with additional description.
+Для задачи 1 выяви сущности, требующие описания жизненного цикла.
 
-### Exercise 03 — Description of Actions on References <div id="44"></div>
+1. Укажи сущности, изменяющие свое состояние в течение работы с системой.
+2. Выяви сущности, работа с которыми зависит от их состояния.
+3. Определи сущности, для которых имеет смысл контролировать этапы жизненного цикла.
+4. Предоставь обоснование для каждой сущности, по которой планируешь отслеживать жизненный цикл.
+5. Добавь в каждую сущность атрибут «Статус», актуализируй описание атрибутов сущности.
+6. Результат представь в табличном виде.
 
-Describe the functionality of the references of Task 1:
+### Упражнение 01 — Жизненный цикл объекта «Слоты обслуживания» <div id="42"></div>
 
-1) Clients,
-2) Employees,
-3) Employee Roles,
-4) Services,
-5) Master Services.
+Для задачи 1 разработай статусную модель объекта «Слоты обслуживания».
 
-1. For each reference and action, specify:
-   1) The role performing the action;
-   2) The UC where the action is described.
-   3) Actions on the references:
-      1) creating records;
-      2) reading records;
-      3) updating records;
-      4) deleting records.
-   4) For each references/operation, specify:
-      1) execution conditions;
-      2) whether rejection is possible, under what conditions;
-      3) whether confirmation is required;
-      4) generating changes in other parts of the system;
-      5) logging (if required) and what to log;
-      6) notification (to whom and how, if required).
+1. Определи состояния объекта от создания до выполнения услуги в соответствии с UC-ами.
+2. Сформируй названия статусов объекта раскрывающими смысл отглагольными существительными или причастиями.
+3. Предусмотри состояние отказа от услуги по инициативе клиента.
+4. Предусмотри состояние непредоставления услуги по инициативе барбершопа.
+5. Проверь наличие в UC-ах отказа от услуги по инициативе клиента и непредоставление услуги по инициативе барбершопа.
+6. Доработай UC-ы, в части указания смены статуса объекта, размести в задании.
+7. Разработай диаграмму состояний объекта «Слот обслуживания».
+8. На диаграмме укажи исполнителя, выполняемые действия и условия при изменении статуса объекта.
+9. Размести диаграмму в задании.
 
-### Exercise 04 — CRUD Operations on the Service Slots Object <div id="45"></div>
+### Упражнение 02 — Статусные модели сущностей <div id="43"></div>
 
-For Task 1, define the basic actions on the Service Slots object.
+Для задачи 1 разработай статусные модели объектов, определенных в Ex.00, кроме объекта «Слоты обслуживания».
 
-1. Specify the roles in the section of CRUD actions on the object.
-2. Verify the existence of CRUD actions in UC by role. 
-3. If necessary:
-   1. supplement/clarify the UC;
-   2. place UC in the task;
-   3. color-code the addition/clarification.
-4. Indicate the UCs in which the relevant actions are described.
-5. Place in tabular form (see section 4 above).
+1. Определи статусы в течение жизненного цикла.
+2. Для каждого статуса укажи:
+   1. название (отглагольное существительное или причастие);
+   2. исходное состояние/статус;
+   3. инициатор / исполнитель / инициирующее событие;
+   4. какие действия выполняются;
+   5. есть ли условия, нужны ли проверки;
+   6. в какое состояние переходит (при каких условиях).
+3. Укажи начало и завершение жизненного цикла.
+4. Представь в табличном виде, допустимо с дополнительным описанием.
 
-### Exercise 05 — Detailed Operations on the Service Slot Object <div id="46"></div>
+### Упражнение 03 — Описание действий над справочниками <div id="44"></div>
 
-For Task 1, define additional actions on system objects.
+Опиши функциональность справочников задачи 1:
 
-Continue the table of CRUD actions on objects, specify:
+1) Клиенты;
+2) Сотрудники;
+3) Роли сотрудника;
+4) Услуги;
+5) Услуги мастера.
 
-1. form of entity visualization (list and/or card);
-2. confirmation of execution;
-3. rollback of the operation; 
-4. sort;
-5. filter;
-6. search;
-7. logging of operations;
-8. sending messages.
-9. Place in tabular form similar to the table of CRUD actions on objects.
+1. Для каждого справочника и действия укажи:
+   1) Роль, выполняющая действие;
+   2) UC, где описано действие.
+   3) Действия над справочником:
+      1) создания записей;
+      2) чтение записей;
+      3) редактирование записей;
+      4) удаление записей.
+   4) Для каждого справочника/операции укажи:
+      1) условия выполнения;
+      2) возможен ли отказ, при каких условиях;
+      3) нужно ли подтверждение;
+      4) порождающие изменения в других частях системы;
+      5) журналирование (если требуется) и что журналировать;
+      6) извещение (кого и как, если требуется).
 
-### Exercise 06 — Role Access Rights <div id="47"></div>
+### Упражнение 04 — Действия CRUD над объектом «Слоты обслуживания» <div id="45"></div>
 
-For Task 1, describe the access rights of roles to objects.
+Для задачи 1 определи основные действия над объектом «Слоты обслуживания».
 
-1. Define access rights to objects:
-   1. Clients,
-   2. Employees,
-   3. Roles of the employee,
-   4. Services,
-   5. The services of the foreman,
-   6. Service slot.
-2. Define access rights for each role:
-   1. Manager,
-   2. Master,
-   3. Client,
-   4. Administrator.
-3. Describe the access rights of CRUD operations.
-4. Specify access conditions for each role to each object.
-5. Specify what changes must be made to other parts of the system.
-6. Determine and specify whether notification of the operation is required, who to notify, how to notify.
-7. Determine and specify whether operation logging is required, what parameters to log.
-8. Provide for denial of access to operations to eliminate uncertainties.
-9. Provide deletion operation only for the role of Administrator and for absent during the year service records for the master, service, client. 
-10. Place in tabular form. 
+1. Укажи роли в разрезе действий CRUD над объектом.
+2. Проверь наличие действий CRUD в UC в разрезе ролей.
+3. При необходимости:
+   1. дополни/уточни UC;
+   2. размести UC в задании;
+   3. цветом выдели дополнение/уточнение.
+4. Укажи UC, в которых описаны соответствующие действия.
+5. Размести в табличном виде (см.раздел 4 выше).
+
+### Упражнение 05 — Детализация действий над объектом Слоты обслуживания <div id="46"></div>
+
+Для задачи 1 определи дополнительные действия над объектами системы.
+
+Продолжи таблицу действий CRUD над объектами, укажи:
+
+1. форму визуализации сущности (список и/или карточка);
+2. подтверждение выполнения;
+3. откат операции;
+4. сортировка;
+5. фильтр;
+6. поиск;
+7. логирование операций;
+8. отправка сообщений.
+9. Размести в табличном виде аналогично таблице действий CRUD над объектами.
+
+### Упражнение 06 — Права доступа ролей <div id="47"></div>
+
+Для задачи 1 опиши права доступа ролей к объектам.
+
+1. Определи права доступа к объектам:
+   1. Клиенты,
+   2. Сотрудники,
+   3. Роли сотрудника,
+   4. Услуги,
+   5. Услуги мастера,
+   6. Слот обслуживания.
+2. Определи права доступа для каждой роли:
+   1. Менеджер,
+   2. Мастер,
+   3. Клиент,
+   4. Администратор.
+3. Опиши права доступа по операциям CRUD.
+4. Укажи условия доступа для каждой роли к каждому объекту.
+5. Укажи, какие изменения должны быть выполнены в других частях системы.
+6. Определи и укажи, требуется ли извещение об операции, кого извещать, как извещать.
+7. Определи и укажи, требуется ли журналирование операции, какие параметры журналировать.
+8. Предусмотри запрет доступа к операциям для исключения неопределенностей.
+9. Предусмотри операцию удаления только для роли Администратор и для отсутствующих в течение года записей на услугу для мастера, услуги, клиента.
+10. Размести в табличном виде.

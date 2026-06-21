@@ -1,284 +1,279 @@
-# Ways to Elicite Requirements
+# Способы выявления требований
 
-Summary:
-In this project, you will learn the ways to elicit requirements and which of them to use in which cases. By applying different methods, you will elicit business requirements, build a functional role model, and learn how to document requirements.
+Резюме:
+В этом проекте ты узнаешь, как выявлять требования и какие из них предпочтительнее применять в каких случаях. Применив несколько способов определения требований, ты выявишь бизнес-требования и построишь функционально-ролевую модель, а также научишься документировать требования.
 
-💡 [Tap here](https://new.oprosso.net/p/4cb31ec3f47a4596bc758ea1861fb624) **to leave your feedback on the project**. It's anonymous and will help our team make your educational experience better. We recommend completing the survey immediately after the project.
+💡 [Нажми сюда](https://new.oprosso.net/p/4cb31ec3f47a4596bc758ea1861fb624), **чтобы поделиться с нами обратной связью на этот проект**. Это анонимно и поможет нашей команде сделать обучение лучше. Рекомендуем заполнить опрос сразу после выполнения проекта.
 
-## Contents
+## Содержание
 
-1. [Chapter I](#chapter-i) \
-   1.1. [Preamble](#11)
-2. [Chapter II](#chapter-ii) \
-   2.1. [General Rules](#21)
-3. [Chapter III](#chapter-iii) \
-   3.1. [Ways to Elicite Requirements](#31) \
-   3.2. [Interview, Survey, Role Play](#32) \
-   3.3. [Brainstorming, Workshop](#33) \
-   3.4. [How to Describe Business Requirements](#34) \
-   3.5. [Project Roles and Their Functions](#35)
-4. [Chapter IV](#chapter-iv) \
-   4.1. [Task 1. Haircut Appointment](#41) \
-   4.2. [Task 2. Delivery of Orders](#42)
-5. [Chapter V](#chapter-v) \
-   5.1. [Exercise 00 — Role-playing Game](#51) \
-   5.2. [Exercise 01 — Brainstorming](#52) \
-   5.3. [Exercise 02 — Workshop](#53) \
-   5.4. [Exercise 03 — Vision](#54)
+1. [Глава I](#chapter-i) \
+    1.1. [Введение](#11)
+2. [Глава II](#chapter-ii) \
+    2.1. [Общие правила](#21)
+3. [Глава III](#chapter-iii) \
+    3.1. [Способы выявления требований](#31) \
+    3.2. [Интервью, опрос, ролевая игра](#32) \
+    3.3. [Мозговой штурм, семинар](#33) \
+    3.4. [Как описать бизнес-требования](#34) \
+    3.5. [Роли проекта и их функции](#35)
+4. [Глава IV](#chapter-iv) \
+    4.1. [Задача 1. Запись на стрижку](#41) \
+    4.2. [Задача 2. Доставка заказов](#42)
+5. [Глава V](#chapter-v) \
+    5.1. [Упражнение 00 — Ролевая игра](#51) \
+    5.2. [Упражнение 01 — Проведение мозгового штурма](#52) \
+    5.3. [Упражнение 02 — Семинар](#53) \
+    5.4. [Упражнение 03 — Видение](#54)
 
-## Chapter I <div id="chapter-i"></div>
+## Глава I <div id="chapter-i"></div>
 
 ![](misc/images/Illustration_03.jpg)
 
-### Preamble <div id="11"></div>
+### Введение <div id="11"></div>
 
-Nowhere are the interests of all project stakeholders more closely tied to the success of a project than at the requirements elicitation stage. Misunderstood, inconsistent, or incomplete requirements elicitation results in further significant changes to what has already been developed.  Here are the reasons why increased attention should be paid to requirements elicitation:
+Успех проекта и интересы всех заинтересованных сторон проекта нигде так тесно не связаны, как на стадии сбора требований. Непонимание, противоречивое или неполное выявление требований влечет в дальнейшем значительные изменения уже разработанного.  Вот причины, по которым следует уделить усиленное внимание сбору требований:
 
-- The customer knows what they want, but can't put it into words;
-- The customer thinks he knows how to solve the problem (he brings the solution);
-- The contractor thinks he knows better than the customer.
+- Заказчик знает, чего хочет, но не может сформулировать;
+- Заказчик думает, что знает, как решить проблему (сразу приносят решение);
+- Исполнитель считает, что знает лучше Заказчика.
 
-In this project, you will learn about requirements elicitation techniques and apply some of them to solve your tasks. 
+В этом проекте ты узнаешь о методах выявления требований и применишь некоторые из них для решения своих задач.
 
-This is a group project. When performing the project tasks, you should first work through all the tasks and then perform them in an integrated manner. The results of the tasks in the form of Business Requirements and Functional Role Model should be placed in a single document: BRD (Business Requirements Document).
+Текущий проект выполняется как групповая работа. При выполнении заданий проекта следует вначале проработать все задания и затем выполнять комплексно. Результаты заданий в виде бизнес-требований и функционально-ролевой модели следует разместить в едином документе. BRD (Business Requirements Document).
 
-**Literature:**
+**Литература:**
 
-1. Karl Wiegers, Joy Beatty, "Software Requirements" 3rd edition, chapter 1 and others. 
-2. BABOK v3 "A Guide to the Business Analysis Body of Knowledge" IIBA.
-3. Dean Leffingwell, Don Widrig "Managing Software Requirements", Part 1, Chapter 4.
-4. Kaner S., Lind L., Toldi K. "Facilitator's Guide: to Participatory Decision-Making".
-5. Ilya Kornipaev "Requirements for Software: Recommendations on Gathering and Documentation".
+1. Карл Вигерс, Джой Битти «Разработка требований к программному обеспечению» издание третье, глава 7.
+2. BABOK v3 «Руководство к своду знаний по бизнес-анализу» IIBA.
+3. Дин Леффингуэлл, Дон Уидриг «Принципы работы с требованиями к программному обеспечению».
+4. Кейнер С., Линд Л., Толди К. «Руководство фасилитатора: как привести группу к принятию совместного решения».
+5. Илья Корнипаев «Требования для программного обеспечения: рекомендации по сбору и документированию».
 
-## Chapter II <div id="chapter-ii"></div>
+## Глава II <div id="chapter-ii"></div>
 
-### General Rules <div id="21"></div>
+### Общие правила <div id="21"></div>
 
-1. Along the way, you may feel a sense of uncertainty and a severe lack of information: that's OK. Remember, the information in the repository and on Google is always with you. So are your peers and Rocket.Chat. Communicate. Search. Use common sense. Don't be afraid to make mistakes.
-2. Pay attention to sources of information. Check. Think. Analyse. Compare. 
-3. Look at the text of each assignment. Read it several times. 
-4. Read the examples carefully. There may be something in them that is not explicitly stated in the task itself.
-5. You may find inconsistencies where something new in the terms of the task or examples conflicts with something you already know. If you come across such an inconsistency, try to work it out. If not, write it down as an open question and find out as you work. Do not leave open questions unanswered. 
-6. If a task seems confusing or impossible, it only seems that way. Try to break it down. It is likely that some parts will become clear. 
-7. There will be several tasks. Those marked with an asterisk (\*) are for the more meticulous students. These tasks are more difficult and are not compulsory. But doing them will give you extra experience and knowledge.
-8. Don't try to fool the system or the people around you. You will fool yourself first.
-9. Got a question? Ask your neighbour to the right. If that doesn't help, ask your neighbour on the left.
-10. When you use help, you should always understand why and how. Otherwise the help is useless.
-11. Always push only to the develop branch! The master branch will be ignored. Work in the src directory.
-12. There should be no files in your directory other than those specified in the tasks.
+1. На протяжении всего курса тебя будет сопровождать чувство неопределенности и острого дефицита информации — это нормально. Не забывай, что информация в репозитории и Google всегда с тобой. Как и пиры, и Rocket.Chat. Общайся. Ищи. Опирайся на здравый смысл. Не бойся ошибиться.
+2. Будь внимателен к источникам информации. Проверяй. Думай. Анализируй. Сравнивай.
+3. Внимательно читай задания. Перечитай несколько раз.
+4. Читать примеры тоже лучше внимательно. В них может быть что-то, что не указано в явном виде в самом задании.
+5. Тебе могут встретиться несоответствия, когда что-то новое в условиях задачи или примере противоречит уже известному. Если встретилось такое — попробуй разобраться. Если не получилось — запиши вопрос в открытые вопросы и выясни в процессе работы. Не оставляй открытые вопросы неразрешенными.
+6. Если задание кажется непонятным или невыполнимым — так только кажется. Попробуй его декомпозировать. Скорее всего, отдельные части станут понятными.
+7. На пути тебе встретятся самые разные задания. Те, что помечены звездочкой (\*) — подходят для более дотошных. Они повышенной сложности и необязательны к выполнению. Но если ты их сделаешь, то получишь дополнительный опыт и знания.
+8. Не пытайся обмануть систему и окружающих. В первую очередь ты обманешь себя.
+9. Есть вопрос? Спроси своего соседа справа. Если это не помогло — соседа слева.
+10. Когда пользуешься помощью — всегда разбирайся до конца: почему, как и зачем. Иначе помощь не будет иметь смысла.
+11. Всегда делай push только в ветку develop! Ветка master будет проигнорирована. Работай в директории src.
+12. В твоей директории не должно быть иных файлов, кроме тех, что обозначены в заданиях.
 
-## Chapter III <div id="chapter-iii"></div>
+## Глава III <div id="chapter-iii"></div>
 
-### 1. Ways to Elicite Requirements <div id="31"></div>
+### 1. Способы выявления требований <div id="31"></div>
+Выявление требований — совместный с заинтересованными сторонами аналитический процесс.
 
-Requirements elicitation is a collaborative analytical process with stakeholders. 
+Требования следует:
 
-Requirements should be discovered:
+- обнаружить — не всегда тебе расскажут об их существовании: например, о требованиях законодательства про обязательные перерывы в расписании сотрудников;
+- собрать — зафиксировать, записать, чтобы не потерять;
+- установить — например, ограничение к расписанию мастеров: запись клиентов должна содержать время перерыва мастера на обед.
 
-- discovered — you will not always be told that they exist: for example, legal requirements for mandatory breaks in employee schedules;
-- gathered — fixed, written down so you don't lose them; 
-- fixed — for example, a constraint on the master's schedule: the client appointment must include the master's lunch break.
+К выявлению требований нужно готовиться:
 
-Requirements elicitation is something you need to prepare for: 
+- собрать информацию о заинтересованных сторонах и их проблемах (по возможности);
+- ознакомится с предметной областью, терминологией;
+- изучить, что известно о задаче и проблемах, которые хотят решить;
+- понять, с кем лучше взаимодействовать и какими методами.
 
-- Gather information about the stakeholders and their concerns (if possible).
-- Familiarize yourself with the domain and terminology.
-- Examine what is known about the task and the problems to be solved.
-- Understand who is best to engage and with what methods.
+Определив требования, нужно согласовать с заинтересованными сторонами.
 
-Once the requirements have been identified, they need to be agreed with the stakeholders.
+Выявление требований — пожалуй, наиболее сложная часть работы аналитика. После первой итерации, как правило, оказывается, что что-то непонятно и следует продолжить работу по выявлению требований. Если же передать требования, содержащие что-то непонятное или двусмысленное, разработчикам, потом обязательно приходится перерабатывать. Поэтому совершенно нормально, что выявление требований выполняется итерационно, циклично.
 
-Requirements elicitation is probably the most difficult part of the analyst's job. After the first iteration, it usually turns out that something is unclear and the elicitation work needs to continue. If you pass requirements that contain something unclear or ambiguous to the developers, you will have to rework them later. Therefore, it is perfectly normal for elicitation to be performed in an iterative, cyclical manner.
+Для более полного представления о выявлении требований рекомендуется прочитать главу 7 К. Вигерса (см. список литературы).
 
-For a more complete understanding of requirements elicitation, it is recommended that you read Chapter 7 by K. Wiegers (see Literature List).
+**Способы выявления требований**
 
-**Ways to Identify Requirements:**
+1. Анализ документации;
+2. Анализ контекста системы;
+3. Изучение подобных систем;
+4. Глоссарий;
+5. Интервью;
+6. Фокус-группы;
+7. Опрос;
+8. Семинар;
+9. Мозговой штурм;
+10. Прототипирование;
+11. Моделирование бизнес-процессов.
 
-1. Documentation analysis; 
-2. System Context Analysis;
-3. Study of such systems;
-4. Glossary;
-5. Interview;
-6. Focus Groups;
-7. Survey;
-8. Workshop;
-9. Brainstorming;
-10. Prototyping;
-11. Business Process Modeling.
+### 2. Интервью, опрос, ролевая игра <div id="32"></div>
+Один из самых применяемых методов выявления требований — интервью. Помимо этого, часто применяется опрос (анкетирование). В работе над проектом, в условиях P2P, будет применен метод — ролевая игра.
 
-### 2. Interview, Survey, Role Play <div id="32"></div>
+**Interview (интервью)** — техника выявления потребностей, болей, требований через непосредственное общение, задавание подходящих вопросов и документирования ответов.
 
-One of the most common methods of requirements elicitation is the interview. In addition, a survey (questionnaire) is often used. When working on the project in P2P conditions, the method of role-playing is used.
+**Survey/Questionnaire (опрос/анкетирование)** — техника выявления требований систематическим способом за короткое время. Группе респондентов задаются одинаковые вопросы (открытые или закрытые), и ответы анализируются.
 
-**Interview** is a technique to identify needs, pains, requirements through direct communication, asking appropriate questions and documenting answers.
+**Role-playing game (ролевая игра)** — техника, поощряющая участников к совместному достижению цели игры, например, пониманию проблем и возможностей, нахождению решения.
 
-**Survey/Questionnaire** is a technique for gathering requirements in a systematic way in a short time. A group of respondents is asked the same questions (open or closed) and the answers are analyzed.
+### 3. Мозговой штурм, семинар <div id="33"></div>
+**Brainstorming (мозговой штурм)** — эффективный способ решения проблем, применяется, когда решения нет совсем или имеющееся решение неоднозначно. Использует «коллективный разум», стимулирует творческую активность команды. Цель мозгового штурма — генерировать как можно больше идей и разными способами определить наилучшее решение.
 
-**Role-playing game** is a technique that encourages participants to work together to achieve the goal of the game, such as understanding problems and opportunities and finding a solution.
+**Seminar (семинар)** — мероприятие, применяемое группой для достижения выбранной цели и выработки согласия по этой цели. Например, выбор одного из сгенерированных ранее решений.
 
-### 3. Brainstorming, Workshop <div id="33"></div>
+### 4. Как описать бизнес-требования <div id="34"></div>
+Бизнес-требования — это высокоуровневая бизнес-цель организации или заказчиков системы. Бизнес-требования описывают основные преимущества, которые новая (или доработанная) система предоставит ее заказчикам, пользователям, организации и ее клиентам. Бизнес-требования определяют пользовательские требования и функции системы. При описании бизнес-требований следует отразить:
 
-**Brainstorming** is an effective way to solve problems when there is no solution or the existing solution is ambiguous. It uses "collective intelligence" and stimulates the creativity of the team. The goal of brainstorming is to generate as many ideas as possible and to find the best solution in different ways. 
+1. Проблему(-ы), для решения которой(-ых) создается или дорабатывается система;
+2. Окружение, предусловия, ситуация, в которой оказалась система или организация;
+3. Возможности, которые позволят решить проблемы с помощью нашей системы;
+4. Бизнес-цели системы — основные цели, ради выполнения которых строится система;
+5. В дополнение к бизнес-целям к описанию бизнес-требований может быть добавлено:
+   1. задачи, которые следует решить для выполнения бизнес-целей;
+   2. иерархия проблем и целей, реализующих основную бизнес-цель;
+   3. основные функции ключевых ролей системы;
+6. Границы системы. Очертить границы по бизнес-требованиям обычно очень сложно. Часто границы системы очерчивают по одному из перечисленного в п.5;
+7. Критерии, метрики, позволяющие измерить успех после реализации системы.
 
-**Workshop** is an activity used by a group to achieve a chosen goal and develop agreement on that goal. For example, choosing one of the previously generated solutions.
+Подробно про описание бизнес-целей описано в главе 5 книги К.Вигерса «Разработка требований к программному обеспечению». Документ, содержащий бизнес-требования, может называться по-разному: BRD (Business Requirements Document), Vision (Видение), Задание или даже Техническое задание к контракту. Обычно его название и содержание определяется организацией заказчика или исполнителя. В текущем проекте ты подготовишь основные разделы такого документа.
 
-### 4. How to Describe Business Requirements <div id="34"></div>
+### 5. Роли проекта и их функции <div id="35"></div>
+Ранее в проекте BSA 02 ты определил роли, их потребности и действия, выполняемые ими в проекте. Но это было твое понимание, твои гипотезы. В этом проекте в рамках ролевой игры следует уточнить у участников, играющих роли стейкхолдеров, насколько твоя точка зрения совпадает с мнением заинтересованных сторон. На мозговом штурме следует обсудить, подтвердить свои гипотезы или выявить другие функции пользователей системы и решение проблем заинтересованных сторон.
 
-A business requirement is a high-level business goal of an organization or system's customers. Business requirements describe the key benefits that a new (or upgraded) system will provide to its customers, users, the organization, and its customers. Business requirements define user requirements and system functionality. When describing the business requirements, you should describe:
+## Глава IV <div id="chapter-iv"></div>
 
-1. The problem(s) for which the system is being created or improved. 
-2. The environment, conditions, situation in which the system or organization finds itself.
-3. Opportunities that will solve problems with our system.
-4. Business goals of the system — the main goals for the fulfillment of which the system is built.
-5. In addition to  thebusiness goals, can be added:
-   1. the tasks that must be performed to achieve the business goals;  
-   2. the hierarchy of problems and objectives that realize the main business goal; 
-   3. the main functions of the system's key roles.
-6. System boundaries. It is usually very difficult to delineate boundaries by business requirements. Often the system boundaries are delineated by one of the things listed in item 5.
-7. Criteria, metrics for measuring success after system implementation.
+### Задача 1. Запись на стрижку <div id="41"></div>
 
-Details about the description of business goals are described in chapter 5 of K. Wiegers's book "Software Requirements". The Business Requirements Document can be called many different names: BRD (Business Requirements Document), Vision, Statement of Work, or even Contract Statement of Work. Usually its title and content is determined by the customer or contractor organization. In this project, you will prepare the main sections of such a document.
-
-### 5. Project Roles and Their Functions <div id="35"></div>
-
-Earlier, in the  BSA 02 project, you identified the roles, their needs, and the actions they perform in the project. But that was your understanding, your hypotheses. In this project, as part of the role play game, you should clarify with the participants playing the roles of the stakeholders to what extent your point of view coincides with the views of the stakeholders. In the brainstorming session, you should discuss, confirm your hypotheses or identify other roles of system users and solutions to stakeholder problems.
-
-## Chapter IV <div id="chapter-iv"></div>
-
-### Task 1. Haircut Appointment <div id="41"></div>
-
-The management of a chain of barbershops decided to implement an online booking system. The main objective is to develop the business by expanding the customer base through the possibility of online registration, as well as to reduce employee labour costs and manual labour by automatically informing customers through communication channels. 
-
-Both registered and unregistered visitors can book an appointment on the website. When making an appointment, they can select the type of service: hairdressing or cosmetology, as well as the service itself, the master and the time from the available intervals. The system should provide automatic sending of reminders to clients through the communication channel chosen by the client (Telegram, WhatsApp, VK, SMS) according to the schedule set by the manager. After receiving a service, the system offers the client to evaluate the service and write suggestions on how to improve the work.
-
-The schedule of masters and the services provided by each master should be entered by the manager, who may be more than one person. This person is also responsible for keeping the schedule up to date and adjusting it if necessary, communicating with customers manually, marking the service, charging and accepting payment, sending the payment data to the accounting department. The manager can also receive reports on completed services and view customer feedback.
-
-Each master has the ability to view the schedule and appointments for their services, as well as customer reviews.
-
-### Задача 2. Delivery of Orders <div id="42"></div>
-
-During the lockdown, many grocery stores and food companies dramatically increased their online sales and the need for quick delivery of small quantities to individual customers increased. 
-
-A group of students got together and decided to start a delivery service. The idea is to quickly receive information about orders, pickup location and time, delivery location, desired delivery dates, and distribute this information to couriers who will pick up the order at the pickup location and deliver it to the delivery location. They decided to develop an online system where orders could be collected and quickly sorted for delivery by couriers.
-
-The first step was to collect orders from stores and caterers in any way possible and have the operator enter them into the system in a consistent format, as well as developing a mobile application for the courier. The courier should be able to view order information, select an order from those available, book it, pick it up at the collection point and deliver it to the customer. The result of the courier's actions should be immediately reflected in the system via a mobile application. The system should also include a dispatcher who controls the couriers and reassigns orders if necessary. Information on received orders should be sent to the accounting department (to another IT system) to calculate delivery charges with order suppliers. Order delivery information should also be sent to the accounting department to calculate payment to couriers. Accrued payment should be transferred to the system and displayed in the courier's personal account. And there should also be an administrator's workstation, where couriers are registered and access rights are assigned to all of them.
-
-## Chapter V <div id="chapter-v"></div>
-
-### Exercise 00 — Role-playing Game <div id="51"></div>
-
-**For task 2:**
-
-1. Assign roles:
-   1. Choose the facilitator.
-   2. Select a group of clerks — 2-3 people.
-   3. Assign the roles from the task description to the participants of the game.
-   4. Include system developers as a team representative.
-2. Prepare for the game:
-   1. Define the goals of the game as immersion in the task and identification:
-      1. Who are we building the system for? What needs do we want to meet? 
-      2. What problems are we solving? Whose problems are they?
-      3. What is the motivation behind the activity?
-      4. What is the basis of the activity, the business? How does it work? What are the roles (people)? What are the processes?
-      5. Where do the processes of the system occur? Is it the real/virtual world? Is the command distributed in the system?
-      6. When? What are the periods, time zones, time constraints? 
-      7. Prepare questions resulting from the study of the task and determine which role to ask these questions.
-3. Play a game.
-4. Provide a report on the role-playing game. Include:
-   1. Role assignment of participants;
-   2. A brief description of each role about themselves;
-   3. Role needs and emerging issues in the context of the task;
-   4. Asked questions and answers from roles. 
-5. Place the report in the turn-in file ex00\_<product prefix>\_rolegame.docx.
-
-**Recommendations for role-playing:**
-
-1. Define the goal of the game as immersion in the task.
-2. After assigning roles to each participant:
-   1. Get into character.
-   2. Explore the needs and abilities of the role.
-3. Make up a story, prepare a brief narrative about your role.
-4. Be prepared to answer questions from other team members.
-
-### Exercise 01 — Brainstorming <div id="52"></div>
-
-**For task 2:**
-
-1. Determine brainstorming goals — identify:
-   1. Suggestions for formulating business requirements;
-   2. Suggestions on the roles of system users, their problems as is;
-   3. Suggestions of users' needs and their possible actions in the system to be;
-   4. Suggestions for problems that are unclear how to solve in the task.
-
-For example, in task 1: how should the master deal with the schedule?
-
-1. Prepare for brainstorming:
-   1. Choose a team member to briefly describe the problem.
-   2. Choose a facilitator (a separate facilitator can be used for each goal).
-   3. Select a writer to record all ideas.
-   4. Set a time and place for the brainstorming session, and notify participants. 
-2. With a help of brainstorming, collect suggestions for each block from item 1.
-3. Prepare a protocol for the brainstorming session. Include:
-   1. Results for each block;
-   2. For each block, specify:
-      1. facilitator, clerk; 
-      2. Goals, problems;
-      3. Suggestions, ideas. 
-4. Place the protocol in the turn-in file ex01\_<product prefix>\_brainstorming.docx.
-
-**Recommendations for brainstorming:**
-
-Before brainstorming:
-
-1. Read or review materials: task conditions, interview reports, ex00 and ex02 results in BSA 02, important documents or internet resources related to the task.
-2. Remember your developments for the task.
-3. Place the task materials close to the brainstorming area to pick them up when needed.
-
-### Exercise 02 — Workshop <div id="53"></div>
-
-**For task 2:**
-
-1. Define the objectives of the workshop as identifying the following:
-   1. Business Requirements;
-   2. Roles of the system and their problems as is;
-   3. Role needs and their possible actions in the to be system;
-   4. Solutions to the problems discussed in the brainstorming session;
-   5. System boundaries in the form of functions performed by roles in the system.
-2. Prepare for the workshop:
-   1. Select a facilitator.
-   2. Select a team of clerks (2-3 people, for substitutes) who will take turns recording the result.
-3. Conduct a workshop.
-4. Prepare a report on the workshop. Include:
-   1. Results for each block;
-   2. Project, task, facilitator, clerks.
-5. Place the report in the turn-in file ex02\_<product prefix>\_workshop.docx.
-
-**Recommendations for the workshop:**
-
-1. The facilitator announces the next question to achieve the objectives of the workshop (item 1).
-2. Participants select brainstorm ideas. They discuss them, provide arguments for and against.
-3. If opinions differ, use voting or weighted calculation.
-4. After obtaining the result, the participants identify the functions to be performed by the user roles in order for the system to fulfill the business requirements (the system to achieve the business goals of the system).
-5. Apply material developed in previous projects, including stakeholder directory, onion and context diagrams, etc., to identify solutions. 
-
-### Exercise 03 — Vision <div id="54"></div>
-
-**For task 2:**
-
-1. Create a Vision document, specify the name of the system.
-2. Create an Introduction, specify:
-   1. Who the document is meant for;
-   2. Goal and field of application;
-   3. Executor.
-3. Describe the source information:
-   1. List of information sources;
-   2. List of abbreviations, glossary;
-   3. List of stakeholders, their roles in the system, brief description.
-4. Describe the business requirements (see Section 3. "How to Describe Business Requirements"):
-   1. Problems for which the system is being created or completed;
-   2. Preconditions, environment, situation;
-   3. Possibilities to solve problems with our system;
-   4. Business goal(s) — the main goals for which the system is being built.
-5. Describe the scope of the project:
-   1. The main roles of the system and their functions in the system.
-6. Place the document in the turn-in file ex03\_<product prefix>\_vision.docx.
+Руководство сети барбершопов приняло решение о внедрении системы, обеспечивающей онлайн-запись на прием.
+
+Основная цель — развитие бизнеса путем расширения клиентской базы за счет возможности онлайн-записи, а также снижение трудозатрат сотрудников и уменьшение ручного труда за счет автоматического информирования клиентов по каналам связи.
+
+Запись может осуществлять как зарегистрированный, так и незарегистрированный посетитель сайта. При записи можно выбрать тип услуги: парикмахерские или косметологические, а также саму услугу, мастера и время из свободных интервалов. Система должна обеспечивать автоматическую отправку напоминаний клиентам через выбранный клиентом канал связи (Telegram, WhatsApp, VK, СМС) по настроенному менеджером расписанию. После получения услуги система предлагает клиенту оценить услугу и написать предложения по улучшению работы.
+
+Расписание мастеров и выполняемые каждым мастером услуги должен вводить менеджер, возможно, это будет не один человек. Он же отвечает за актуальность расписания и при необходимости корректирует его, осуществляет связь с клиентами в ручном режиме, проставляет отметку о выполнении услуги, начисляет и принимает оплату, передает данные об оплате в бухгалтерию. Также менеджер может получать отчеты о выполненных услугах и просматривать отзывы клиентов.
+
+Любой мастер имеет возможность посмотреть расписание и запись на свои услуги, отзывы клиентов.
+
+### Задача 2. Доставка заказов <div id="42"></div>
+
+В локдаун многие продуктовые магазины и предприятия питания резко увеличили объемы онлайн-продаж, и потому возросла потребность в быстрой доставке мелких партий товаров индивидуальным клиентам.
+
+Компания студентов собрались и решила создать стартап службы доставки.
+
+Идея состоит в том, чтобы оперативно получать информацию о заказах, месте и сроке комплектации, месте доставки, желаемых сроках доставки и раздавать инфо курьерам, которые будут получать заказ в месте комплектации и доставлять в место доставки. Решили развернуть онлайн-систему, куда стекаются заказы и откуда курьеры оперативно разбирают заказы для выполнения. На первом этапе решили собирать заказы от магазинов и предприятий питания любым доступным способом и вводить в систему в едином формате силами оператора, но разработать мобильное приложение для курьеров.
+
+Курьер должен иметь возможность просматривать информацию о заказах, выбирать заказ из свободных, бронировать его, забирать в точке выдачи и доставлять клиенту. Результат своих действий курьер должен оперативно отражать в системе через мобильное приложение. Также в системе должен работать диспетчер, который контролирует курьеров и при необходимости переназначает заказы. Информация о поступивших заказах должна направляться в бухгалтерию (в другую ИТ-систему) для расчета с поставщиками заказов за доставку. Также в бухгалтерию должна направляться информация о доставке заказа, где будет производиться расчет оплаты курьеров. Начисленная оплата должна передаваться в систему и отражаться в личном кабинете курьера. И еще запланировано рабочее место администратора, регистрирующего курьеров и назначающего всем права доступа.
+
+## Глава V <div id="chapter-v"></div>
+
+### Упражнение 00 — Ролевая игра <div id="51"></div>
+**Для задачи 2 нужно:**
+
+1. Распределить роли:
+   1. Выделить ведущего.
+   2. Выделить группу делопроизводителей — 2-3 человека.
+   3. Распределить роли из описания задачи на участников игры.
+   4. Включить в роли представителя команды студентов-разработчиков системы.
+2. Подготовиться к игре:
+   1. Определить целями игры погружение в задачу и выявление:
+      1. Для кого строим систему? Какие потребности хотим закрыть?
+      2. Какие проблемы решаем? Чьи это проблемы?
+      3. В чем мотивация деятельности?
+      4. В чем основа деятельности, бизнеса? Как это работает? Какие роли (люди)? Какие процессы?
+      5. Где происходят процессы системы? Реальный/виртуальный мир? Распределена ли команда в системе?
+      6. Когда? Какие периоды, часовые пояса, временные ограничения?
+      7. Подготовить вопросы, возникающие из изучения задачи, и определить, какой роли эти вопросы задавать.
+3. Провести ролевую игру.
+4. Представить отчет о ролевой игре. Отразить:
+   1. Распределение участников по ролям;
+   2. Краткое описание каждой роли о себе;
+   3. Потребности роли и возникающие проблемы в контексте задачи;
+   4. Заданные вопросы и ответы от ролей.
+5. Разместить отчет в turn-in файле ex00\_<префикс продукта>\_rolegame.docx.
+
+**Рекомендации для проведения ролевой игры:**
+
+1. Определите цель игры как погружение в задачу.
+2. После распределения ролей каждому участнику нужно:
+   1. Погрузиться в роль;
+   2. Изучить потребности и возможности роли.
+3. Придумайте легенду, подготовьте краткий рассказ о своей роли.
+4. Будьте готов отвечать на вопросы других членов команды.
+
+### Упражнение 01 — Проведение мозгового штурма <div id="52"></div>
+**Для задачи 2 нужно:**
+
+1. Определить цели мозгового штурма и выявить:
+   1. Предложения для формирования бизнес-требований;
+   2. Предложения по ролям пользователей системы, их проблемы as is;
+   3. Предложения потребностей пользователей и их возможных действий в системе to be;
+   4. Предложения по проблемам, которые непонятно как решать в задаче.
+
+Например, в задаче 1: как мастер должен работать с расписанием?
+
+1. Подготовиться к мозговому штурму:
+   1. Выбрать члена команды, который кратко опишет проблему.
+   2. Выбрать ведущего (для каждой цели возможен отдельный ведущий).
+   3. Выбрать делопроизводителя, который будет записывать все идеи.
+   4. Определить время и место мозгового штурма, сообщить участникам.
+2. Провести мозговой штурм, собрать предложения по каждому блоку из п.1.
+3. Подготовить протокол мозгового штурма. Отразить:
+   1. Результаты по каждому блоку.
+   2. По каждому блоку указать:
+      1. Ведущего, делопроизводителя;
+      2. Цели, проблемы;
+      3. Предложения, идеи.
+4. Разместить протокол в turn-in файле ex01\_<префикс продукта>\_brainstorming.docx.
+
+**Рекомендации для подготовки к мозговому штурму:**
+
+Перед мозговым штурмом следует:
+
+1. Прочитать или посмотреть материалы: условия задачи, отчеты по интервью, результаты ex00 и ex02 в BSA 02, важные документы или интернет-ресурсы, относящиеся к задаче.
+2. Восстановить в памяти свои разработки по задаче.
+3. Разместить материалы задачи в непосредственной близости к месту мозгового штурма, чтобы поднять их при необходимости.
+
+### Упражнение 02 — Семинар <div id="53"></div>
+**Для задачи 2 нужно:**
+
+1. Определить цели семинара как выявление следующего:
+   1. Бизнес-требования;
+   2. Роли системы и их проблемы as is;
+   3. Потребности ролей и их возможные действия в системе to be;
+   4. Решения проблем, рассматриваемых на мозговом штурме;
+   5. Границы системы в виде функций, выполняемых ролями в системе.
+2. Подготовиться к семинару:
+   1. Выбрать ведущего;
+   2. Выбрать команду делопроизводителей (2-3 человека, для замены), которые по очереди будут записывать результат.
+3. Провести семинар.
+4. Подготовить отчет о семинаре. В отчете отразить:
+   1. Результаты по каждому блоку.
+   2. Проект, задачу, ведущего, делопроизводителей.
+5. Разместить отчет в turn-in файле ex02\_<префикс продукта>\_seminar.docx.
+
+**Рекомендации к семинару:**
+
+1. Ведущий объявляет очередной вопрос для достижения целей семинара (п.1).
+2. Участники отбирают предложения мозгового штурма. Обсуждают, предоставляют аргументы за и против.
+3. При расхождении мнений применяйте голосование или расчет с помощью весовых коэффициентов.
+4. После получения результата участники выявляют функции, которые следует выполнять ролям пользователей для выполнения системой бизнес-требований (достижения системой бизнес-целей системы).
+5. Для определения решений применяйте материал, разработанный в предыдущих проектах, в том числе каталог стейкхолдеров, луковую и контекстную диаграммы и пр.
+
+### Упражнение 03 — Видение <div id="54"></div>
+**Для задачи 2 нужно:**
+
+1. Создать документ «Видение», указать название системы.
+2. Создать Введение, отразить:
+   1. Для кого предназначен документ;
+   2. Цель и область применения;
+   3. Исполнителя.
+3. Описать исходную информацию:
+   1. Список источников информации;
+   2. Список сокращений, глоссарий;
+   3. Список заинтересованных сторон, их роли в системе, краткое описание.
+4. Описать бизнес-требования (см. раздел 3. «Как описать бизнес-требования»):
+   1. Проблемы, для решения которых создается или дорабатывается система;
+   2. Предусловия, окружение, ситуация;
+   3. Возможности, позволяющие решить проблемы с помощью нашей системы;
+   4. Бизнес-цель(-и) — основные цели, ради которых строится система.
+5. Описать границы проекта:
+   1. Основные роли системы и их функции в системе.
+6. Разместить документ в turn-in файле ex03\_<префикс продукта>\_vision.docx.

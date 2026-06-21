@@ -1,400 +1,398 @@
-# IT analyst's role and functions in the IT systems development team 
+# Роль и функции ИТ-аналитика в команде разработки ИТ-систем
 
-Summary:
-You will learn about a typical software development lifecycle, the typical team composition and the main functions of each individual at the lifecycle stages. You will also learn the concept of decomposition and the rules for its application.
+Резюме:
+На занятии ты познакомишься с типовым жизненным циклом разработки программного обеспечения, типовым ролевым составом команды и основными функциями каждой роли на этапах жизненного цикла. А еще узнаешь такое понятие, как декомпозиция, и освоишь правила применения.
 
 ---
 
->💡 If this is your very first project, fill out this [form](http://opros.so/kAnXy).
+>💡 Если это твой первый проект, заполни эту [форму](http://opros.so/kAnXy).
 
->💡 [Tap here](https://new.oprosso.net/p/4cb31ec3f47a4596bc758ea1861fb624) to leave your feedback on the project. It's anonymous and will help our team make your educational experience better. We recommend completing the survey immediately after the project.
+>💡 [Нажми сюда](https://new.oprosso.net/p/4cb31ec3f47a4596bc758ea1861fb624), чтобы поделиться с нами обратной связью на этот проект. Это анонимно и поможет нашей команде сделать обучение лучше. Рекомендуем заполнить опрос сразу после выполнения проекта.
 
-## Contents
+## Содержание
 
-1. [Chapter I](#chapter-i) \
-   1.1. [Preamble](#11)
-2. [Chapter II](#chapter-ii) \
-   2.1. [General Rules](#21)
-3. [Chapter III](#chapter-iii) \
-   3.1. [IT Systems Development Life Cycle](#31) \
-   3.2. [Identifying Information Sources](#32) \
-   3.3. [Glossary](#33) \
-   3.4. [Placement, Naming and Other Rules](#34) \
-   3.5. [Decomposition. Main Concepts](#35) \
-   3.6. [Decomposition Rules](#36) \
-   3.7. [Recommendations for Decomposition](#37)
-4. [Chapter IV](#chapter-iv) \
-   4.1. [Task 1. Haircut Appointment](#41) \
-   4.2. [Task 2. Delivery of Orders](#42)
-5. [Chapter V](#chapter-v) \
-   5.1. [Exercise 00 — Creating a Workspace](#51) \
-   5.2. [Exercise 01 — Identifying Information Sources](#52) \
-   5.3. [Exercise 02 — Creating and Maintaining a Glossary](#53) \
-   5.4. [Exercise 03 — Concept of Decomposition](#53) \
-   5.5. [Exercise 04 — Types of Decomposition](#55) \
-   5.6. [Exercise 05 — Types of Decomposition](#56) \
-   5.7. [Exercise 06 — Decomposition Rules](#57)
+1. [Глава I](#chapter-i) \
+    1.1. [Введение](#11)
+2. [Глава II](#chapter-ii) \
+    2.1. [Общие правила](#21)
+3. [Глава III](#chapter-iii) \
+    3.1. [Жизненный цикл разработки ИТ-систем](#31) \
+    3.2. [Выявление источников информации](#32) \
+    3.3. [Глоссарий](#33) \
+    3.4. [Правила размещения, именования и другие правила](#34) \
+    3.5. [Декомпозиция. Основные понятия](#35) \
+    3.6. [Правила декомпозиции](#36) \
+    3.7. [Рекомендации по построению декомпозиции](#37)
+4. [Глава IV](#chapter-iv) \
+    4.1. [Задача 1. Запись на стрижку](#41) \
+    4.2. [Задача 2. Доставка заказов](#42)
+5. [Глава V](#chapter-v) \
+    5.1. [Упражнение 00 — Создание пространства](#51) \
+    5.2. [Упражнение 01 — Выявление источников информации](#52) \
+    5.3. [Упражнение 02 — Создание и ведение глоссария](#53) \
+    5.4. [Упражнение 03 — Основные понятия декомпозиции](#53) \
+    5.5. [Упражнение 04 — Виды декомпозиции](#55) \
+    5.6. [Упражнение 05 — Виды декомпозиции](#56) \
+    5.7. [Упражнение 06 — Правила декомпозиции](#57)
 
-## Chapter I <div id="chapter-i"></div>
+## Глава I <div id="chapter-i"></div>
 
 ![illustration_00](./misc/images/illustration_00.jpg)
 
-### Preamble <div id="11"></div>
+### Введение <div id="11"></div>
 
-A typical software development life cycle consists of the following stages: research, design, development, testing, implementation, maintenance, and decommissioning. You will learn about the typical team composition and activities at each stage.
+Типовой жизненный цикл разработки программного обеспечения состоит из этапов: обследование, проектирование, разработка, тестирование, внедрение, эксплуатация, вывод из эксплуатации. Ты познакомишься с типовым составом команды и работами на каждом этапе.
 
-And in the current project, you'll also look at some of the skills of an IT analyst who performs some work at each stage of development:
+А еще в текущем проекте ты рассмотришь несколько навыков ИТ-аналитика, который выполняет те или иные работы на каждом этапе разработки:
 
-1. Identifying sources of information.
+1. Выявление источников информации.
 
-The information initially specified in the terms of reference is usually insufficient. We must therefore be able to identify additional information quickly.
+Практически во всех проектах информации, указанной первоначально в условиях задачи, недостаточно. Поэтому мы должны уметь быстро выявлять дополнительную информацию.
 
-2. Consistency of terms and concepts.
+2. Единство терминов и понятий.
 
-Inaccuracies in the interpretation of terms and concepts can lead to project errors. The use of a project glossary can minimise the likelihood of inaccurate interpretation.
+Неточности в трактовке терминов и понятий чреваты ошибками проекта. Ведение глоссария проекта позволяет максимально снизить вероятность неточного трактования.
 
-3. Decomposition.
+3. Декомпозиция.
 
-One of the fundamental techniques of software design and development of complex IT systems.
+Один из основных приемов проектирования программного обеспечения и разработки сложных ИТ-систем.
 
-In this project you will learn how to:
+В этом проекте ты научишься:
 
-- Gather sources of information and use them in the future;
-- Create and maintain a glossary for consistent interpretation of terms and concepts;
-- "Break the elephant into pieces" by applying the principles and rules of decomposition.
+- собирать источники информации и использовать их в дальнейшем;
+- создавать и вести глоссарий для единого толкования терминов и понятий;
+- «разделять слона на кусочки», применяя принципы и правила декомпозиции.
 
-### Literature
+### Литература
 
 1. <https://cyberleninka.ru/article/n/printsipy-dekompozitsii-modeli-protsessa/viewer>
 2. <https://docs.microsoft.com/ru-ru/dynamics365/project-operations/prod-pma/work-breakdown-structures>
 
-## Chapter II <div id="chapter-ii"></div>
+## Глава II <div id="chapter-ii"></div>
+
+### Общие правила <div id="21"></div>
+
+1. Всю дорогу тебя будет сопровождать чувство неопределенности и острого дефицита информации — это нормально. Не забывай, что информация в репозитории и Google всегда с тобой, так же как пиры и Rocket.Chat. Общайся, ищи, опирайся на здравый смысл и не бойся ошибиться.
+2. Будь внимателен к источникам информации: проверяй, думай, анализируй,сравнивай.
+3. Будь внимателен к тексту задания, перечитывай по нескольку раз.
+4. Внимательно читай примеры. В них может быть что-то, что не указано в явном виде в самом задании.
+5. Могут встретиться несоответствия, когда что-то новое в условиях задачи или примере противоречит уже известному. Если встретилось такое — попробуй разобраться. Если не получилось — запиши вопрос в перечень открытых вопросов и найдешь ответ в процессе работы. Не оставляй открытые вопросы неразрешенными.
+6. Если задание кажется непонятным или невыполнимым — так только кажется.Попробуй его декомпозировать. Скорее всего, отдельные части станут понятными.
+7. На пути тебе встретятся разные задания. Помеченные звездочкой (\*) подходят для более дотошных и пытливых. Эти задания с повышенной сложностью и необязательны к выполнению, но если ты их сделаешь, то получишь дополнительный опыт и знания.
+8. Не пытайся обмануть систему и окружающих. Ведь в первую очередь ты обманываешь себя.
+9. Есть вопрос? Спроси своего соседа справа, если это не помогло — соседа слева.
+10. Когда пользуешься чьей-либо помощью, то всегда разбирайся до конца: почему, как и зачем. Иначе помощь не будет иметь смысла.
+11. Всегда делай push только в ветку develop! Ветка master будет проигнорирована.Работай в директории src.
+12. В твоей директории не должно быть иных файлов, кроме тех, что обозначены в заданиях.
+
+## Глава III <div id="chapter-iii"></div>
+
+### 1. Жизненный цикл разработки ИТ-систем <div id="31"></div>
+Любое ПО проходит через 6 основных этапов, от начального замысла до использования её конечным пользователем. Эти этапы в разных методологиях могут называться по-разному, мы приведем наиболее употребляемые термины. Вот эти этапы:
+
+- Обследование (сбор требований);
+- Проектирование;
+- Разработка;
+- Тестирование;
+- Внедрение;
+- Сопровождение.
+
+В общем случае в команде разработки присутствуют специалисты, выполняющие такие роли:
+
+- ИТ-аналитик (может быть отдельно бизнес-аналитик и системный аналитик);
+- Архитектор (архитекторы могут быть разных направлений);
+- Разработчик (разработчики тоже могут быть разных направлений);
+- Тестировщик (и они бывают разные);
+- Специалист внедрения/сопровождения;
+- Менеджер;
+- Специалист DevOps;
+- Технический писатель.
+
+И это только роли, не отдельные специалисты. Каждую роль может выполнять несколько человек, и один человек может выполнять несколько ролей.
+
+### 2. Выявление источников информации <div id="32"></div>
+Существует много методов выявления информации о задаче, о некоторых мы поговорим позже. Но один метод надо понимать всегда и начинать с него. Это изучение материалов, до которых можем дотянуться в начальный момент: нормативно-правовые документы, официальный сайт, статьи в СМИ, описание процессов, научно-популярные ролики. В случае госорганов — список функций, возложенных государством (их тоже можно найти на официальном сайте).
 
-### General Rules <div id="21"></div>
+Мы не сможем изучить все документы в сжатые сроки, поэтому создаем каталог источников информации, к которому можем обратиться в нужный момент.
 
-1. Along the way, you may feel a sense of uncertainty and a severe lack of information: that's OK. Remember, the information in the repository and on Google is always with you. So are your peers and Rocket.Chat. Communicate. Search. Use common sense. Don't be afraid to make mistakes.
-2. Pay attention to sources of information. Check. Think. Analyse. Compare. 
-3. Look at the text of each assignment. Read it several times. 
-4. Read the examples carefully. There may be something in them that is not explicitly stated in the task itself.
-5. You may find inconsistencies where something new in the terms of the task or examples conflicts with something you already know. If you come across such an inconsistency, try to work it out. If not, write it down as an open question and find out as you work. Do not leave open questions unanswered. 
-6. If a task seems confusing or impossible, it only seems that way. Try to break it down. It is likely that some parts will become clear. 
-7. There will be several tasks. Those marked with an asterisk (\*) are for the more meticulous students. These tasks are more difficult and are not compulsory. But doing them will give you extra experience and knowledge.
-8. Don't try to fool the system or the people around you. You will fool yourself first.
-9. Got a question? Ask your neighbour to the right. If that doesn't help, ask your neighbour on the left.
-10. When you use help, you should always understand why and how. Otherwise the help is useless.
-11. Always push only to the develop branch! The master branch will be ignored. Work in the src directory.
-12. There should be no files in your directory other than those specified in the tasks.
+Заносим туда:
 
-## Chapter III <div id="chapter-iii"></div>
+1. Нормативно-правовые акты;
+2. Приказы, распоряжения;
+3. Сайты, статьи в СМИ, ролики;
+4. Регламенты, инструкции;
+5. Интервью, опросы;
+6. Мировой опыт, лучшие практики, опыт конкурентов;
+7. И т. д.
 
-### 1. IT Systems Development Life Cycle <div id="31"></div>
+Чтобы не потеряться в этих источниках, рекомендуется указывать некоторые параметры. Эти параметры ты должен выбрать самостоятельно, исходя из здравого смысла, чтобы быстро ориентироваться в большом объеме документов, например:
 
-All software goes through 6 main stages, from the initial idea to its use by the end user. These stages may be called differently in different methodologies, but we will use the most commonly used terms. Here are these stages:
+1. Источник (название, автор, дата выпуска, откуда получен, и пр.);
+2. Адрес размещения;
+3. Приоритет изучения;
+4. Актуальность, легитимность (Не устаревшая ли информация? Насколько можно доверять источнику?);
+5. Дата ввода/прекращения действия (если это нормативно-законодательные документы);
+6. Кто добавляет источник в каталог;
+7. Дата занесения;
+8. Отметка об изучении;
+9. Примечание (содержание, комментарии, заметки).
 
-- Research (requirements gathering);
-- Design;
-- Development;
-- Testing;
-- Implementation;
-- Maintenance.
+Даже кратко записанное содержание и небольшие комментарии помогут тебе вспомнить и вернуться к источнику при необходимости.
 
-Typically, the development team will have specialists with the following roles
+### 3. Глоссарий <div id="33"></div>
 
-- IT Analyst (may be a separate Business Analyst and Systems Analyst);
-- Architect (they may have different orientations);
-- Developer (these can also be different directions);
-- Tester (these can also be different);
-- Implementation/maintenance specialist;
-- Manager;
-- DevOps specialist;
-- Technical Writer.
+Часто одно понятие называют разными словами, например, «стейкхолдеры» и «заинтересованные стороны».
+А иногда одним именем называют совсем разные понятия, например, лицевой счет и балансовый счет сокращенно могут называть «счет».
+Путаница в понятиях отрицательно сказывается на результатах анализа, а затем и проектирования, повышает риск ошибок, может потребовать переделки уже выбранных решений, увеличить сроки работ.
+Для исключения этого с самого начала следует создать глоссарий и поддерживать его на протяжении всей работы над проектом.
+Надо понимать, что понятия могут изменять свое значение, например, при изменении нормативно-правовых документов.
+Поэтому следует вести историю изменений глоссария, указывать дату добавления/обновления каждого понятия и фиксировать его источник.
 
-And these are just roles, not individual specialists. Each role can be performed by more than one person, and one person can perform more than one role.
+### 4. Правила размещения, именования и другие правила <div id="34"></div>
 
-### 2. Identifying Information Sources <div id="32"></div>
+Для уменьшения ошибок из-за нестыковок и досадных недоразумений рекомендуем придерживаться правил размещения и именования создаваемых артефактов. Обычно эти правила вырабатываются командой продукта/проекта в начале работ. Если ты пришел в команду в процессе работы — выясни эти правила и выполняй их. Если таких правил нет, то выработай их самостоятельно, доведи до других членов команды и при согласовании придерживайся их.
 
-There are many ways to find information about a task — we'll talk about some of them later, but there is one method that everyone should know about and start with. This is a study of the materials we can find at the beginning: legal documents, official websites, articles in the mass media, descriptions of processes, popular science videos. In the case of state bodies — a list of functions assigned by the state (these can also be found on the official website).
+Ниже — вариант правил, который можно использовать в работе над проектами.
 
-We can't go through all the documents in a short time, so we need to create a list of information sources that can be used at any time.
+1. Для каждого продукта (задачи) определи префикс (трех- или четырехбуквенное осмысленное выражение) и создай для каждого продукта (задачи) отдельную директорию, названную с указанием префикса.
+2. Размещай все рабочие и проектные документы в созданной директории. Часто в директории дополнительно создают отдельные папки для разделения документации по типам: контрактная, рабочая, проектная, пользовательская и прочее.
+3. Текстовые рабочие документы, состоящие из списков, сохраняй в формате .xlsx. Так проще добавлять новые признаки и свойства, необходимые для работы. Также можно сохранять в формате .docx альбомной ориентации.
+4. Списки, каталоги размещай на разных листах в файле формата .xlsx.
+5. При создании каталогов кодируй как сам каталог, так и его элементы. Один из вариантов кодировки:
+   - Каждый каталог обозначается осмысленным трехбуквенным выражением, например:
+      - STA — каталог заинтересованных сторон (стейкхолдеров);
+      - INF — каталог источников информации.
+   - Элементы каталогов обозначаются по шаблону <XXXYYYYY>, где:
+      - XXX — буквенное обозначение каталога;
+      - YYYYY — числовое значение, уникальный неизменяемый номер в каталоге, количество знаков — на усмотрение разработчика каталога.
+6. Создай документ «Содержание», где отражай все созданные аналитиками артефакты, место их размещения, автора (ответственного). Допустимо размещать его как отдельный лист в файле каталога.
+7. Актуализируй документ «Содержание» в процессе работы.
 
-Here we have:
+P.S. Принципы кодировки и размещения могут отличаться в зависимости от сложности системы, предметной области, правил компании или команды.
 
-1. Regulatory documents;
-2. Orders, ordinances;
-3. Websites, mass media articles, videos;
-4. Rules, instructions;
-5. Interviews, surveys;
-6. World experience, best practices, competitors' experience;
-7. etc.
+#### Пример:
+![img1](./misc/images/img1.png)
 
-To avoid getting lost in these sources, it is advisable to specify some parameters. You should choose them yourself, using common sense, for example to navigate quickly through a large number of documents:
+### 5. Декомпозиция. Основные понятия <div id="35"></div>
+Декомпозиция, то есть процесс разделения целого на части, позволяет рассматривать любую систему, как состоящую из отдельных взаимосвязанных подсистем, которые, в свою очередь, также могут быть декомпозированы.
 
-1. Source (title, author, date of publication, where you found it, etc.);
-2. URL;
-3. Priority of the study; 
-4. Relevance, legitimacy (is the information outdated? How trustworthy is the source?);
-5. Date of introduction/closure (in the case of regulatory documents); 
-6. Who is adding the source to the directory;
-7. Date of entry;
-8. A mark of study;
-9. Note (content, comments, remarks)
+Мы применяем процесс декомпозиции в ИТ повсеместно, когда разбиваем на небольшие части свои цели, задачи, а также функции и компоненты самой ИТ-системы. Декомпозировать можно различными способами, видов декомпозиции довольно много.
+При разработке ИТ-систем обычно применяют такие виды декомпозиции:
 
-Even a short note on the content and a small comment will help you to remember and refer back to the source when needed.
+1. **Функциональная** — структурирование функций. Например, в задаче 1 (Глава IV) клиент барбершопа может выполнить действия (функции):
+   - Регистрация на сайте;
+   - Просмотр расписания мастеров;
+   - Выбор мастера, услуги, времени;
+   - Запись на услугу.
+2. **Объектная, компонентная** — расчленение на объекты. Так, в задаче 1 (Глава IV) услуги подразделяются на:
+   - Первый уровень: тип услуги (парикмахерские, косметические);
+   - Второй уровень (парикмахерские): стрижка, покраска, укладка и т. д;
+   - Второй уровень (косметические): чистка, массаж, питательная маска и т. д.
 
-### 3. Glossary <div id="33"></div>
+**Цели разбиения**
 
-Often, different words are used to refer to the same concept, such as "stakeholders" and "interested parties". And sometimes the same name is used for completely different concepts, e.g. a personal account and a balance account may be shortened to just 'account'. Confusion in terms has a negative impact on the results of the analysis and subsequent design, increases the risk of errors, may require redesign of solutions already selected, and increases work time. To avoid this, you should create a glossary at the beginning of your work and maintain it throughout the project. It is important to understand that terms can change meaning, for example when regulatory documents change. Therefore, you should keep a history of changes to the glossary, indicating the date each concept was added/updated and recording its source.
+Вид декомпозиции выбираем исходя из стоящей перед нами цели. В таблице 1 приведены цели выполнения декомпозиции и соответствующие им основные виды, а также вопросы, помогающие выполнить декомпозицию.
 
-### 4. Placement, Naming and Other Rules <div id="34"></div>
+Таблица 1. Вопросы для выявления вида декомпозиции
 
-In order to reduce errors due to inconsistencies and unfortunate misunderstandings, it is recommended to follow the rules for placing and naming created artefacts. Usually these rules are created by the product/project team at the beginning. If you have joined the team in the course of the work — find out these rules and follow them. If there are no such rules, develop them yourself, share them with the team members and, if agreed, follow them. 
+| Цель                                      | Вид декомпозиции         | Вопросы                                                                             |
+|-------------------------------------------|--------------------------|-------------------------------------------------------------------------------------|
+| Выделение функций                         | Функциональная           | Что делает / должна делать система? Что обеспечивает / должна обеспечивать система? |
+| Выделение составляющих частей (компонент) | Компонентная, объектная  | Из каких частей/подсистем/модулей состоит / должна состоять система?                |
+| Структурирование по выбранным критериям   | Структурная              | Как разделяется / должна разделяться система по выбранным критериям?                |
+| Разделение по времени, по событиям        | Темпоральная, событийная | Какие этапы проходит система? Как разделяются этапы?                                |
 
-Below is a version of the rules that you can use when working on projects.
+**Уровень (глубина) декомпозиции**
 
-1. For each product (task), define a prefix — a three- or four-letter meaningful expression — and create a separate directory for each product (task) named with the prefix.
-2. Place all work and project documents in the created directory. Often additional folders are created in the directory to separate documentation by type: contractual, work, project, user, etc. 
-3. Save text documents consisting of lists in .xlsx format. This makes it easier to add new attributes and properties required for your work. You can also save them in .docx format in landscape orientation.
-4. Place lists, directories on different sheets in an .xlsx file. 
-5. When creating directoris, encode both the directory itself and its elements. One of the encoding options:
-   - Each directory is denoted by a meaningful three-letter expression, e.g.:
-     - STA — directory of interested parties (stakeholders);
-     - INF — information source directory.
-   - directory elements are indicated using the pattern <XXXYYYYYYYYYY>, where:
-     - XXX — directory letter symbols;
-     - YYYYY — numeric value, unique unchangeable number in the directory, number of characters is at the discretion of the directory developer.
-6. Create Contents document, where you show all the artifacts created by the analysts, their location, author (responsible person). It is acceptable to place it as a separate sheet in the directory file.
-7. Update Contents in the course of work.
+Уровень декомпозиции, т. е. глубина разбиения и подробности описания, зависит от предназначения декомпозиции и пользователя (для кого предназначена). В качестве элементарного уровня выбирают уровень, достаточный для выполнения работ. Искомая система принимается за нулевой уровень и не учитывается при подсчете уровней декомпозиции, т.к. разбиения на нулевом уровне нет, поскольку на нем система представлена в целостном виде.
 
-P.S. Coding and placement principles may vary depending on system complexity, subject area, company or team rules.
+**Документирование декомпозиции**
 
-#### Example: 
+Декомпозицию можно записать в виде схемы, таблицы, каталога.
 
-![img1_eng](./misc/images/img1_eng.png)
+Для наглядности каждому элементу декомпозиции присваивается уникальный идентификатор, соответствующий уровню и, например, порядковому номеру на уровне с использованием разделителей типа табуляции, знаков препинания и т. д. На рисунке 1 представлена декомпозиция завтрака.
 
-### 5. Decomposition. Main Concepts <div id="35"></div>
+Для обозримости рекомендуют выделять на каждом уровне 7 (+/- 2) подсистем/элементов. Естественно, это не всегда получается. Иногда количество элементов довольно велико. В таких случаях декомпозиция представляется в табличном виде или в виде каталога.
 
-Decomposition, the process of breaking the whole into parts, allows us to look at any system as being made up of separate, interrelated subsystems, which in turn can be decomposed. We apply the decomposition process in IT wherever we break down our goals, tasks, and the functions and components of the IT system itself. Decomposition can be done in many ways, and there are many types of decomposition. Here are the types of decomposition commonly used in IT systems development:
+Часто на схеме показывают не только декомпозируемую систему, но и вышестоящую (надсистему), в которую входит рассматриваемая система, и смежные системы — другие подсистемы надсистемы. На рисунке 2 — декомпозиция системы Система1. Дополнительно на этой же схеме указаны надсистема и смежная Система2.
 
-1. **Functional** — structuring of functions. For example, in task 1 (Chapter IV), a barbershop client can perform actions (functions): 
-   - Register on the website;
-   - View master schedule;
-   - Select a master, service or time;
-   - Book a service.
-2. **Object, component** — division into objects. Thus, Task 1 (Chapter IV) categorizes services into:
-   - First level: type of service (hairdressing, cosmetic);
-   - Second level (hairdressing): haircut, coloring, styling, etc.;
-   - Second level (cosmetic): cleansing, massage, nourishing mask, etc.
+*Рисунок 1. Декомпозиция подготовки завтрака*
 
-**Decomposition goals** 
+![img2](./misc/images/img2.png)
 
-We choose the type of decomposition based on our goal. Table 1 shows the goals of decomposition and its main types, as well as the questions that help to perform the decomposition. 
+*Рисунок 2. Декомпозиция системы Система1*
 
-Table 1. Questions to Identify Type of Decomposition
+![img3](./misc/images/img3.png)
 
-| Goal                                            | Decomposition Type | Questions                                                    |
-| ----------------------------------------------- | ------------------ | ------------------------------------------------------------ |
-| Identification of functions                     | Functional         | What does/should the system do? What does/should the system provide? |
-| Identification of constituent parts (component) | Component, object  | What parts/subsystems/modules does/should the system consist of? |
-| Structuring according to selected criteria      | Structural         | How is/should the system be divided according to the selected criteria? |
-| Decomposition by time, by event                 | Temporal, event    | What stages does the system go through? How are the stages divided? |
+### 6. Правила декомпозиции <div id="36"></div>
+При построении декомпозиции применяют следующие правила:
 
-**Level (Depth) of Decomposition**
+1. Подчиненность;
+2. Единственность критерия;
+3. Целостность.
 
-The level of decomposition, i.e. the depth of breakdown and description detail, depends on the goal of the decomposition and the user (for whom it is intended). As an elementary level, a level is chosen which is sufficient for the work to be carried out. The desired system is taken as the zero level and is not taken into account when calculating the decomposition levels, as there is no partitioning at the zero level, as the system is represented as a whole at this level.
+**Подчиненность**
 
-**Decomposition Documentation**
+Построение декомпозиции обычно начинается сверху вниз. Исходная система располагается на нулевом уровне и представляется в виде частей одинаковой значимости, которые не пересекаются между собой и полностью закрывают верхний уровень. Это первый уровень декомпозиции. Расчленение этих подсистем приводит к появлению подсистем второго уровня и т. д.
 
-The decomposition can be written in the form of a diagram, a table or a directory.
+**Единственность критерия**
 
-Each element of the decomposition is assigned a unique identifier corresponding to the level and, for example, the sequence number at the level, using separators such as tabulators, punctuation marks, etc. Figure 1 shows the decomposition of a breakfast.
+Система расчленяется только по одному, постоянному для уровня, критерию. Критерии уровней выбираются в зависимости от цели декомпозиции. Критерием декомпозиции может быть:
 
-It is recommended to define 7 (+/- 2) subsystems/elements at each level. Of course, this is not always possible. Sometimes the number of elements is quite large. In such cases, the decomposition is presented in tabular or directory form.
+1. Назначение (выполнение функций);
+2. Конструктивное устройство (части системы, вид материалов, формы поверхностей и др.);
+3. Структурные признаки (способы построения и др.);
+4. Виды этапов и процессов (жизненный цикл, физическое состояние и др.);
+5. Предметные характеристики (экономические, информационные, технологические и др.);
+6. И другие.
 
-Often the diagram shows not only the system to be decomposed, but also the higher level (supersystem), which includes the system in question, and adjacent systems — other subsystems of the supersystem. Figure 2 shows the decomposition of System 1. In addition, the same diagram shows the super-system and the adjacent system 2.
+Например, выделение в составе автомобиля мотора, шасси и кузова проводится в соответствии с функциональным признаком (назначение частей).
 
-*Figure 1: Breakfast preparation decomposition*
+**Целостность**
 
-![img2_eng](./misc/images/img2_eng.png)
+Целостность обеспечивается правилами:
 
-*Figure 2: System 1 decomposition*
+1. **Полнота:** вычленяемые подсистемы на одном уровне в сумме должны полностью характеризовать систему верхнего уровня. Не должно оставаться чего-то, что не входит в одну из групп. Если нет возможности определить полный набор элементов, допустимо ввести группу «другие», «прочие» и т. п.;
+2. **Взаимное непересечение**: элементы, входящие в одну группу, не должны входить в другую группу на этом же уровне.
 
-![img3_eng](./misc/images/img3_eng.png)
+P.S. Иногда в работе целесообразно отойти от этих правил, и в дальнейших проектах мы рассмотрим такие примеры.
 
-### 6. Decomposition Rules <div id="36"></div>
+### 7. Рекомендации по построению декомпозиции <div id="37"></div>
+Перед тем как выполнять декомпозицию, определи:
 
-The following rules apply when making a decomposition:
+1. Зачем декомпозировать? Что хотим показать?
+2. Для какого пользователя выполняем декомпозицию? В чем потребность пользователя?
+3. Какой показатель выбираем для разбиения? Что будет составными частями?
+4. По каким критериям хотим разделять подсистемы и элементы декомпозиции?
 
-1. Subordination;
-2. Singularity of criterion;
-3. Integrity.
+В ответах на эти вопросы раскроется цель и потребность декомпозиции, и далее ты определишь ее вид.
 
-**Subordination**
+P.S. Не всегда хорошая декомпозиция получается с первого раза (точнее, редко получается с первого раза). Хорошее решение приходит с опытом.
 
-The decomposition usually starts from top to bottom. The initial system is located at the zero level and is represented in the form of parts of equal importance that do not overlap with each other and completely cover the upper level. This is the first level of decomposition. The breakdown of these subsystems leads to the appearance of subsystems of the second level, and so on.
+**Примерный порядок создания декомпозиции методом «Сверху вниз»**
 
-**Singularity of criterion**
+1. Определи верхний (корневой, нулевой) уровень декомпозиции — систему, которая подлежит разбиению.
+2. Выбери несколько критериев (два-три) для разделения подсистем первого уровня, соответствующих цели декомпозиции.
+3. Разбей корневую систему по каждому критерию.
+4. Проверь, что по каждому критерию выполняются правила декомпозиции:
+   - Система верхнего уровня разделена полностью (не осталось неохваченной части);
+   - Все части нижнего уровня входят в верхний уровень системы;
+   - Выделенные части нижнего уровня разделены по единому критерию;
+   - Выделенные части не пересекаются между собой.
+5. Сравни результаты разбивки по выбранным критериям, выбери оптимальный с учетом дальнейших действий.
+6. Повтори операции 2-5 для каждой подсистемы первого и всех последующих уровней.
+7. Остановись на том уровне, который достаточен для выполнения теми, кто будет работать с выделенными элементами (функциями, работами или объектами).
 
-The system is decomposed according to only one criterion, which is constant for the level.The level criteria are chosen according to the objective of the decomposition. A decomposition criterion can be:
+## Глава IV <div id="chapter-iv"></div>
 
-1. Purpose (performance of functions);
-2. Structural arrangement (parts of the system, type of materials, surface shapes, etc.);
-3. Structural attributes (ways of construction, etc.);
-4. Types of stages and processes (life cycle, physical state, etc.);
-5. Subject characteristics (economic, informational, technological, etc.);
-6. etc.
+### Описание задач
 
-For example, the decomposition of a car into the motor, chassis and body is carried out in accordance with the functional attribute (purpose). 
+### Задача 1. Запись на стрижку <div id="41"></div>
 
-**Integrity**
+Руководство сети барбершопов приняло решение о внедрении системы, обеспечивающей онлайн-запись на прием. Основная цель — развитие бизнеса путем расширения клиентской базы за счет возможности онлайн-записи, а также снижение трудозатрат сотрудников и уменьшение ручного труда за счет автоматического информирования клиентов по каналам связи.
 
-Integrity is achieved through the following rules:
+Запись может осуществлять как зарегистрированный, так и незарегистрированный посетитель сайта. При записи можно выбрать тип услуги: парикмахерские или косметологические, а также саму услугу, мастера и время из свободных интервалов. Система должна обеспечивать автоматическую отправку напоминаний клиентам через выбранный клиентом канал связи (Telegram, WhatsApp, VK, СМС) по настроенному менеджером расписанию. После получения услуги система предлагает клиенту оценить услугу и написать предложения по улучшению работы.
 
-1. **Completeness:** The subsystems at one level should together fully characterise the system at the higher level. There should be nothing left that does not belong to one of the groups. If it is not possible to define a complete set of elements, it is allowed to enter the group "other", etc;
-2. **Mutual non-intersection**: elements belonging to one group may not belong to another group at the same level.
+Расписание мастеров и выполняемые каждым мастером услуги должен вводить менеджер, возможно, это будет не один человек. Он же отвечает за актуальность расписания и при необходимости корректирует его, осуществляет связь с клиентами в ручном режиме, проставляет отметку о выполнении услуги, начисляет и принимает оплату, передает данные об оплате в бухгалтерию. Также менеджер может получать отчеты о выполненных услугах и просматривать отзывы клиентов.
 
-P.S. Sometimes it is useful to break these rules, and we will look at such examples in future projects.
+Любой мастер имеет возможность посмотреть расписание и запись на свои услуги, отзывы клиентов.
 
-### 7. Recommendations for Decomposition <div id="37"></div>
+### Задача 2. Доставка заказов <div id="42"></div>
 
-Before carrying out the decomposition, define
+В локдаун многие продуктовые магазины и предприятия питания резко увеличили объемы онлайн-продаж, и потому возросла потребность в быстрой доставке мелких партий товаров индивидуальным клиентам.
 
-1. Why should we decompose? What do we want to show?
-2. Who are we decomposing for? What do they need?
-3. Which indicator do we choose for the breakdown? What will be the components? 
-4. What criteria will we use to separate subsystems and decomposition elements?
+Компания студентов собрались и решила создать стартап службы доставки.
 
-The answers to these questions will reveal the purpose and need for decomposition, and then you will determine the type of decomposition.
+Идея состоит в том, чтобы оперативно получать информацию о заказах, месте и сроке комплектации, месте доставки, желаемых сроках доставки и раздавать инфо курьерам, которые будут получать заказ в месте комплектации и доставлять в место доставки. Решили развернуть онлайн-систему, куда стекаются заказы и откуда курьеры оперативно разбирают заказы для выполнения. На первом этапе решили собирать заказы от магазинов и предприятий питания любым доступным способом и вводить в систему в едином формате силами оператора, но разработать мобильное приложение для курьеров.
 
-P.S. A good decomposition is not always successful at the first try (to be more precise — it is rarely successful at the first try). A good solution comes with experience.
+Курьер должен иметь возможность просматривать информацию о заказах, выбирать заказ из свободных, бронировать его, забирать в точке выдачи и доставлять клиенту. Результат своих действий курьер должен оперативно отражать в системе через мобильное приложение. Также в системе должен работать диспетчер, который контролирует курьеров и при необходимости переназначает заказы. Информация о поступивших заказах должна направляться в бухгалтерию (в другую ИТ-систему) для расчета с поставщиками заказов за доставку. Также в бухгалтерию должна направляться информация о доставке заказа, где будет производиться расчет оплаты курьеров. Начисленная оплата должна передаваться в систему и отражаться в личном кабинете курьера. И еще запланировано рабочее место администратора, регистрирующего курьеров и назначающего всем права доступа.
 
-**An example of how to create a decomposition using the Top-Bottom method**
+## Глава V <div id="chapter-v"></div>
 
-1. Define the top (root, zero) level of decomposition — the system to be decomposed. 
-2. Select several criteria (two to three) to separate the first level subsystems corresponding to the decomposition goal.
-3. Break down the root system for each criterion.
-4. Check that the decomposition rules are met for each criterion:
-   - The top-level system is fully divided (no part left out);
-   - All parts of the lower level are included in the upper level of the system; 
-   - The parts of the lower level are divided according to a single criterion;
-   - The parts do not overlap with each other.
-5. Compare the results of the breakdown according to the selected criteria, choose the best one considering further actions.
-6. Repeat steps 2-5 for each subsystem of the first level and all subsequent levels.
-7. Stop at a level that is sufficient for those who will be working with the selected elements (functions, jobs, or objects).
+### Упражнение 00 — Создание пространства <div id="51"></div>
+**Для каждой задачи**:
 
-## Chapter IV <div id="chapter-iv"></div>
+1. Определи префикс продукта.
+2. Создай отдельную директорию в своем GIT-репозитории в подпапке src, имя директории должно содержать префикс продукта.
 
-### Description of Tasks
+### Упражнение 01 — Выявление источников информации <div id="52"></div>
+**Для каждой задачи:**
 
-### Task 1. Haircut Appointment <div id="41"></div>
+1. Создай каталог источников информации.
+2. Найди не менее 5 источников информации и занеси их в каталог.
+3. Укажи приоритет изучения источников информации.
+4. Определи необходимые параметры каталога.
+5. Укажи свои ответы в turn-in файле ex01\_<префикс продукта>\_infosources.xlsx.
 
-The management of a chain of barbershops decided to implement an online booking system. The main objective is to develop the business by expanding the customer base through the possibility of online registration, as well as to reduce employee labour costs and manual labour by automatically informing customers through communication channels. 
+### Упражнение 02 — Создание и ведение глоссария <div id="53"></div>
+**Для каждой задачи:**
 
-Both registered and unregistered visitors can book an appointment on the website. When making an appointment, they can select the type of service: hairdressing or cosmetology, as well as the service itself, the master and the time from the available intervals. The system should provide automatic sending of reminders to clients through the communication channel chosen by the client (Telegram, WhatsApp, VK, sms) according to the schedule set by the manager. After receiving a service, the system offers the client to evaluate the service and write suggestions on how to improve the work.
+1. Создай глоссарий.
+2. Размести в глоссарии не менее 10 понятий.
+3. Укажи свои ответы в turn-in файле ex02\_<префикс продукта>\_glossary.xlsx.
 
-The schedule of masters and the services provided by each master should be entered by the manager, who may be more than one person. This person is also responsible for keeping the schedule up to date and adjusting it if necessary, communicating with customers manually, marking the service, charging and accepting payment, sending the payment data to the accounting department. The manager can also receive reports on completed services and view customer feedback.
+**Рекомендации по выполнению задания:**
 
-Each master has the ability to view the schedule and appointments for their services, as well as customer reviews.
+1. В работе над проектами (здесь и далее) в качестве даты добавления понятия в глоссарий следует указывать номер проекта, выполняя который было добавлено данное понятие (Пример: BSA 00).
 
-### Task 2. Delivery of Orders <div id="42"></div>
+### Упражнение 03 — Основные понятия декомпозиции <div id="54"></div>
 
-During the lockdown, many grocery stores and food companies dramatically increased their online sales and the need for quick delivery of small quantities to individual customers increased. 
+1. Найди демографическую пирамиду РФ. Отрази найденную пирамиду в файле.
+2. Укажи показатель разбиения демографической пирамиды.
+3. Укажи цель составления демографической пирамиды.
+4. Определи вид декомпозиции демографической пирамиды.
+5. Укажи:
+   - Сколько уровней декомпозиции у демографической пирамиды;
+   - Какие это уровни;
+   - Какие критерии применяются для разбиения каждого уровня.
+6. Определи порядок построения демографической пирамиды.
+7. Укажи свои ответы в turn-in файле ex03\_decomposition.docx.
 
-A group of students got together and decided to start a delivery service. The idea is to quickly receive information about orders, pickup location and time, delivery location, desired delivery dates, and distribute this information to couriers who will pick up the order at the pickup location and deliver it to the delivery location. They decided to develop an online system where orders could be collected and quickly sorted for delivery by couriers.
+### Упражнение 04 — Виды декомпозиции <div id="55"></div>
+**Меню завтрака:** вареное яйцо, тост с маслом, сок, чай.
 
-The first step was to collect orders from stores and caterers in any way possible and have the operator enter them into the system in a consistent format, as well as developing a mobile application for the courier. The courier should be able to view order information, select an order from those available, book it, pick it up at the collection point and deliver it to the customer. The result of the courier's actions should be immediately reflected in the system via a mobile application. The system should also include a dispatcher who controls the couriers and reassigns orders if necessary. Information on received orders should be sent to the accounting department (to another IT system) to calculate delivery charges with order suppliers. Order delivery information should also be sent to the accounting department to calculate payment to couriers. Accrued payment should be transferred to the system and displayed in the courier's personal account. And there should also be an administrator's workstation, where couriers are registered and access rights are assigned to all of them.
+1. <a name="_heading=h.4i7ojhp"></a>Рассмотри декомпозицию завтрака на рисунке 3:
+   - Определи цель и вид декомпозиции;
+   - Укажи количество уровней декомпозиции;
+   - Найди ошибки декомпозиции и перечисли их;
+   - Исправь ошибки в декомпозиции и примени исправленную версию для следующего задания.
+2. Разработай объектную декомпозицию завтрака на основе уточненной декомпозиции в пункте выше:
+   - Укажи цель декомпозиции;
+   - Построй декомпозицию до уровня 2;
+   - Укажи критерии разбиения для каждого уровня построенной декомпозиции.
+3. Укажи свои ответы в turn-in файле ex04\_types.docx.
 
-## Chapter V <div id="chapter-v"></div>
+*Рисунок 3. Декомпозиция завтрака*
 
-### Exercise 00 — Creating a Workspace <div id="51"></div>
+![img4](misc/images/img4.png)
 
-**For each task**:
+**Условия:**
 
-1. Determine the product prefix.
-2. Create a separate directory in your GIT repository in the src subfolder, the directory name should contain the product prefix. 
+Средство для изображения декомпозиции — на твое усмотрение.
 
-### Exercise 01 — Identifying Information Sources <div id="52"></div>
+### Упражнение 05 — Виды декомпозиции <div id="56"></div>
+**Для задачи 2:**
 
-**For each task:**
+1. Изучи задачу 2 (Глава IV).
+2. Разработай декомпозицию действий курьеров.
+3. Определи цель и вид декомпозиции.
+4. Укажи количество уровней.
+5. Разработай объектную декомпозицию действующих лиц (ролей) задачи.
+6. Укажи цель объектной декомпозиции.
+7. Укажи количество уровней.
+8. Укажи свои ответы в turn-in файле ex05\_types.docx.
 
-1. Create a directory of information sources.
-2. Find at least 5 sources of information and place them into a directory.
-3. Prioritize the study of sources of information.
-4. Define the necessary directory parameters.
-5. Indicate your answers in the turn-in file ex01\_<product prefix>\_infosources.xlsx. 
+### Упражнение 06 — Правила декомпозиции <div id="57"></div>
+**Активности дня:**
 
-### Exercise 02 — Creating and Maintaining a Glossary <div id="53"></div>
+1. Перечисли не менее 10 активностей своего дня.
+2. Определи минимум 2 цели декомпозиции, в рамках каждой цели определи пользователей и потребности.
+3. Построй событийную декомпозицию активностей своего дня в соответствии с выбранной целью. Во время построения придерживайся правил декомпозиции.
+4. Укажи свои ответы в turn-in файле ex06\_rules.docx.
 
-**For each task:**
 
-1. Create a glossary.
-2. Place at least 10 concepts into the glossary.
-3. Indicate your answers in the turn-in file ex02\_<product prefix>\_glossary.xlsx.
+**Рекомендации по выполнению задания:**
 
-**Recommendations for tasks:**
+Нет единственно верного пути создания декомпозиции. Всегда иди от цели создания, потребности того пользователя, для которого создается декомпозиция. Выбирай вид декомпозиции исходя из цели. Определяй активности исходя из ответов на «Вопросы для выявления вида декомпозиций». Возможно, активности будут разноуровневые — на этапе перечисления активностей — это нормально. Но далее обязательно посмотри и перераспредели активности по уровням в зависимости от критерия.
 
-1. (Hereafter) When you add new concepts to the glossary, you should enter the project number as the date the concept was added to the glossary (Example:BSA 00).
-
-### Exercise 03 — Concept of Decomposition <div id="54"></div>
-
-1. Find the demographic pyramid of the Russian Federation. Add the found pyramid to the file.
-2. Specify the demographic pyramid breakdown indicator.
-3. Indicate the purpose of the demographic pyramid.
-4. Determine the type of decomposition of the demographic pyramid.
-5. Specify:
-   - How many levels of decomposition has has?
-   - What are those levels?
-   - What criteria are used to categorize each level?
-6. Determine the order in which the demographic pyramid is constructed.
-7. Indicate your answers in the turn-in file ex03\_decomposition.docx.
-
-### Exercise 04 — Types of Decomposition <div id="55"></div>
-
-**Breakfast menu:** boiled egg, buttered toast, juice, tea.
-
-1. <a name="_heading=h.4i7ojhp"></a>Look at the decomposition of breakfast in Figure 3:
-   - Specify the goal and type of decomposition; 
-   - Specify the number of decomposition levels;
-   - Find decomposition errors and list them;
-   - Correct errors in the decomposition and apply the corrected version to the next task.
-2. Develop an object decomposition of breakfast based on the refined decomposition in the paragraph above:
-   - Specify the goal of the decomposition;
-   - Build a decomposition to level 2;
-   - Specify the breakdown criteria for each level of the constructed decomposition.
-3. Indicate your answers in the turn-in file ex04\_types.docx.
-
-*Figure 3: Breakfast decomposition*
-
-![img4_eng](./misc/images/img4_eng.png)
-
-**Conditions:** 
-
-The means of representing the decomposition is at your discretion.
-
-### Exercise 05 — Types of Decomposition <div id="56"></div>
-
-**For task 2:**
-
-1. Study task 2 (Chapter IV).
-2. Develop a decomposition of couriers' actions.
-3. Determine the goal and type of decomposition. 
-4. Specify the number of levels.
-5. Develop an object decomposition of the actors (roles) of the task.
-6. Specify the goal of object decomposition.
-7. Specify the number of levels.
-8. Indicate your answers in the turn-in file ex05\_types.docx.
-
-### Exercise 06 — Decomposition Rules <div id="57"></div>
-
-**Daily activities:**
-
-1. List at least 10 activities of your day.
-2. Define at least 2 decomposition goals; identify users and needs within each goal.
-3. Build an event decomposition of your day's activities according to the chosen goal. Stick to the rules of decomposition.
-4. Indicate your answers in the turn-in file ex06\_rules.docx.
-
-
-**Recommendations for the task:**
-
-There's no one right way to do a decomposition. You should always start with the goal, the needs of the user for whom you are creating the decomposition. Choose the type of decomposition based on this goal. Determine the activities based on the answers to the "Questions to Identify the Type of Decomposition". It is possible that the activities will be of different levels — at the stage of listing the activities this is normal. However, as you go on, it is important to look at the activities and rearrange them into levels according to the criteria.
-
-Make sure that the elements at the same level are equivalent, answer the same question and are selected by the same criterion. They belong to that level, not to a higher or lower one. Make several choices and choose the one that best suits your goal, needs and circumstances.
+Следи, чтобы элементы одного уровня были равнозначными, отвечали на один и тот же вопрос, выделялись по одному критерию. Относились именно к этому уровню, а не к более высокому или низкому. Сделай несколько вариантов и выбери наиболее подходящий твоей цели, твоим потребностям и условиям.

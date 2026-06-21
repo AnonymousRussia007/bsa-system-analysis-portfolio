@@ -1,260 +1,269 @@
-# Non-functional requirements 
+# Нефункциональные требования
 
-Summary:
-In the current project, you will review non-functional requirements. You will understand how the success of the system depends on them. You will learn to identify and formulate them.
+Резюме:
+В текущем проекте ты рассмотришь нефункциональные требования, поймешь, как от них зависит успешность системы, и научишься выявлять и формулировать их.
 
-💡 [Tap here](https://new.oprosso.net/p/4cb31ec3f47a4596bc758ea1861fb624) **to leave your feedback on the project**. It's anonymous and will help our team make your educational experience better. We recommend completing the survey immediately after the project.
+💡 [Нажми сюда](https://new.oprosso.net/p/4cb31ec3f47a4596bc758ea1861fb624), **чтобы поделиться с нами обратной связью на этот проект**. Это анонимно и поможет нашей команде сделать обучение лучше. Рекомендуем заполнить опрос сразу после выполнения проекта.
 
-## Contents
+## Содержание
 
-  - [Chapter I](#chapter-i)
-    - [Preamble](#preamble)
-    - [Literature](#literature)
-  - [Chapter II](#chapter-ii)
-    - [General Rules](#general-rules)
-  - [Chapter III](#chapter-iii)
-    - [Theory](#theory)
-  - [Chapter IV](#chapter-iv)
-    - [Description of tasks](#description-of-tasks)
-    - [Task 1. Haircut Appointment](#task-1-haircut-appointment)
-    - [Task 2. Delivery of Orders](#task-2-delivery-of-orders)
-  - [Chapter V](#chapter-v)
-    - [Exercise 00 — Identification of Non-Functional Requirements](#exercise-00--identification-of-non-functional-requirements)
-    - [Exercise 01 — Classification of Non-Functional Requirements](#exercise-01--classification-of-non-functional-requirements)
-    - [Exercise 02 — Selection of NFRs](#exercise-02--selection-of-nfrs)
-    - [Exercise 03 — Performance Attributes](#exercise-03--performance-attributes)
-    - [Exercise 04 — Availability and Reliability Attributes](#exercise-04--availability-and-reliability-attributes)
-    - [Exercise 05 — Scalability Attributes](#exercise-05--scalability-attributes)
-    - [Exercise 06 — Security Attributes](#exercise-06--security-attributes)
+  - [Глава I](#глава-i)
+    - [Введение](#введение)
+  - [Глава II](#глава-ii)
+    - [Общие правила](#общие-правила)
+  - [Глава III](#глава-iii)
+    - [Теория](#теория)
+  - [Глава IV](#глава-iv)
+    - [Задача 1. Запись на стрижку](#задача-1-запись-на-стрижку)
+    - [Задача 2. Доставка заказов](#задача-2-доставка-заказов)
+  - [Глава V](#глава-v)
+    - [Упражнение 00 — Определение нефункциональных требований](#упражнение-00--определение-нефункциональных-требований)
+    - [Упражнение 01 — Классификация нефункциональных требований](#упражнение-01--классификация-нефункциональных-требований)
+    - [Упражнение 02 — Выбор НФТ](#упражнение-02--выбор-нфт)
+    - [Упражнение 03 — Атрибуты производительности](#упражнение-03--атрибуты-производительности)
+    - [Упражнение 04 — Атрибуты доступности и надежности](#упражнение-04--атрибуты-доступности-и-надежности)
+    - [Упражнение 05 — Атрибуты масштабирования](#упражнение-05--атрибуты-масштабирования)
+    - [Упражнение 06 — Атрибуты безопасности](#упражнение-06--атрибуты-безопасности)
 
-## Instructions 
+## Инструкции
 
-How to learn at “School 21”:
+Как учиться в «Школе 21»:
 
-- Here, you’ll find a unique learning experience with a lot of freedom. You’re given a task and left to find your own way to solve it, using whatever resources work best for you — whether that’s the Internet or AI tools like GigaChat. Just be mindful of information quality: verify, think critically, analyze, and compare.
-- Peer-to-peer (P2P) learning is the exchange of knowledge and experience with peers, where everyone acts as both mentor and student. This approach allows you to gain a deeper understanding of the material by learning from one another.
-- Feel free to ask for help: around you are peers who are also navigating this path for the first time. Share your own experience and ideas with others.  Join Rocket.Chat to stay updated with the latest community announcements. 
-- Your learning is meaningless if you just copy someone else’s solutions. When receiving help from others, always make sure you fully understand the “why”, “how”, and “purpose” behind the solution. Don’t be afraid to make mistakes. 
-- Does the task seem impossible? Take a break, get some fresh air and clear your mind — this has helped many people. Maybe after that, the solution will come to you naturally.
-- The learning process is just as important as the result. It’s not just about completing the task — it’s about understanding HOW to solve it.
+- Здесь тебя ждет уникальный образовательный опыт с большим количеством свободы. Ты получаешь задачу и самостоятельно ищешь пути решения, используя любые удобные способы поиска информации — ресурсы Интернета или нейросети (например, GigaChat). Но внимательно относись к качеству информации: проверяй, думай, анализируй, сравнивай.
+- Взаимообучение (Peer-to-Peer, P2P) — это обмен знаниями и опытом с другими пирами, где каждый выступает и учителем, и учеником. Такой подход позволяет глубже понять материал, учась друг у друга.
+- Чувствуй себя свободно и проси о помощи — вокруг тебя те, кто тоже впервые проходят этот путь. Делись своим опытом и идеями с другими. Присоединяйся к Rocket.Chat, чтобы быть в курсе всех новостей от нашего сообщества.
+- Твое обучение не будет иметь никакого смысла, если ты будешь копировать чужие решения. Если пользуешься помощью других — всегда разбирайся до конца, почему, как и зачем. Не бойся ошибиться.
+- Кажется, что задача невыполнима? Сделай перерыв, проветрись, перезагрузи голову — это помогало многим. Возможно, после этого решение придет само собой.
+- Важен не только результат обучения, но и сам процесс. Нужно не просто решить задачу, а понять, КАК ее решить.
 
-## Chapter I 
+## Глава I
 
 ![Illustration](misc/images/IMG_6493.jpg)
 
-### Preamble 
-The success of a system depends not only on whether it performs the functions that customers and system users need. How it performs them is also important:
+### Введение
 
-- How often the system is unavailable during users' working hours;
-- Whether users are satisfied with the speed of certain operations;
-- Whether users find it convenient to work in the system;
-- Whether data is stored in the system for as long as needed;
-- Whether the network capacity is adequate for the amount of data being sent.
+Успешность системы зависит не только от того, выполняет ли она функции, в которых есть потребность заказчика и пользователей системы. Немаловажно то, как она их выполняет:
 
-This is not an exhaustive list of conditions (they are different for each system) that determine the quality of a system's functioning.
+- Как часто система недоступна в периоды работы пользователей;
+- Удовлетворяет ли пользователей скорость выполнения тех или иных операций;
+- Удобно ли пользователям работать в системе;
+- Сохраняются ли данные в системе столько, сколько требуется;
+- Соответствует ли пропускная способность сети объемам пересылаемых данных.
 
-In this project, you will focus on these conditions. and learn to identify and formulate them.
+Это далеко неполный список условий (для каждой системы свой), определяющих качество выполнения функции системы.
 
-### Literature
+В настоящем проекте ты рассмотришь эти условия, а также научишься их выявлять и формулировать.
 
-1. Karl Wiegers, Joy Beatty, "Software Requirements" 3rd edition, amplified. 
-2. N. Tarasova "Non-functional requirements. How not to lose the quality of the product" https://rutube.ru/video/9f0c8e681994034e5eeb05a9b3e23c69/?ysclid=m0m8oih8dv400187997
-3. M. Maximov "Non-functional requirements. How an analyst should work with them" https://rutube.ru/video/523fb99f096855893c40dbe6918bca7d/?ysclid=m0m8pcd64k889258712
-4. I.Gertovskaya "To avoid falling into a trap. On the influence of non-functional requirements on system performance" https://rutube.ru/video/20792726635aeea4f0ae6f7ff4970d70/?ysclid=m0m8prjjfn9750426 .
+### Литература
 
-## Chapter II 
+1. Карл Вигерс, Джой Битти, «Разработка требований к программному обеспечению», издание третье, дополненное.
+2. Н.Тарасова [«Нефункциональные требования. Как не упустить качество продукта»](https://rutube.ru/video/9f0c8e681994034e5eeb05a9b3e23c69/?ysclid=m0m8oih8dv400187997).
+3. М.Максимов [«Нефункциональные требования. Как аналитику работать с ними»](https://rutube.ru/video/523fb99f096855893c40dbe6918bca7d/?ysclid=m0m8pcd64k889258712).
+4. И.Гертовская [«Чтобы не попасть в капкан. О влиянии нефункциональных требований на работоспособность системы»](https://rutube.ru/video/20792726635aeea4f0ae6f7ff4970d70/?ysclid=m0m8prjjfn9750426).
 
-### General Rules
+## Глава II
 
-Before starting, clone the project from GitLab into a repository with the same name.
+### Общие правила
 
-1. Along the way, you may feel a sense of uncertainty and a severe lack of information: that's OK. Remember, the information in the repository and on Google is always with you. So are your peers and Rocket.Chat. Communicate. Search. Use common sense. Don't be afraid to make mistakes.
-2. Pay attention to sources of information. Check. Think. Analyse. Compare. 
-3. Look at the text of each assignment. Read it several times. 
-4. Read the examples carefully. There may be something in them that is not explicitly stated in the task itself.
-5. You may find inconsistencies where something new in the terms of the task or examples conflicts with something you already know. If you come across such an inconsistency, try to work it out. If not, write it down as an open question and find out as you work. Do not leave open questions unanswered. 
-6. If a task seems confusing or impossible, it only seems that way. Try to break it down. It is likely that some parts will become clear. 
-7. There will be several tasks. Those marked with an asterisk (\*) are for the more meticulous students. These tasks are more difficult and are not compulsory. But doing them will give you extra experience and knowledge.
-8. Don't try to fool the system or the people around you. You will fool yourself first.
-9. Got a question? Ask your neighbour to the right. If that doesn't help, ask your neighbour on the left.
-10. When you use help, you should always understand why and how. Otherwise the help is useless.
-11. Always push only to the _develop_ branch! The master branch will be ignored. Work in the _src_ directory.
-12. There should be no files in your directory other than those specified in the tasks.
+Перед выполнением проект необходимо склонировать с GitLab в одноименный репозиторий.
 
-## Chapter III 
+1. На протяжении всего курса тебя будет сопровождать чувство неопределенности и острого дефицита информации — это нормально. Не забывай, что информация в репозитории и Google всегда с тобой. Как и пиры, и Rocket.Chat. Общайся. Ищи. Опирайся на здравый смысл. Не бойся ошибиться.
+2. Будь внимателен к источникам информации. Проверяй. Думай. Анализируй. Сравнивай.
+3. Внимательно читай задания. Перечитай несколько раз.
+4. Читать примеры тоже лучше внимательно. В них может быть что-то, что не указано в явном виде в самом задании.
+5. Тебе могут встретиться несоответствия, когда что-то новое в условиях задачи или примере противоречит уже известному. Если встретилось такое — попробуй разобраться. Если не получилось — запиши вопрос в открытые вопросы и выясни в процессе работы. Не оставляй открытые вопросы неразрешенными.
+6. Если задание кажется непонятным или невыполнимым — так только кажется. Попробуй его декомпозировать. Скорее всего, отдельные части станут понятными.
+7. На пути тебе встретятся самые разные задания. Те, что помечены звездочкой (\*), подходят для более дотошных. Они повышенной сложности и необязательны к выполнению. Но если ты их сделаешь, то получишь дополнительный опыт и знания.
+8. Не пытайся обмануть систему и окружающих. В первую очередь ты обманешь себя.
+9. Есть вопрос? Спроси своего соседа справа. Если это не помогло — соседа слева.
+10. Когда пользуешься помощью — всегда разбирайся до конца: почему, как и зачем. Иначе помощь не будет иметь смысла.
+11. Всегда делай push только в ветку _develop_! Ветка master будет проигнорирована. Работай в директории _src_.
+12. В твоей директории не должно быть иных файлов, кроме тех, что обозначены в заданиях.
 
-### Theory 
-What does the successful execution of operations in the system depend on? 
+## Глава III
+### Теория
 
-1. On the number of simultaneously executed operations of the same type in the system. In fact — on the number of users of the same role (performing the same type of operations) working simultaneously in the system. 
-2. The technology (equipment) on which the software is installed. 
-3. On the performance of networks providing interaction with related systems, including the stability and capacity of the Internet, if the interaction is via the Internet. 
-4. The methods, settings and quality of code that ensure the speed and reliability of operations in the system.
-5. The architecture of the system. What system software the application software runs on, what technologies are used.
+От чего зависит успешное выполнение операций в системе?
 
-There is no single architectural solution for all cases. Some systems require the accumulation and processing of large amounts of data over several years (e.g., weather forecasting), while others require the receipt of small messages and a quick response to each message (e.g., banking transactions). 
+1. От количества одновременно выполняющихся однотипных операций в системе. Фактически — от количества одновременно работающих в системе пользователей одной роли (выполняющих однотипные операции).
+2. От техники (оборудования), на котором установлено программное обеспечение.
+3. От мощности сетей, обеспечивающих взаимодействие со смежными системами, в том числе от устойчивости и пропускной способности интернета, если взаимодействие через интернет.
+4. От методов, настроек и качества кода, обеспечивающего быстроту и надежность выполнения операций в системе.
+5. От архитектуры системы. От того, на каком системном программном обеспечении работает прикладное программное обеспечение, какие технологии применяются.
 
-The architect is responsible for building the system architecture, but this is done based on the information that the analyst first gathered.
+Не бывает единого архитектурного решения на все случаи жизни. В одних системах требуется накопление больших объемов данных в течение нескольких лет и их обработка (например, для прогноза погоды), в других — получение небольших сообщений и быстрый ответ на каждое сообщение (например, банковские операции).
 
-The indicators that influence the success of the functions in the system have historically been called non-functional requirements, as opposed to functional requirements. These indicators are also called quality attributes. Depending on the goals and functions of the system, certain attributes are more or less important. Here is a list of the most commonly used attributes.
+За построение архитектуры системы отвечает архитектор, но делается это на основании тех сведений, которые в первую очередь собирает аналитик при сборе требований.
 
-| Run time     | Design time     |
-| ------------ | --------------- |
-| Availability | Repeatability   |
-| Reliability  | extensibility   |
-| Durability   | Portability     |
-| Scalability  | Compatibility   |
-| Usability    | Maintainability |
-| Security     | Localization    |
-| Performance  | Testability     |
-| Constraints  |                 |
+Показатели, влияющие на успешность выполнения функций в системе, исторически принято называть нефункциональными требованиями, в противоположность функциональным требованиям. Еще эти показатели называют атрибутами качества. В зависимости от целей и функций системы те или иные атрибуты имеют большее или меньшее значение. Вот список наиболее часто применяемых атрибутов.
 
-This is not an exhaustive list of quality attributes, and not all of the attributes listed below are required in every project. 
+|     Время   выполнения (run time)    |     Время   разработки (design time)    |
+|--------------------------------------|-----------------------------------------|
+|     Доступность                      |     Повторяемость                       |
+|     Надежность                       |     Расширяемость                       |
+|     Долговечность                    |     Портируемость                       |
+|     Масштабируемость                 |     Совместимость                       |
+|     Удобство использования           |     Обслуживаемость                     |
+|     Безопасность                     |     Локализация                         |
+|     Производительность               |     Тестируемость                       |
+|     Ограничения                      |                                         |
 
-An explanation of the concepts behind each attribute, examples of quality attributes, and how to identify them can be found in:
+Это неполный список атрибутов качества, и в разных проектах не всегда нужны все ниже перечисленные атрибуты.
 
-1) Karl Wiegers, Joy Beatty, "Software Requirements" 3rd edition, chapter 14. 
-2) [N. Tarasova "Non-functional requirements. How not to lose the quality of the product"](https://www.youtube.com/watch?v=IEWlrZcqXCw).
-3) [M. Maximov "Non-functional requirements. How an analyst should work with them»](https://www.youtube.com/watch?v=dJKr6DfY3Cs&t=2375s).
-4) [I.Gertovskaya "To avoid falling into a trap. On the influence of non-functional requirements on system performance"](https://www.youtube.com/watch?v=x--UgY-QbVA).
+Разъяснение понятий отдельных атрибутов, примеры атрибутов качества и порядок их выявления ты можешь найти в:
 
-The presentation by Nadezhda Tarasova and Irina Gertovskaya describes the categories of non-functional requirements, sources of NFRs, and how to identify them. When identifying non-functional requirements, analysts should work closely with other roles in the team and with customer representatives. M. Maximov's presentation gives a good overview of who to interact with for what quality attributes. We recommend listening not only to the presentations, but also to the questions and answers. This will help you to complete the tasks.
+1) К. Вигерс, Дж. Битти «Разработка требований к программному обеспечению», изд.3, глава 14.
+2) [Н. Тарасова «Нефункциональные требования. Как не упустить качество продукта»](https://www.youtube.com/watch?v=IEWlrZcqXCw).
+3) [М. Максимов «Нефункциональные требования. Как аналитику работать с ними»](https://www.youtube.com/watch?v=dJKr6DfY3Cs&t=2375s).
+4) [И. Гертовская «Чтобы не попасть в капкан. О влиянии нефункциональных требований на работоспособность системы»](https://www.youtube.com/watch?v=x--UgY-QbVA).
 
-It is also important to understand that certain attributes may be more or less important depending on the functionality of the system, the goals of the customer, and the needs of the system users. Thus, a system intended for online sales to a wide audience should have a comfortable, attractive interface, taking into account design trends (otherwise users will go to an online store with more convenient access), quick access to client functions, but there is no point in it to store the state of offered goods for several years. And the system for internal use in a large factory, for example, is designed for a much smaller contingent of users, the design does not need to take into account trends, it is important to have convenient access to operations, but to analyze data from several previous years is required. The approach to determining the importance of non-functional requirements is well described in Chapter 14 of Karl Wiegers' book.
+О категориях нефункциональных требованиях, источниках НФТ и порядке их выявления рассказано в докладе Надежды Тарасовой и Ирины Гертовской. При выявлении нефункциональных требований аналитики должны тесно взаимодействовать с другими ролями команды и с представителями заказчика. С кем взаимодействовать конкретно и по каким атрибутам качества, хорошо рассмотрено в докладе М. Максимова. Рекомендуем не только прослушать сами доклады, но и вопросы-ответы на них. Это поможет выполнить задания.
 
-All of this needs to be considered when identifying and forming non-functional requirements. 
+Также надо понимать, что в зависимости от функций системы, целей заказчика и потребностей пользователей системы большую или меньшую значимость могут приобрести те или иные атрибуты. Так, система, нацеленная на онлайн-продажи для широкой аудитории, должна обладать удобным привлекательным интерфейсом с учетом трендов в дизайне (иначе пользователи уйдут в онлайн-магазин с более удобным доступом), быстротой доступа к функциям клиента, но нет смысла в ней хранить состояние предлагаемых товаров в течение нескольких лет. А система для внутреннего применения на крупном заводе, например, рассчитана на значительно меньший контингент пользователей, в дизайне не обязательно учитывать тренды, важно, чтобы был удобный доступ к операциям, но для анализа нужны данные за несколько предыдущих лет. О подходе к определению значимости нефункциональных требований хорошо описано в главе 14 книги Карла Вигерса.
 
-## Chapter IV 
+Всё это надо учитывать при выявлении и формировании нефункциональных требований.
 
-### Description of tasks
+## Глава IV
 
-### Task 1. Haircut Appointment 
+### Описание задач
 
-The management of a chain of barbershops decided to implement an online booking system. The main objective is to develop the business by expanding the customer base through the possibility of online registration, as well as to reduce employee labour costs and manual labour by automatically informing customers through communication channels. 
+### Задача 1. Запись на стрижку
 
-Both registered and unregistered visitors can book an appointment on the website. When making an appointment, they can select the type of service: hairdressing or cosmetology, as well as the service itself, the master and the time from the available intervals. The system should provide automatic sending of reminders to clients through the communication channel chosen by the client (Telegram, WhatsApp, VK, SMS) according to the schedule set by the manager. After receiving a service, the system offers the client to evaluate the service and write suggestions on how to improve the work.
+Руководство сети барбершопов приняло решение о внедрении системы, обеспечивающей онлайн-запись на прием. Основная цель — развитие бизнеса путем расширения клиентской базы за счет возможности онлайн-записи, а также снижение трудозатрат сотрудников и уменьшение ручного труда за счет автоматического информирования клиентов по каналам связи.
 
-The schedule of masters and the services provided by each master should be entered by the manager, who may be more than one person. This person is also responsible for keeping the schedule up to date and adjusting it if necessary, communicating with customers manually, marking the service, charging and accepting payment, sending the payment data to the accounting department. The manager can also receive reports on completed services and view customer feedback.
+Запись может осуществлять как зарегистрированный, так и незарегистрированный посетитель сайта. При записи можно выбрать услугу, мастера и время из свободных интервалов. Система должна обеспечивать автоматическую отправку напоминаний клиентам через выбранный клиентом канал связи (Telegram, WhatsApp, VK, СМС) по настроенному менеджером расписанию. После получения услуги система предлагает клиенту оценить услугу и написать предложения по улучшению работы.
 
-Each master has the ability to view the schedule and appointments for their services, as well as customer reviews.
+Расписание мастеров и выполняемые каждым мастером услуги должен вводить менеджер, возможно, это будет не один человек. Он же отвечает за актуальность расписания и при необходимости корректирует его, осуществляет связь с клиентами в ручном режиме, проставляет отметку о выполнении услуги, начисляет и принимает оплату, передает данные об оплате в бухгалтерию. Также менеджер может получать отчеты о выполненных услугах и просматривать отзывы клиентов.
 
-The first stage of the system implementation is to identify 5% of the network outlets with 75 masters. In standard mode, masters are loaded at 60-70%, and in peak periods (before New Year and other holidays) the demand increases to 150% and more. If the implementation is successful in the first quarter of operation, the system will be extended to the entire network in all regions of the Russian Federation in the next nine months.
+Любой мастер имеет возможность посмотреть расписание и запись на свои услуги, отзывы клиентов.
 
-### Task 2. Delivery of Orders 
+В качестве первой очереди для внедрения системы выделено 5% точек сети, в которых работают 75 мастеров, в стандартном режиме мастера загружены на 60-70%, а в пиковые периоды (перед Новым годом и другими праздниками) потребность возрастает до 150% и более. При положительном результате внедрения в течение первого квартала эксплуатации, за следующие девять месяцев расширить систему на всю сеть, размещенную во всех регионах РФ.
 
-During the lockdown, many grocery stores and food companies dramatically increased their online sales and the need for quick delivery of small quantities to individual customers increased. 
+### Задача 2. Доставка заказов
 
-A group of students got together and decided to create a delivery service startup. The idea is to quickly receive information about orders, pickup location and time, delivery location, desired delivery dates, and distribute this information to couriers who will pick up the order at the pickup location and deliver it to the delivery location. They decided to develop an online system where orders could be collected and quickly sorted for delivery by couriers.
+В локдаун многие продуктовые магазины и предприятия питания резко увеличили объемы онлайн-продаж, и возросла потребность в быстрой доставке мелких партий товаров индивидуальным клиентам.
 
-The first step was to collect orders from stores and caterers in any way possible and have the operator enter them into the system in a consistent format, as well as developing a mobile application for the courier. The courier should be able to view order information, select an order from those available, book it, pick it up at the collection point and deliver it to the customer. The result of the courier's actions should be immediately reflected in the system via a mobile application. The system should also include a dispatcher who controls the couriers and reassigns orders if necessary. Information on received orders should be sent to the accounting department (to another IT system) to calculate delivery charges with order suppliers. Order delivery information should also be sent to the accounting department to calculate payment to couriers. Accrued payment should be transferred to the system and displayed in the courier's personal account. And there should also be an administrator's workstation, where couriers are registered and access rights are assigned to all of them.
+Компания студентов собрались и решила создать стартап службы доставки.
 
-## Chapter V 
+Идея состоит в том, чтобы оперативно получать информацию о заказах, месте и сроке комплектации, месте доставки, желаемых сроках доставки и раздавать инфо курьерам, которые будут получать заказ в месте комплектации и доставлять в место доставки. Решили развернуть онлайн-систему, куда стекаются заказы и откуда курьеры оперативно разбирают заказы для выполнения.
 
-### Exercise 00 — Identification of Non-Functional Requirements 
+На первом этапе решили собирать заказы от магазинов и предприятий питания любым доступным способом и вводить в систему в едином формате силами оператора, но разработать мобильное приложение для курьеров. Курьер должен иметь возможность просматривать информацию о заказах, выбирать заказ из свободных, бронировать его, забирать в точке выдачи и доставлять клиенту.
 
-List the numbers of sentences that contain non-functional requirements.
+Результат своих действий курьер должен оперативно отражать в системе через мобильное приложение. Также в системе должен работать диспетчер, который контролирует курьеров и при необходимости переназначает заказы. Информация о поступивших заказах должна направляться в бухгалтерию (в другую ИТ-систему) для расчета с поставщиками заказов за доставку. Дополнительно в бухгалтерию должна направляться информация о доставке заказа, где будет производиться расчет оплаты курьеров. Начисленная оплата должна передаваться в систему и отражаться в личном кабинете курьера. И еще запланировано рабочее место администратора, регистрирующего курьеров и назначающего всем права доступа.
 
-1. The system must generate a list of available slots. 
-2. The system must generate a list of free slots in no more than 10 seconds with 1000 users working simultaneously.
-3. The system must provide access to functions according to the user's assigned role.
-4. The system must provide access to the data of the management area of responsibility, only to management employees and controllers.
-5. The system must retain information on orders completed by the courier for at least 3 years.  
-6. The system must calculate the payment to the courier for the delivery of the order.
-7. The system must calculate end-of-day balances on client accounts no later than 50 minutes after the end of the operational day if the number of client accounts does not exceed 1000000.  
-8. System recovery in case of failure must be performed in no more than 30 minutes.
-9. The system must restore the previously entered data. It is allowed to lose data no more than 5 minutes before the failure. 
+## Глава V
 
-**Scale from 1 to 5**
+### Упражнение 00 — Определение нефункциональных требований
 
-### Exercise 01 — Classification Non-Functional Requirements 
-Match the non-functional requirements and types of NFRs from the following.
+Выпиши номера предложений, содержащих нефункциональные требования.
 
-1. For each NFR, indicate the type of NFR. 
-2. Enter the results in a table.
+1. Система должна формировать список свободных слотов.
+2. Система должна формировать список свободных слотов не более чем за 10 секунд при одновременно работающих 1000 пользователей.
+3. Система должна предоставлять доступ к функциям в соответствии с назначенной пользователю ролью.
+4. Система должна предоставлять доступ к данным зоны ответственности управления, только сотрудникам управления и контролерам.
+5. Система должна сохранять информацию о выполненных курьером заказах не менее 3 лет.
+6. Система должна рассчитывать оплату курьеру за доставку заказа.
+7. Система должна рассчитывать остатки на конец дня на лицевых счетах клиентов не позднее 50 минут после закрытия оперативного дня при количестве лицевых счетов клиентов не более 1000000.
+8. Восстановление системы при сбое должно выполняться не более чем за 30 минут.
+9. Система должна восстанавливать введенные ранее данные. Допускается потеря данных не более, чем за 5 минут перед сбоем.
 
-Types of NFRs:
+**Шкала от 1 до 5**
 
-1) Availability,
-2) Reliability,
-3) Scalability,
-4) Localization,
-5) Usability,
-6) Performance,
-7) Compatibility,
-8) Durability,
-9) Security.
+### Упражнение 01 — Классификация нефункциональных требований
 
-NFR:
+Сопоставь нефункциональные требования и типы НФТ из указанных ниже:
 
-1) The system must provide the user with the "Administrator" role with access to assign and correct user roles. 
-2) The system must keep information about client's payments for goods for at least 5 years.
-3) The system must prohibit access to assigning and correcting user roles for all users except for users with the "Administrator" role.
-4) The system recovery time after a failure should not exceed 30 minutes.  
-5) After the client selects a region, the system should display the regional time and provide the client with the ability to perform its actions taking into account the regional time.
-6) The system must provide the client with the opportunity to place an order 24 hours a day, seven days a week, except for the time of technological breaks. Time of technological break: weekly, Sunday from 2:00 to 4:00.
-7) The first wave of the system implementation should be carried out in two regions. Within six months after the completion of the first wave of implementation, the system shall be implemented in the next four regions.
-8) The screen interfaces for the clients of the system shall meet the current trends and provide color customization.
-9) The system should be available 99% of the time from 9:00 to 21:00, the rest of the time — 90%.
-10) The system must provide the selection of a master and service in an average of 3 seconds and no more than 6 seconds after a request for simultaneous work of up to 1000 users.
-11) The system must support user interface through browsers: Chrome, Safari, Firefox. And tested on the following versions of browsers: specify the last and second-to-last version of browsers.
+1. Для каждого НФТ указать тип НФТ.
+2. Результаты разместить в таблицу.
 
-**Scale from 1 to 5**
+Типы НФТ:
 
-### Exercise 02 — Selection of NFRs 
-Select the types of NFRs for Task 1 and Task 2.
+1) доступность,
+2) надежность,
+3) масштабируемость,
+4) локализация,
+5) удобство использования,
+6) производительность,
+7) совместимость,
+8) долговечность,
+9) безопасность.
 
-1. Specify a list of NFR types required for successful system operation. 
-2. Specify at least 7 types of NFRs in the list.
-3. Specify the priority of each NFR type (from 1 to 5, with 1 being the highest priority) separately for each task. 
+НФТ:
 
-**Scale from 1 to 5**
+1) Система должна предоставлять пользователю с ролью «Администратор» доступ к назначению и корректировке ролей пользователей.
+2) Система должна сохранять информацию об оплатах клиента за товар не менее 5 лет.
+3) Система должна запретить доступ к назначению и корректировке ролей пользователей всем пользователям, кроме пользователей с ролью «Администратор».
+4) Срок восстановления системы после сбоя должен занимать не более 30 минут.
+5) После выбора клиентом региона система должна показывать региональное время и обеспечивать клиенту выполнение своих действий с учетом регионального времени.
+6) Система должна предоставлять клиенту возможность оформлять заказ круглосуточно, семь дней в неделю за исключением времени технологических перерывов. Время технологических перерывов: еженедельно, в воскресенье с 2:00 до 4:00.
+7) Первая волна внедрения системы должна быть выполнена на двух регионах. В течение полугода после окончания внедрения первой волны система должна быть внедрена в следующих четырех регионах.
+8) Экранные интерфейсы для клиентов системы должны удовлетворять современным трендам и обеспечивать настройку цветовой гаммы.
+9) Система должна быть доступна с 9:00 до 21:00 99% времени, в остальное время — 90%.
+10) Система должна обеспечить выбор мастера и услуги в среднем за 3 секунды и не более чем за 6 секунд после запроса у системы при одновременной работе до 1000 пользователей.
+11) Система должна поддерживать интерфейс пользователя через браузеры: Chrome, Safari, Firefox. И протестирована на следующих версиях браузеров: указать последнюю и предпоследнюю версию браузеров.
 
-### Exercise 03 — Performance Attributes 
-Specify the performance attributes for Task 1 and Task 2.
+**Шкала от 1 до 5**
 
-1. For each task, identify at least 3 important scenarios from a business and customer perspective. 
-2. Identify the roles involved in each scenario.
-3. For each scenario, identify:
-   1. Approximate number of logged on users by role; 
-   2. Approximate number of concurrent users by role;
-   3. peak hours of user work;
-   4. Approximate number of concurrent users by role during peak periods.
-4. Identify 3 to 5 operations/pages that require controlled response time (most important for efficient system operation).
-5. Specify the response time for each of the monitored operations.
-6. Provide results in tabular form, multiple tables are acceptable.
+### Упражнение 02 — Выбор НФТ
 
-**Scale from 1 to 5**
+Выбери типы НФТ для задачи 1 и задачи 2:
 
-### Exercise 04 — Availability and Reliability Attributes 
-Specify the availability and reliability attributes for Task 1 and Task 2.
+1. Укажи список типов НФТ, необходимых для успешного функционирования системы.
+2. Укажи в списке не менее 7 типов НФТ.
+3. Укажи приоритет каждого типа НФТ (от 1 до 5, 1 — высший приоритет) отдельно для каждой задачи.
 
-1. Specify the availability attributes for each task. 
-2. Specify the reliability attributes for each task.
+**Шкала от 1 до 5**
 
-**Scale from 1 to 5**
+### Упражнение 03 — Атрибуты производительности
 
-### Exercise 05 — Scalability Attributes 
-Specify scalability and localization attributes for Task 1 and Task 2.
+Укажи атрибуты производительности для задачи 1 и задачи 2:
 
-1. Specify the need for or lack of system scalability. 
-2. If there is a need for scaling, describe the scaling requirements.
-3. Specify the need or lack of localization.
-4. If there is a need for localization, describe the localization attributes.  
+1. Укажи не менее 3 важных сценариев для каждой задачи с точки зрения бизнеса и клиентов.
+2. Распиши роли, принимающие участие в каждом сценарии.
+3. Для каждого сценария укажи:
+   1. примерное количество зарегистрированных пользователей в разрезе ролей;
+   2. примерное количество одновременно работающих пользователей в разрезе ролей;
+   3. пиковые периоды работы пользователей;
+   4. примерное количество одновременно работающих пользователей в разрезе ролей в пиковые периоды.
+4. Напиши от 3 до 5 операций/страниц, требующих контролируемого времени отклика (наиболее значимых для эффективной работы системы).
+5. Укажи время отклика для каждой из контролируемых операций.
+6. Результаты представь в табличном виде, допустимо несколько таблиц.
 
-**Scale from 1 to 5**
+**Шкала от 1 до 5**
 
-### Exercise 06 — Security Attributes 
-Describe the password and logging security requirements for Task 1 and Task 2.
+### Упражнение 04 — Атрибуты доступности и надежности
 
-Specify password and multifactor requirements using different approaches in each Task. 
+Укажи атрибуты доступности и надежности для задачи 1 и задачи 2:
 
-1. Specify password composition requirements. 
-2. Describe password reset, change, and recovery rules.
-3. Specify multifactor authentication requirements:
-   1. actions that require multifactor authentication,
-   2. the order of authentication
-4. Specify logging requirements:
-   1. actions requiring logging,
-   2. logged data.
+1. Укажи атрибуты доступности для каждой задачи.
+2. Укажи атрибуты надежности для каждой задачи.
 
-**Scale from 1 to 5**
+**Шкала от 1 до 5**
+
+### Упражнение 05 — Атрибуты масштабирования
+
+Укажи атрибуты масштабирования и локализации для задачи 1 и задачи 2:
+
+1. Укажи потребность масштабирования системы или ее отсутствие.
+2. Если потребность масштабирования есть, опиши требования к масштабированию.
+3. Укажи потребность локализации или ее отсутствие.
+4. Если есть потребность локализации, опиши атрибуты локализации.
+
+**Шкала от 1 до 5**
+
+### Упражнение 06 — Атрибуты безопасности
+
+Опиши для задачи 1 и задачи 2 требования к безопасности в части паролей и логирования.
+
+Требования в части паролей и многофакторности укажи с различными подходами в каждой задаче.
+
+1. Укажи требования к составу пароля.
+2. Опиши правила сброса, смены и восстановления пароля.
+3. Укажи требования к многофакторной аутентификации:
+   1. Действия, требующие многофакторной аутентификации;
+   2. Порядок аутентификации.
+4. Укажи требования к логированию:
+   1. Операции, требующие логирования;
+   2. Логируемые данные.
+
+**Шкала от 1 до 5**

@@ -1,90 +1,111 @@
-# Business & Systems Analysis Learning Portfolio
+# Портфолио по бизнес- и системному анализу
 
-A portfolio of 14 School 21 business and systems analysis assignments, developed around two recurring case studies: an online barbershop booking service and an order-delivery service.
+Учебное портфолио для позиции **стажера или младшего системного аналитика**. В репозитории собраны результаты 14 последовательных модулей School 21: от декомпозиции задачи и анализа заинтересованных сторон до проектирования функциональных и нефункциональных требований, пользовательских интерфейсов и управления требованиями.
 
-The repository shows a progression from problem decomposition and stakeholder analysis through requirements, domain and process modeling, interaction design, non-functional requirements, and requirements management. Deliverables are primarily in Russian; every module retains the original English and Russian assignment brief.
+Работы построены вокруг двух сквозных учебных кейсов:
 
-> **Portfolio scope:** this is an educational case study, not a production system. The repository contains analysis artifacts and interface wireframes—not application source code, a deployed product, or automated acceptance tests.
+- системы онлайн-записи в барбершоп;
+- сервиса управления доставкой заказов.
 
-## What this portfolio demonstrates
+> Это учебное портфолио, а не коммерческий проект и не система промышленной эксплуатации. Здесь представлены аналитические документы, модели, диаграммы и прототипы интерфейсов. Исполняемого приложения, развернутого сервиса и автоматизированных тестов в репозитории нет.
 
-- stakeholder identification, needs analysis, and glossary management;
-- As-Is / To-Be analysis, context diagrams, and data-flow modeling;
-- requirements elicitation through role play, workshops, and brainstorming;
-- domain modeling, CRUD analysis, data dictionaries, and logical data models;
-- DFD, swimlane, state, and BPMN modeling;
-- user stories, use cases, alternate flows, and role-based access rules;
-- interface inventories, key scenarios, wireframes, field rules, and controls;
-- measurable non-functional requirements for performance, availability, scalability, localization, and security;
-- requirements registration and positive/negative test-case design.
+## Что демонстрирует портфолио
 
-## Selected artifacts
+- выявление заинтересованных сторон, их интересов, потребностей и проблем;
+- описание текущего состояния процессов (As-Is) и целевого состояния (To-Be);
+- сбор требований с помощью интервью, ролевой игры, мозгового штурма и семинара;
+- ведение глоссария и реестров источников информации;
+- построение контекстных моделей, DFD, диаграмм с дорожками, диаграмм состояний и BPMN;
+- выделение сущностей, CRUD-анализ, проектирование словарей данных и логических моделей;
+- разработку пользовательских историй и сценариев использования, включая основные и альтернативные потоки;
+- описание жизненных циклов, статусных моделей, операций и ролевых прав доступа;
+- проектирование состава экранных форм, пользовательских сценариев и макетов интерфейса;
+- формулирование NFR для производительности, надежности, масштабирования, локализации и безопасности;
+- регистрацию требований, трассировку идентификаторов и подготовку позитивных и негативных тест-кейсов.
 
-### Logical data model
+## Модули BSA00–BSA13
 
-![Logical data model for the barbershop booking case](BSA04_Domains.ID_1361447-1-develop/src/ex03_BRS_model.png)
-
-Editable source: [`ex03_BRS_model.drawio`](BSA04_Domains.ID_1361447-1-develop/src/ex03_BRS_model.drawio)
-
-### Level-0 data-flow diagram
-
-![Level-0 DFD for the barbershop booking case](BSA05_Diagrams.ID_1361446-1-develop/src/BRS/ex00_BRS_dfd.png)
-
-### Manager interface wireframe
-
-![Manager main-menu wireframe](BSA11_UserInterfaces.ID_1361457-Team_TL_joelleet.6f9d1128_4541_4165-1-develop/src/Ex05/assets/fig_03_scr_mg_01.png)
-
-The UI module includes 22 linked wireframes for manager, specialist, and client flows.
-
-## Learning path
-
-| Module | Topic | Evidence in `src/` |
+| Модуль | Тема | Основные результаты |
 |---|---|---|
-| BSA00 | Decomposition and analyst foundations | information-source registers, glossaries, decomposition exercises |
-| BSA01 | Stakeholders | stakeholder register, onion diagram, needs/problems matrix, glossary |
-| BSA02 | Requirements foundations | As-Is actions, context diagram, To-Be changes, data flows |
-| BSA03 | Requirements elicitation | role-play, brainstorming, workshop, and vision artifacts |
-| BSA04 | Domain modeling | entity catalogs, CRUD matrix, data dictionaries, editable logical models |
-| BSA05 | Analysis diagrams | DFD, swimlane, extended swimlane, state diagrams, state tables |
-| BSA06 | Business processes and BPMN | process inventory, discussions, process descriptions, BPMN diagrams, review matrix |
-| BSA07 | User stories | role-oriented stories and a coordination record |
-| BSA08 | Use cases | six documents covering descriptions, main flows, and alternate flows |
-| BSA09 | Objects, references, and roles | entity specifications and evolving class diagrams |
-| BSA10 | Functional requirements | lifecycle/status models, CRUD behavior, operation detail, access matrix |
-| BSA11 | User interaction design | interface catalog, scenarios, 22 wireframes, validation and control rules |
-| BSA12 | Non-functional requirements | performance, reliability, scalability, localization, and security attributes |
-| BSA13 | Requirements management | requirement records, traceable IDs, test cases, and task-tool screenshots |
+| BSA00 | Декомпозиция и основы работы аналитика | реестры источников, глоссарии, упражнения по декомпозиции |
+| BSA01 | Заинтересованные стороны | реестр заинтересованных сторон, луковичная диаграмма, матрица потребностей и проблем |
+| BSA02 | Основы работы с требованиями | текущее состояние, контекстная диаграмма, целевое состояние, входные и выходные потоки |
+| BSA03 | Выявление требований | ролевая игра, мозговой штурм, семинар, видение проекта |
+| BSA04 | Предметная область и данные | перечни сущностей, CRUD-матрица, словари данных, логические модели |
+| BSA05 | Модели и диаграммы | DFD, диаграммы с дорожками, диаграммы и таблицы состояний |
+| BSA06 | Бизнес-процессы и BPMN | реестр процессов, протоколы обсуждений, описания и BPMN-диаграммы, матрица проверки |
+| BSA07 | Пользовательские истории | истории для нескольких ролей и материалы согласования |
+| BSA08 | Сценарии использования | описания сценариев, основные и альтернативные потоки |
+| BSA09 | Объекты, справочники и роли | спецификации сущностей и последовательное развитие диаграммы классов |
+| BSA10 | Функциональные требования | жизненные циклы, статусные модели, CRUD-операции, детализация действий, матрица доступа |
+| BSA11 | Пользовательское взаимодействие | каталог экранов, ключевые сценарии, 22 макета интерфейса, правила полей и элементов управления |
+| BSA12 | Нефункциональные требования | производительность, надежность, масштабирование, локализация и безопасность |
+| BSA13 | Управление требованиями | реестр требований, идентификаторы, тест-кейсы и подтверждающие снимки экрана |
 
-For direct links to every module, its brief, and its main deliverables, see the [artifact catalog](docs/artifact-catalog.md).
+Подробные ссылки на задания и результаты каждого модуля собраны в [каталоге артефактов](docs/artifact-catalog.md).
 
-## How to review
+## Что посмотреть в первую очередь
 
-1. Start with BSA01–BSA02 to see the business context, stakeholders, problems, and target-state framing.
-2. Continue with BSA04–BSA06 for data, behavior, and business-process models.
-3. Review BSA07–BSA10 for user and system requirements with lifecycle and access detail.
-4. Finish with BSA11–BSA13 for interaction design, quality attributes, traceability, and test cases.
+### Логическая модель данных
 
-The original assignment structure is intentionally preserved. In each module:
+![Логическая модель данных сервиса онлайн-записи](BSA04_Domains.ID_1361447-1-develop/src/ex03_BRS_model.png)
 
-- `README.md` and `README_RUS.md` contain the assignment brief;
-- `src/` contains the submitted work;
-- `materials/` and `misc/` contain course references and illustrations.
+Редактируемый исходник: [`ex03_BRS_model.drawio`](BSA04_Domains.ID_1361447-1-develop/src/ex03_BRS_model.drawio).
 
-## Tools and formats
+### DFD уровня 0
 
-The portfolio uses Markdown, Microsoft Word, Excel, PDF, PNG, and editable Draw.io sources. The artifacts apply BPMN, DFD, swimlane, state, context, onion, CRUD, logical data-model, user-story, use-case, and wireframing techniques.
+![DFD уровня 0 для сервиса онлайн-записи](BSA05_Diagrams.ID_1361446-1-develop/src/BRS/ex00_BRS_dfd.png)
 
-No build is required. Open Markdown and PNG files directly on GitHub; use Microsoft Office or a compatible suite for `.docx` / `.xlsx`, and Draw.io for `.drawio` files.
+### Макет главного экрана менеджера
 
-## Status and limitations
+![Макет главного меню менеджера](BSA11_UserInterfaces.ID_1361457-Team_TL_joelleet.6f9d1128_4541_4165-1-develop/src/Ex05/assets/fig_03_scr_mg_01.png)
 
-- All 14 module folders contain submission artifacts matching the exercise groups in their assignment briefs.
-- The repository has been checked for readable Office containers, PDF readability, image rendering, duplicate content, local Markdown links, and obvious secret-file patterns.
-- Some modules were team assignments, as indicated by `Team` in their preserved folder names. This portfolio does not present those artifacts as sole-authored work.
-- Assessment grades and formal stakeholder approval are not included, so the repository does not claim either.
-- There is no executable application or automated test suite; validation here checks artifact integrity and repository presentation.
+В модуле BSA11 подготовлены 22 связанных макета интерфейса для менеджера, мастера и клиента.
 
-## Repository notes
+Дополнительные материалы для быстрого просмотра:
 
-The course folders contain a minimal `School 21 License` marker supplied with the assignments. No broader root-level license is asserted. Review the license marker in the relevant module before reusing an artifact.
+- [спецификация экранных форм справочников](BSA11_UserInterfaces.ID_1361457-Team_TL_joelleet.6f9d1128_4541_4165-1-develop/src/Ex01/ex01_references_screen_forms.md);
+- [требования безопасности](BSA12_NonfunctionalRequirements.ID_1361458-1-develop/src/Ex06.md);
+- [отчет по управлению требованиями и тест-кейсам](BSA13_RequirementsManagements_ID_1361460-Team_TL_gerrench_57ba4a36_785d_40e3-1-develop/src/BSA13_report.md).
 
+## Как проходить по репозиторию
+
+### Быстрый просмотр для HR
+
+1. Просмотреть эту страницу и таблицу модулей.
+2. Открыть три ключевых артефакта выше: модель данных, DFD и макет интерфейса.
+3. Перейти в [каталог артефактов](docs/artifact-catalog.md) и выбрать темы, наиболее близкие вакансии.
+
+### Техническое ревью
+
+1. Начать с BSA01–BSA02: контекст, заинтересованные стороны, проблемы и целевое состояние.
+2. Перейти к BSA04–BSA06: модели данных, поведения и бизнес-процессов.
+3. Изучить BSA07–BSA10: пользовательские и системные требования, жизненные циклы и права доступа.
+4. Завершить BSA11–BSA13: пользовательские интерфейсы, атрибуты качества, трассировка требований и тест-кейсы.
+
+## Структура модулей
+
+Исходная структура учебных заданий сохранена. В каждом модуле:
+
+- `README.md` — русская версия задания;
+- `README_EN.md` — английская версия задания;
+- `src/` — выполненные работы;
+- `materials/` и `misc/` — учебные материалы и иллюстрации.
+
+Основные форматы: Markdown, DOCX, XLSX, PDF, PNG и Draw.io. Для просмотра `.docx` и `.xlsx` потребуется Microsoft Office или совместимый офисный пакет; файлы `.drawio` открываются в Draw.io.
+
+## Командные задания
+
+Модули BSA03, BSA06, BSA09, BSA11 и BSA13 выполнялись в командном формате. Это отражено в сохраненных именах каталогов и отмечено в каталоге артефактов. Репозиторий не представляет командные результаты как полностью индивидуальную работу.
+
+## Статус и ограничения
+
+- Во всех 14 модулях присутствуют артефакты, соответствующие группам упражнений из исходных заданий.
+- Файлы проверены на читаемость, локальные Markdown-ссылки — на существование целей, а предполагаемый дубликат BSA12 — по SHA-256 перед удалением.
+- В репозитории нет оценок курса и формального согласования со стейкхолдерами, поэтому такие результаты не заявляются.
+- Аналитические артефакты не подтверждают готовность к промышленной эксплуатации и не заменяют проверку требований реальными заказчиками.
+- Автоматизированного тестового набора нет: выполненные проверки относятся к целостности файлов и оформлению репозитория.
+
+## Лицензия
+
+В каталогах учебных модулей сохранен краткий файл лицензии, поставлявшийся вместе с заданиями School 21. Отдельная корневая лицензия не добавлена. Перед повторным использованием материалов необходимо уточнить условия лицензирования School 21.

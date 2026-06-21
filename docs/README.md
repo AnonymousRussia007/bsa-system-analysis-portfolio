@@ -1,7 +1,7 @@
-# Documentation index
+# Документация портфолио
 
-- [Artifact catalog](artifact-catalog.md) — module-by-module review map and assignment coverage.
-- [Validation notes](validation.md) — what can and cannot be validated in this artifact-based repository.
+- [Каталог артефактов](artifact-catalog.md) — карта модулей, выполненных заданий и основных материалов для ревью.
+- [Проверка репозитория](validation.md) — выполненные проверки и границы их интерпретации.
 
-The original assignment briefs and submissions remain inside their BSA module folders so course-required paths are not broken.
+Исходные задания и результаты сохранены внутри каталогов BSA00–BSA13, чтобы не нарушать обязательную учебную структуру и относительные ссылки.
 

@@ -1,319 +1,310 @@
-# Modeling business processes
+# Моделирование бизнес-процессов
 
-Summary:
+Резюме:
 
-In this project, you will continue to learn about the basic models and representations that an analyst develops during the analysis and design process. You will learn about BPMN diagrams, their scope, and how to build them. You will also compare it to the one you developed earlier, identify inconsistencies, and complete them.
+В этом проекте ты продолжишь знакомиться с основными моделями и представлениями, которые аналитик разрабатывает в процессе анализа и проектирования. Узнаешь о диаграммах BPMN, областях их применения и научишься их строить. А также сравнишь их с разработанным тобой ранее, увидишь нестыковки и дополнишь их.
 
-💡 [Tap here](https://new.oprosso.net/p/4cb31ec3f47a4596bc758ea1861fb624) **to leave your feedback on the project**. It's anonymous and will help our team make your educational experience better. We recommend completing the survey immediately after the project.
+💡 [Нажми сюда](https://new.oprosso.net/p/4cb31ec3f47a4596bc758ea1861fb624), **чтобы поделиться с нами обратной связью на этот проект**. Это анонимно и поможет нашей команде сделать обучение лучше. Рекомендуем заполнить опрос сразу после выполнения проекта.
 
-## Contents
+## Содержание
 
-1. [Chapter I](#chapter-i) \
-   1.1. [Preamble](#11)
-2. [Chapter II](#chapter-ii) \
-   2.1. [General Rules](#21)
-3. [Chapter III](#chapter-iii) \
-   3.1. [Business processes](#31) \
-   3.2. [Recommendations for Work with Business Processes](#32) \
-   3.3. [BPMN Diagram](#33)
-4. [Chapter IV](#chapter-iv) \
-   4.1. [Task 1. Haircut Appointment](#41) \
-   4.2. [Task 2. Delivery of Orders)](#42)
-5. [Chapter V](#chapter-v) \
-   5.1. [Exercise 00 — Preparatory Work](#51) \
-   5.2. [Exercise 01 — Identification of Main Business Processes](#52) \
-   5.3. [Exercise 02 — Discussion of Business Processes](#53) \
-   5.4. [Exercise 03 — Description of the Main Business Processes](#54) \
-   5.5. [Exercise 04 — Development of Business Process Diagrams](#55) \
-   5.6. [Exercise 05 — Revision of the Main Business Process Diagrams](#56)
+1. [Глава I](#chapter-i) \
+    1.1. [Введение](#11)
+2. [Глава II](#chapter-ii) \
+    2.1. [Общие правила](#21)
+3. [Глава III](#chapter-iii) \
+    3.1. [Бизнес-процессы](#31) \
+    3.2. [Рекомендации по работе с бизнес-процессами](#32) \
+    3.3. [BPMN-диаграмма](#33)
+4. [Глава IV](#chapter-iv) \
+    4.1. [Задача 1. Запись на стрижку](#41) \
+    4.2. [Задача 2. Доставка заказов](#42)
+5. [Глава V](#chapter-v) \
+    5.1. [Упражнение 00 — Подготовительные работы](#51) \
+    5.2. [Упражнение 01 — Выделение основных бизнес-процессов](#52) \
+    5.3. [Упражнение 02 — Обсуждение бизнес-процессов](#53) \
+    5.4. [Упражнение 03 — Описание основных бизнес-процессов](#54) \
+    5.5. [Упражнение 04 — Разработка диаграмм бизнес-процессов](#55) \
+    5.6. [Упражнение 05 — Ревизия диаграмм основных бизнес-процессов](#56)
 
-## Chapter I <div id="chapter-i"></div>
+## Глава I <div id="chapter-i"></div>
 
 ![](misc/images/Illustration_06.jpg)
 
-### Preamble <div id="11"></div>
+### Введение <div id="11"></div>
 
-In this project you will: be introduced to the concept of "business process" and techniques for building business process diagrams; learn about the BPMN notation; build diagrams in this notation; compare business process models with other previously created artifacts, which will allow you to identify inconsistencies and better understand needs and problems. 
+В этом проекте ты познакомишься с понятием «бизнес-процесс» и приемами построения диаграмм бизнес-процессов. Узнаешь о нотации BPMN и построишь диаграммы в этой нотации. А также сопоставишь модели бизнес-процессов с другими созданными ранее артефактами, что позволит выявить нестыковки, лучше разобраться в потребностях и проблемах.
 
-The current project is a group project.
+Текущий проект выполняется как групповая работа.
 
-### Literature:
+### Литература:
 
-1. Karl Wiegers, Joy Beatty, "Software Requirements" 3rd edition, amplified.
-2. Vladimir Repin "Business Process Modeling in BPMN Notation. Manual for beginners. Part I".
-3. [BPMN Description](https://www.businessstudio.ru/wiki/docs/current/doku.php/ru/csdesign/bpmodeling/bpmn_notation) by Business Studio.
-4. [Blog about business processes and BPMN](https://bpmn.pro/bpmn/chto-takoe-bpmn). 
-5. Microsoft "[A beginner's guide to using BPMN in everyday work](https://www.microsoft.com/ru-ru/microsoft-365/business-insights-ideas/resources/the-guide-to-using-bpmn-in-your-business)".
-6. Comindware's Blog "[BPMN 2.0 notation: key elements and description](https://www.comindware.ru/blog/%d0%bd%d0%be%d1%82%d0%b0%d1%86%d0%b8%d1%8f-bpmn-2-0-%d1%8d%d0%bb%d0%b5%d0%bc%d0%b5%d0%bd%d1%82%d1%8b-%d0%b8-%d0%be%d0%bf%d0%b8%d1%81%d0%b0%d0%bd%d0%b8%d0%b5/)".
+1. Карл Вигерс, Джой Битти, «Разработка требований к программному обеспечению» издание третье, дополненное.
+2. Владимир Репин «Моделирование бизнес-процессов в нотации BPMN. Пособие для начинающих. Часть I».
+3. [Описание нотации BPMN](https://www.businessstudio.ru/wiki/docs/current/doku.php/ru/csdesign/bpmodeling/bpmn_notation) от Business Studio.
+4. [Блог о бизнес-процессах и BPMN](https://bpmn.pro/bpmn/chto-takoe-bpmn).
+5. Microsoft «[Руководство для начинающих по использованию BPMN в повседневной работе](https://www.microsoft.com/ru-ru/microsoft-365/business-insights-ideas/resources/the-guide-to-using-bpmn-in-your-business)».
+6. Блог Comindware «[Нотация BPMN 2.0: ключевые элементы и описание](https://www.comindware.ru/blog/%d0%bd%d0%be%d1%82%d0%b0%d1%86%d0%b8%d1%8f-bpmn-2-0-%d1%8d%d0%bb%d0%b5%d0%bc%d0%b5%d0%bd%d1%82%d1%8b-%d0%b8-%d0%be%d0%bf%d0%b8%d1%81%d0%b0%d0%bd%d0%b8%d0%b5/)».
 
-## Chapter II <div id="chapter-ii"></div>
+## Глава II <div id="chapter-ii"></div>
 
-### General Rules <div id="21"></div>
+### Общие правила <div id="21"></div>
 
-1. Along the way, you may feel a sense of uncertainty and a severe lack of information: that's OK. Remember, the information in the repository and on Google is always with you. So are your peers and Rocket.Chat. Communicate. Search. Use common sense. Don't be afraid to make mistakes.
-2. Pay attention to sources of information. Check. Think. Analyse. Compare. 
-3. Look at the text of each assignment. Read it several times. 
-4. Read the examples carefully. There may be something in them that is not explicitly stated in the task itself.
-5. You may find inconsistencies where something new in the terms of the task or examples conflicts with something you already know. If you come across such an inconsistency, try to work it out. If not, write it down as an open question and find out as you work. Do not leave open questions unanswered. 
-6. If a task seems confusing or impossible, it only seems that way. Try to break it down. It is likely that some parts will become clear. 
-7. There will be several tasks. Those marked with an asterisk (\*) are for the more meticulous students. These tasks are more difficult and are not compulsory. But doing them will give you extra experience and knowledge.
-8. Don't try to fool the system or the people around you. You will fool yourself first.
-9. Got a question? Ask your neighbour to the right. If that doesn't help, ask your neighbour on the left.
-10. When you use help, you should always understand why and how. Otherwise the help is useless.
-11. Always push only to the develop branch! The master branch will be ignored. Work in the src directory.
-12. There should be no files in your directory other than those specified in the tasks.
+1. На протяжении всего курса тебя будет сопровождать чувство неопределенности и острого дефицита информации — это нормально. Не забывай, что информация в репозитории и Google всегда с тобой. Как и пиры, и Rocket.Chat. Общайся. Ищи. Опирайся на здравый смысл. Не бойся ошибиться.
+2. Будь внимателен к источникам информации. Проверяй. Думай. Анализируй. Сравнивай.
+3. Внимательно читай задания. Перечитай несколько раз.
+4. Читать примеры тоже лучше внимательно. В них может быть что-то, что не указано в явном виде в самом задании.
+5. Тебе могут встретиться несоответствия, когда что-то новое в условиях задачи или примере противоречит уже известному. Если встретилось такое — попробуй разобраться. Если не получилось — запиши вопрос в открытые вопросы и выясни в процессе работы. Не оставляй открытые вопросы неразрешенными.
+6. Если задание кажется непонятным или невыполнимым — так только кажется. Попробуй его декомпозировать. Скорее всего, отдельные части станут понятными.
+7. На пути тебе встретятся самые разные задания. Те, что помечены звездочкой (\*) — подходят для более дотошных. Они повышенной сложности и необязательны к выполнению. Но если ты их сделаешь, то получишь дополнительный опыт и знания.
+8. Не пытайся обмануть систему и окружающих. В первую очередь ты обманешь себя.
+9. Есть вопрос? Спроси своего соседа справа. Если это не помогло — соседа слева.
+10. Когда пользуешься помощью — всегда разбирайся до конца: почему, как и зачем. Иначе помощь не будет иметь смысла.
+11. Всегда делай push только в ветку develop! Ветка master будет проигнорирована. Работай в директории src.
+12. В твоей директории не должно быть иных файлов, кроме тех, что обозначены в заданиях.
 
-## Chapter III <div id="chapter-iii"></div>
+## Глава III <div id="chapter-iii"></div>
 
-### Theory
+### Теория
+В этом проекте для решения наших задач применим процессный подход. Процессный подход заключается в рассмотрение деятельности организации как системы взаимосвязанных и согласованных процессов, выполняемых организацией для достижения своих главных целей.
 
-In this project, we will use a process approach to solve our problems. The process approach involves viewing the activities of an organization as a system of interrelated and coordinated processes that the organization performs to achieve its primary goals.
+### 1. Бизнес-процессы <div id="31"></div>
 
-### 1. Business Processes <div id="31"></div>
+**Бизнес-процесс** — последовательность действий (мероприятий, операций, работ), ограниченная началом и окончанием и направленная на получения заданного результата (например, создание продукта или услуги).
 
-**Business process** is a sequence of actions (events, operations, work), limited by a beginning and an end, aimed at achieving a given result (e.g. creation of a product or service).
+Бизнес-процесс характеризуется такими основными элементами:
 
-A business process is characterized by these basic elements:
+- ***Цель/результат бизнес-процесса (выход)***: то, ради чего выполняется бизнес-процесс. Бизнес-процесс всегда направлен на получение результата. Как правило, и название бизнес-процессу присваивают по целевому назначению. *Например*, начисление оплаты за телефонные разговоры.
+- ***Владелец бизнес-процесса:*** человек или должностное лицо, отвечающее за выполнение процесса и получение результата. Негрупповая роль. ***Например,*** руководитель группы расчетов компании, предоставляющей услуги мобильной связи.
+- ***Исполнители:*** люди (группы людей), выполняющие те или иные действия бизнес-процесса. Люди, выполняющие идентичные действия, объединяются в роли. ***Например,*** сотрудник группы расчетов компании, предоставляющие услуги мобильной связи.
+- ***Вход бизнес-процесса:*** ресурсы, необходимые для создания результата бизнес-процесса. Входные ресурсы (материалы, информационные данные) потребляются или преобразуются в результат. ***Например,*** тайминг телефонных разговоров для расчета оплаты за эти разговоры.
 
-- ***Business process purpose/result (output)*** — what the business process is for. A business process always aims to achieve a result. Typically, a business process is named according to its purpose. ***For example***, billing for telephone calls.
-- ***Business process owner*** — the person or official responsible for performing the process and achieving the result. Non-group role. ***For example***, the head of the accounts team of a mobile phone company.
-- ***Executors*** — people (groups of people) who perform certain actions of a business process. People who perform identical actions are grouped into roles ***For example***, an employee of the accounts team of a cell phone company. 
-- ***Business process input*** — the resources required to create the result of the business process. Input resources (materials, information data) are consumed or transformed into an output. ***For example,*** the timing of telephone calls to calculate payment for those calls.
+Кроме того, бизнес-процесс имеет:
+- ***Начало***: событие, инициирующее бизнес-процесс. ***Например,*** наступление конца периода при расчете оплаты за телефонные разговоры.
+- ***Окончание:*** событие получения результата. Результат бизнес-процесса может быть как успешным, так и неуспешным. *Например,* начисленная оплата за телефонные разговоры за период.
+- ***Применяемые ресурсы*:** применяемые и остающиеся без изменения в бизнес-процессе. ***Например,*** справочные данные по тарификации телефонных разговоров.
+- ***Шаги бизнес-процесса:*** действия бизнес-процесса, выполняемые в определенной последовательности. ***Например,*** действия, выполняемые для расчета за телефонные разговоры.
+- ***Описание бизнес-процесса:*** текстовое или/и графическое описание последовательности действий; указание ролей, выполняющих действия и условия выполнения.
 
-In addition, the business process has:
+Бизнес-процесс может состоять из нескольких подпроцессов, процедур и функций, которые ориентированы на достижение цели основного бизнес-процесса. Выход одного бизнес-процесса может быть входом для другого.
 
-- ***Beginning*** — an event that initiates a business process. ***For example,*** the end of the period when calculating telephone charges.
-- ***Ending*** — result event. The result of a business process can be either successful or unsuccessful. *For example,* the accrued payment for telephone calls for the period.
-- ***Applicable resources*** — applied and unchanged in the business process. ***For example,*** telephone tariff reference data.
-- ***Business process steps*** — business process actions executed in a specific sequence. ***For example,*** the actions performed for telephone charges.
-- ***Business process description*** — textual or/and graphical description of the sequence of actions; indication of the roles executing the actions and conditions of execution. 
+### 2. Рекомендации по работе с бизнес-процессами <div id="32"></div>
 
-A business process can consist of several sub-processes, procedures, and functions that are designed to achieve the goal of the main business process. The output of one business process may be the input for another.
+Выделение бизнес-процессов — творческий процесс. Нет единственно правильного варианта выделения бизнес-процессов. Это всегда результат соглашений в команде.
 
-### 2. Recommendations for Work with Business Processes <div id="32"></div>
+Важно, чтобы **результатом реализации бизнес-процессов** было:
 
-Identifying business processes is a creative process. There is no one right way to do it. It is always the result of team agreements.
+1) выполнение бизнес-требований;
+2) решение выделенных в задаче проблем ключевых заинтересованных сторон;
+3) выполнение ролями системы своих функций.
 
-It is important that the **result of the business process implementation** consists of:
+Бизнес-требования, проблемы ключевых заинтересованных сторон задачи и функционально-ролевая модель рассматривалась в проекте BSA03.
 
-1) fulfillment of business requirements;
-2) solving key stakeholder problems identified in the task;
-3) execution by the system roles their functions. 
+**Категории бизнес-процессов**
+- *основные:* процессы, которые добавляют ценность бизнесу;
+- *обеспечивающие:* поддерживающие процессы, требуются для корректного выполнения основных процессов, не приносят ценности бизнесу, но обеспечивают выполнение основных бизнес-процессов.
 
-The business requirements, key stakeholder concerns of the task and functional role model were reviewed in the BSA03 project. 
+**Критерии выделения** в отдельные бизнес-процессы:
+1. различие в целях, т. е. различны потребности в бизнес-процессах;
+2. бизнес-процесс должен получать результат (выход).
 
-**Business Process Categories**
+**Совокупность основных бизнес-процессов** должна обеспечивать возможность:
+1. выполнение бизнес-требований;
+2. решение выделенных в задаче проблем ключевых заинтересованных сторон;
+3. выполнение функций ролей системы.
 
-- *main:* processes that add value to the business;
-- *supporting:* supporting processes, required for the correct execution of the main processes, do not add value to the business but ensure that the main business processes are executed.   
+**Порядок работ**
+1. определяем область рассмотрения as is (область проблем) или to be (область решений);
+2. выполняем декомпозицию, выделяем категории: основные и обеспечивающие;
+3. основные и обеспечивающие бизнес-процессы рассматриваем отдельно;
+4. сначала выделяем и рассматриваем основные бизнес-процессы, затем обеспечивающие;
+5. при рассмотрении основных бизнес-процессов: сначала самые важные, значимые для бизнеса, затем остальные;
+6. при рассмотрении обеспечивающих бизнес-процессов: сначала те, без которых основные не смогут получить требуемый результат.
 
-**Criteria for separation** into business processes:
+**Декомпозиция:** для выделения бизнес-процессов не забываем правила (рассматривали в проекте BSA00):
 
-1. difference in objectives, i.e. different business process needs;
-2. a business process must get a result (output).
+- подчиненность,
+- единственность критерия,
+- целостность.
 
-**The main business processes** must provide the ability to:
+А также:
+1. применяем правила декомпозиции отдельно к основным процессам, отдельно к обеспечивающим;
+2. возможны обоснованные нарушения правил декомпозиции; например, для обеспечивающих процессов допустимо нарушение целостности: не всегда возможно указать сразу все обеспечивающие бизнес-процессы.
 
-1. fulfill business requirements;
-2. solve key stakeholder problems identified in the task;
-3. fulfill the functions of the system roles.
+Бизнес-процессы **не рекомендуется** выделять **по функциям ролей**. Процессный подход как раз и создан для того, чтобы увидеть сквозные цепочки действий между ролями системы. Он призван наладить взаимодействие между разными группами участников в процессе достижения цели и получения результата.
 
-**Execution order**
+Также полезно определить:
+1. Цель описания бизнес-процесса;
+2. С точки зрения кого описываем;
+3. Границы, глубину описания.
 
-1. define the area of consideration: as-is (problem area) or to-be (solution area);
-2. decompose, identify categories: main and supporting;
-3. consider main and supporting business processes separately;
-4. identify and consider the main business processes first, then the supporting ones; 
-5. consider the most important and business-critical main processes first, then the rest;
-6. when considering supporting business processes, first consider those without which the main business processes cannot achieve the required result.
+### 3. BPMN-диаграмма <div id="33"></div>
 
-**Decomposition:** to identify business processes, don't forget the rules (from the BSA00 project):
+Для визуализации бизнес-процессов часто применяются различные графические нотации.
+В текущем проекте рассмотрим одну из них — [BPMN](https://ru.wikipedia.org/wiki/BPMN) (Business Process Model and Notation).
 
-- subordination,
-- singularity of criterion,
-- integrity.
+BPMN — это:
+- интуитивно-понятный (и поэтому распространенный) метод моделирования бизнес-процессов;
+- язык моделирования бизнес-процессов.
 
-Also:
+В BPMN существуют следующие виды диаграмм:
+1. Процесс (Process Diagram) описывает последовательность задач и событий, условия выполнения, логику бизнес-процесса.
+2. Диаграммы, описывающие обмен данными:
+   1. Взаимодействие (Collaboration Diagram) описывает потоки сообщений;
+   2. Упрощенные модели взаимодействия:
+      1. Хореография (Choreography Diagram) описывает последовательность взаимодействий участников;
+      2. Диалог (Conversation Diagram) описывает верхний уровень взаимодействия между сторонами: организациями, подразделениями и пр.
 
-1. Apply decomposition rules separately to the main processes and separately to the supporting processes;
-2. Reasonable violations of decomposition rules are possible; for example, integrity violations are acceptable for supporting processes: it is not always possible to specify all supporting business processes at once. 
+Элементы BPMN представлены в виде специальных значков.
+Как правило, достаточно базового набора для понимания принципов нотации и моделирования и разработки большинства диаграмм.
+Язык описания бизнес-процессов основан на следующих базовых объектах:
+- Event — событие;
+- Activity — действие;
+- Gateway — шлюзы или развилка;
+- Flow — поток;
+- Date — данные;
+- Artefact — артефакт;
+- Swimline, Pool — дорожка и пул.
 
-Business processes are **not recommended** to be identified **by role function**. The process approach is designed to see the end-to-end chain of activities between the roles of the system. It is designed to identify the interaction between different groups of participants in the process of achieving a goal and producing a result.
+Хорошие описания нотации BPMN:
+- [Описание нотации BPMN](https://www.businessstudio.ru/wiki/docs/current/doku.php/ru/csdesign/bpmodeling/bpmn_notation) от Business Studio.
+- [https://www.comindware.ru/blog](https://www.comindware.ru/blog/%d0%bd%d0%be%d1%82%d0%b0%d1%86%d0%b8%d1%8f-bpmn-2-0-%d1%8d%d0%bb%d0%b5%d0%bc%d0%b5%d0%bd%d1%82%d1%8b-%d0%b8-%d0%be%d0%bf%d0%b8%d1%81%d0%b0%d0%bd%d0%b8%d0%b5/)/нотация-bpmn-2-0-элементы-и-описание.
+
+В BPMN с точки зрения моделирования два типа процессов:
+- исполняемые, которые могут реально исполняться посредством специального программного обеспечения Business Studio или Bizagi;
+- неисполняемые, применяемые для изучения, согласования и демонстрации.
+
+Многие команды применяют неисполняемые диаграммы и стремятся создавать их минимальным, базовым набором элементов.
+Такой подход позволяет быстро осваивать, понимать нотацию окружающим, не только аналитикам, но и разработчикам, заказчикам системы, пользователям, что способствует ускорению работ команды (быстрее разрабатывают, быстрее согласовывают).
+Для исполняемых процессов требуется строгое соответствие всем правилам нотации BPMN и более глубокая детализация.
+
+## Глава IV <div id="chapter-iv"></div>
 
-It also helps to identify:
-
-1. The purpose of the business process description;
-2. From whose perspective we are describing;
-3. Boundaries, depth of description.
-
-### 3. BPMN Diagram <div id="33"></div>
-
-Various graphical notations are often used to visualize business processes. 
-In the current project, we will consider one of them — [BPMN](https://ru.wikipedia.org/wiki/BPMN) (Business Process Model and Notation).
-
-BPMN is:
-
-- An intuitive (and therefore common) way to model business processes;
-- A language for modeling business processes.
-
-There are the following types of diagrams in BPMN:
-
-1. The process diagram describes the sequence of tasks and events, the execution conditions, and the logic of the business process.
-2. Diagrams describing the data exchange:
-   1. The Collaboration diagram describes the message flows;
-   2. Simplified interaction models:
-      1. The Choreography diagram describes a sequence of interactions between participants;
-      2. Conversation diagram describes the top level of interaction between the parties: organizations, divisions and so on.
-
-BPMN elements are represented as special symbols. Usually a basic set is enough to understand the principles of notation and modeling and to develop most of the diagrams.
-The language of business process description is based on the following objects:
-
-- Event;
-- Activity;
-- Gateway;
-- Flow;
-- Data;
-- Artifact;
-- Swimlane, Pool.
-
-Good descriptions of BPMN:
-
-- [Description of the BPMN](https://www.businessstudio.ru/wiki/docs/current/doku.php/ru/csdesign/bpmodeling/bpmn_notation) by Business Studio.
-- [https://www.comindware.ru/blog](https://www.comindware.ru/blog/%d0%bd%d0%be%d1%82%d0%b0%d1%86%d0%b8%d1%8f-bpmn-2-0-%d1%8d%d0%bb%d0%b5%d0%bc%d0%b5%d0%bd%d1%82%d1%8b-%d0%b8-%d0%be%d0%bf%d0%b8%d1%81%d0%b0%d0%bd%d0%b8%d0%b5/)/notation-bpmn-2-0-elemets-and-description.
-
-There are two types of processes in BPMN from a modeling perspective:
-
-- Executable, which can actually be executed using special Business Studio or Bizagi software;
-- Non-executable, which are used for study, coordination, and demonstration.
-
-Many teams use non-executable diagrams and aim to create them with a minimal, basic set of elements. This approach allows people to quickly learn and understand the notation, not only analysts, but also developers, system customers, users, which contributes to faster work of the team (faster development, faster coordination). Executable processes require strict adherence to all rules of BPMN notation and deeper detailing.
-
-## Chapter IV <div id="chapter-iv"></div>
-
-### Description of tasks
-
-### Task 1. Haircut Appointment <div id="41"></div>
-
-The management of a chain of barbershops decided to implement an online booking system. The main objective is to develop the business by expanding the customer base through the possibility of online registration, as well as to reduce employee labour costs and manual labour by automatically informing customers through communication channels. 
-
-Both registered and unregistered visitors can book an appointment on the website. When making an appointment, they can select the type of service: hairdressing or cosmetology, as well as the service itself, the master and the time from the available intervals. The system should provide automatic sending of reminders to clients through the communication channel chosen by the client (Telegram, WhatsApp, VK, SMS) according to the schedule set by the manager. After receiving a service, the system offers the client to evaluate the service and write suggestions on how to improve the work.
-
-The schedule of masters and the services provided by each master should be entered by the manager, who may be more than one person. This person is also responsible for keeping the schedule up to date and adjusting it if necessary, communicating with customers manually, marking the service, charging and accepting payment, sending the payment data to the accounting department. The manager can also receive reports on completed services and view customer feedback.
-
-Each master has the ability to view the schedule and appointments for their services, as well as customer reviews.
-
-### Task 2. Delivery of Orders <div id="42"></div>
-
-During the lockdown, many grocery stores and food companies dramatically increased their online sales and the need for quick delivery of small quantities to individual customers increased. 
-
-A group of students got together and decided to create a delivery service startup. The idea is to quickly receive information about orders, pickup location and time, delivery location, desired delivery dates, and distribute this information to couriers who will pick up the order at the pickup location and deliver it to the delivery location. They decided to develop an online system where orders could be collected and quickly sorted for delivery by couriers.
-
-The first step was to collect orders from stores and caterers in any way possible and have the operator enter them into the system in a consistent format, as well as developing a mobile application for the courier. The courier should be able to view order information, select an order from those available, book it, pick it up at the collection point and deliver it to the customer. The result of the courier's actions should be immediately reflected in the system via a mobile application. The system should also include a dispatcher who controls the couriers and reassigns orders if necessary. Information on received orders should be sent to the accounting department (to another IT system) to calculate delivery charges with order suppliers. Order delivery information should also be sent to the accounting department to calculate payment to couriers. Accrued payment should be transferred to the system and displayed in the courier's personal account. And there should also be an administrator's workstation, where couriers are registered and access rights are assigned to all of them.
-
-## Chapter V <div id="chapter-v"></div>
-
-### Exercise 00 — Preparatory "Work" <div id="51"></div>
-
-**For each task:**
-Pick up the following artifacts from previous projects (chapter 1):
-
-1. glossary;
-2. onion diagram;
-3. context diagram;
-4. the problems to be solved by the system;
-5. business requirements (business goals);
-6. stakeholder roles;
-7. role functions in the system;
-8. data flows sent/received by external systems.
-
-Indicate your answers in a file with corresponding names ex00\_<product prefix>\_<file name>.
-
-### Exercise 01 — Identification of Main Business Processes <div id="52"></div>
-
-**For task 1** identify main business processes. 
-
-1. Identify business processes of level 1. Follow the decomposition rules. In case of violation, provide an explanation.
-2. For each business process, select one person from your group and assign him/her to the role of business process owner. Determine who he/she is according to the role model of the task.
-3. Make a list of the main business processes, specify:
-   1. name (purpose) of the business process;
-   2. business process identifier (alphanumeric, up to 5 characters); 
-   3. business process result;
-   4. owner (role in the task, last name, first name of the person assigned from the group).
-4. Consider the criteria for identifying business processes:
-   1. each business process must have a result;
-   2. the results of business processes of the same level should be different.
-5. Indicate your answers in the file ex01\_<product prefix>\_mpr.xlsx.
-
-### Exercise 02 — Discussion of Business Processes <div id="53"></div>
-
-**For task 1** have a discussion on each of the main business processes. 
-
-1. Prepare questions for a business process discussion.
-2. Consider both Exercise 03 of the current project and your own understanding of the business process when preparing questions.
-3. Discuss the business process (it can be a role-playing game, brainstorming session, workshop — the team's choice).
-4. Prepare a report of the discussion (discussed in detail in the BSA03 project), indicate:
-   1. business process name;
-   2. business process identifier;
-   3. topic, purpose of the discussion;
-   4. date of discussion, form of discussion, list of participants;
-   5. facilitator, clerk, business process owner;
-   6. issues discussed;
-   7. answers to questions;
-   8. on issues that caused controversial opinions: write down the opinions of the participants, the opinion of the business process owner, and the decision made.
-5. Place the report in the file ex02\_<product prefix>\_<business process identifier>\_disc.docx. 
-
-### Exercise 03 — Description of the Main Business Processes <div id="54"></div>
-
-**For task 1** describe each of the main business processes, write them in a single table. 
-
-1. Specify for each main business process:
-   1. business process name;
-   2. business process identifier;
-   3. Start (input): 
-      1. initiating event;
-      2. resources to create a product (result);
-   4. end (exit): 
-      1. resulting event; 
-      2. the finished product/result of a business process;
-   5. owner:
-      1. role;
-      2. surname, first name of the assigned member of the group; 
-   6. list of business process executors (roles in the task);
-   7. used resources (information data used in the business process);
-   8. relationships with other main business processes.
-2. Indicate your answers in the file ex03\_<product prefix>\_mpr.xlsx.
-
-### Exercise 04 — Development of Business Process Diagrams <div id="55"></div>
-
-**For task 1** create a process diagram of each main business process in BPMN notation.
-
-1. Specify the name of the business process and its identifier in the diagram.
-2. Specify the owner of the business process (who is responsible for execution) next to the name.
-3. Specify the initial event, what the event is about, who the event comes from (executor or automatically).
-4. Specify the input of the business process: the resources required to create the result of the business process (information, personnel) from which the result is obtained.
-5. Specify process steps, branches, data and relationships.
-6. Specify intermediate events if necessary.
-7. Apply lanes/pools or specify executors on footnotes (artifacts) if necessary. 
-8. Specify the end event and result of the business process.
-9. Indicate your answers in the file ex04\_<product prefix>\_bpmn\_N.xxx (xxx is an extension, N — business process identifier).
-
-### Exercise 05 — Revision of the Main Business Process Diagrams <div id="56"></div>
-
-**For task 1** check the consistency of the main business process diagrams and other task artifacts.
-
-1. Check the consistency of the stakeholders and the roles in:
-   1. context diagram;
-   2. onion diagram;
-   3. stakeholders list;
-   4. main business process diagrams.
-2. Check that the glossary contains the domain concepts specified in the main business process diagrams.
-3. Check that the problems for which the system is being created can be solved in the execution of the main business processes.
-4. Check that the business requirements of the system can be achieved by the main business processes.
-5. Check that the main business processes ensure that the functions of the system roles are fulfilled. 
-6. Place the results in the "Artifact Comparison" table (https://docs.google.com/spreadsheets/d/1tKYX2C6t6lXdRNa14qHG4j2gKa\_mQSW5/edit#gid=2122219759).
-7. In case of inconsistency:
-   1. report the inconsistency for each case in a table;
-   2. indicate the need (or lack of need) to modify the artifacts under consideration;
-   3. correct an artifact that requires clarification.
-8. Indicate your answers in the file ex05\_<product prefix>\_rev.xlsx.
-9. Place a new revision of the refined artifact with a ex05 prefix in the name.
+### Описание задач
+
+### Задача 1. Запись на стрижку <div id="41"></div>
+
+Руководство сети барбершопов приняло решение о внедрении системы, обеспечивающей онлайн-запись на прием. Основная цель — развитие бизнеса путем расширения клиентской базы за счет возможности онлайн-записи, а также снижение трудозатрат сотрудников и уменьшение ручного труда за счет автоматического информирования клиентов по каналам связи.
+
+Запись может осуществлять как зарегистрированный, так и незарегистрированный посетитель сайта. При записи можно выбрать тип услуги: парикмахерские или косметологические, а также саму услугу, мастера и время из свободных интервалов. Система должна обеспечивать автоматическую отправку напоминаний клиентам через выбранный клиентом канал связи (Telegram, WhatsApp, VK, СМС) по настроенному менеджером расписанию. После получения услуги система предлагает клиенту оценить услугу и написать предложения по улучшению работы.
+
+Расписание мастеров и выполняемые каждым мастером услуги должен вводить менеджер, возможно, это будет не один человек. Он же отвечает за актуальность расписания и при необходимости корректирует его, осуществляет связь с клиентами в ручном режиме, проставляет отметку о выполнении услуги, начисляет и принимает оплату, передает данные об оплате в бухгалтерию. Также менеджер может получать отчеты о выполненных услугах и просматривать отзывы клиентов.
+
+Любой мастер имеет возможность посмотреть расписание и запись на свои услуги, отзывы клиентов.
+
+### Задача 2. Доставка заказов <div id="42"></div>
+
+В локдаун многие продуктовые магазины и предприятия питания резко увеличили объемы онлайн-продаж, и возросла потребность в быстрой доставке мелких партий товаров индивидуальным клиентам.
+
+Компания студентов собрались и решила создать стартап службы доставки.
+
+Идея состоит в том, чтобы оперативно получать информацию о заказах, месте и сроке комплектации, месте доставки, желаемых сроках доставки и раздавать инфо курьерам, которые будут получать заказ в месте комплектации и доставлять в место доставки. Решили развернуть онлайн-систему, куда стекаются заказы и откуда курьеры оперативно разбирают заказы для выполнения. На первом этапе решили собирать заказы от магазинов и предприятий питания любым доступным способом и вводить в систему в едином формате силами оператора, но разработать мобильное приложение для курьеров.
+
+Курьер должен иметь возможность просматривать информацию о заказах, выбирать заказ из свободных, бронировать его, забирать в точке выдачи и доставлять клиенту. Результат своих действий курьер должен оперативно отражать в системе через мобильное приложение. Также в системе должен работать диспетчер, который контролирует курьеров и при необходимости переназначает заказы. Информация о поступивших заказах должна направляться в бухгалтерию (в другую ИТ-систему) для расчета с поставщиками заказов за доставку. Также в бухгалтерию должна направляться информация о доставке заказа, где будет производиться расчет оплаты курьеров. Начисленная оплата должна передаваться в систему и отражаться в личном кабинете курьера. И еще запланировано рабочее место администратора, регистрирующего курьеров и назначающего всем права доступа.
+
+## Глава V <div id="chapter-v"></div>
+
+### Упражнение 00 — Подготовительные работы <div id="51"></div>
+
+**Для каждой задачи:**
+Поднимите из предыдущих проектов (chapter 1) следующие артефакты:
+1. глоссарий;
+2. луковичную диаграмму;
+3. контекстную диаграмму;
+4. проблемы, для решения которых создается система;
+5. бизнес-требования (бизнес-цели);
+6. роли стейкхолдеров;
+7. функции ролей в системе;
+8. потоки данных, направляемые/получаемые внешними системами.
+
+Укажите свои ответы в файле с соответствующими именами ex00\_<префикс продукта>\_<наименование файла>.
+
+### Упражнение 01 — Выделение основных бизнес-процессов <div id="52"></div>
+
+**Для задачи 1** выделите основные бизнес-процессы.
+
+1. Выделите бизнес-процессы уровня 1. При выделении выполните правила декомпозиции. В случае нарушения — представьте пояснение.
+2. Для каждого бизнес-процесса выберите из своей группы одного человека и назначьте на роль владельца бизнес-процесса. Определите, кто он по ролевой модели задачи.
+3. Составьте список основных бизнес-процессов, укажите:
+   1. название (целевое назначение) бизнес-процесса;
+   2. идентификатор бизнес-процесса (буквенно-цифровой, до 5 символов);
+   3. результат бизнес-процесса;
+   4. владелец (роль в задаче, фамилия, имя назначенного от группы).
+4. Учитывайте критерии выделения бизнес-процессов:
+   1. у каждого бизнес-процесса должен быть результат;
+   2. результаты бизнес-процессов одного уровня должны быть различными.
+5. Запишите свои ответы в файле ex01\_<префикс продукта>\_mpr.xlsx.
+
+### Упражнение 02 — Обсуждение бизнес-процессов <div id="53"></div>
+
+**Для задачи 1** по каждому из основных бизнес-процессов проведите обсуждение.
+
+1. Подготовьте вопросы к обсуждению бизнес-процесса.
+2. При подготовке вопросов учитывайте как Упражнение 03 текущего проекта, так и собственное понимание бизнес-процесса.
+3. Проведите обсуждение бизнес-процесса (ролевую игру, мозговой штурм, семинар — на выбор команды).
+4. Подготовьте отчет об обсуждении (подробно рассматривали в проекте BSA03), укажите:
+   1. название бизнес-процесса;
+   2. идентификатор бизнес-процесса;
+   3. тему, цель обсуждения;
+   4. дату обсуждения, форму обсуждения, список участников;
+   5. ведущего, делопроизводителя, владельца бизнес-процесса;
+   6. обсуждаемые вопросы;
+   7. ответы на вопросы;
+   8. по вопросам, вызвавшим спорные мнения: запишите мнения участников, мнение владельца бизнес-процесса, принятое решение.
+5. Разместите отчет в файле ex02\_<префикс продукта>\_<идентификатор бизнес-процесса>\_disc.docx.
+
+### Упражнение 03 — Описание основных бизнес-процессов <div id="54"></div>
+
+**Для задачи 1** опишите каждый из основных бизнес-процессов, отразите их в единой таблице.
+
+1. Для каждого основного бизнес-процесса укажите:
+   1. название бизнес-процесса;
+   2. идентификатор бизнес-процесса;
+   3. начало (вход):
+      1. инициирующее событие;
+      2. ресурсы для создания продукта (результата);
+   4. окончание (выход):
+      1. результирующее событие;
+      2. готовый продукт/результат бизнес-процесса;
+   5. владелец:
+      1. роль;
+      2. фамилия, имя назначенного члена группы;
+   6. перечень исполнителей бизнес-процесса (роли в задаче);
+   7. применяемые ресурсы (информационные данные, использованные в бизнес-процессе);
+   8. взаимозависимости с другими основными бизнес-процессами.
+2. Запишите свои ответы в файле ex03\_<префикс продукта>\_mpr.xlsx.
+
+### Упражнение 04 — Разработка диаграмм бизнес-процессов <div id="55"></div>
+
+**Для задачи 1** разработайте диаграмму каждого основного бизнес-процесса (Process Diagram) в нотации BPMN.
+
+1. Укажите на диаграмме название бизнес-процесса и его идентификатор.
+2. Рядом с названием укажите владельца бизнес-процесса (кто ответственный за исполнение).
+3. Обозначьте начальное событие, в чем заключается событие, от кого поступает (от исполнителя или автоматически).
+4. Укажите вход бизнес-процесса: ресурсы, необходимые для создания результата бизнес-процесса (информационные, персонала), из которых получается результат.
+5. Укажите шаги процесса, развилки, данные и связи.
+6. При необходимости обозначьте промежуточные события.
+7. При необходимости примените дорожки/пулы или укажите исполнителей на сносках (артефактах).
+8. Укажите событие окончания и результат бизнес-процесса.
+9. Зафиксируйте свои ответы в файле ex04\_<префикс продукта>\_bpmn\_N.xxx (xxx — расширение файла, N — идентификатор бизнес-процесса).
+
+### Упражнение 05 — Ревизия диаграмм основных бизнес-процессов <div id="56"></div>
+
+**Для задачи 1** проверьте соответствие диаграмм основных бизнес-процессов и других артефактов задачи.
+
+1. Проверьте соответствие заинтересованных сторон и ролей в:
+   1. контекстной диаграмме;
+   2. луковичной диаграмме;
+   3. списке ролей заинтересованных сторон;
+   4. диаграммах основных бизнес-процессов.
+2. Проверьте наличие в глоссарии понятий предметной области, указанных в диаграммах основных бизнес-процессов.
+3. Проверьте, что проблемы, для решения которых создается система, могут быть решены при выполнении основных бизнес-процессов.
+4. Проверьте, что бизнес-требования системы могут быть достигнуты при выполнении основных бизнес-процессов.
+5. Проверьте, что основные бизнес-процессы обеспечивают выполнение функций ролей системы.
+6. Отразите результаты в таблице «Сравнение артефактов» (https://docs.google.com/spreadsheets/d/1tKYX2C6t6lXdRNa14qHG4j2gKa\_mQSW5/edit#gid=2122219759).
+7. В случае расхождения:
+   1. расхождение по каждому случаю отразите в таблице;
+   2. укажите потребность (или отсутствие потребности) изменения рассматриваемых артефактов;
+   3. откорректируйте артефакт, требующий уточнения.
+8. Укажите свои ответы в файле ex05\_<префикс продукта>\_rev.xlsx.
+9. Разместите новую редакцию уточненного артефакта с префиксом в имени ex05.

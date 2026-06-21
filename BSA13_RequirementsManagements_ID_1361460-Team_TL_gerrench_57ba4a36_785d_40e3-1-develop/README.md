@@ -1,312 +1,315 @@
-## Requirements, quality, task management
+## Управление требованиями, качеством, задачами
 
-Summary:
-In this project, you will examine the process of requirements management, product quality management, and task management. You will learn how to identify requirements, establish relationships between them, and track the status of requirements. You will also learn the rules and approaches of quality management, understanding what to test for and how to do it.
+Резюме:
+В настоящем проекте ты рассмотришь процесс управления требованиями и качеством продукта, научишься идентифицировать требования, устанавливать связи между ними и отслеживать состояния требований, а также узнаешь правила и подходы к управлению качеством.
 
-💡 [Tap here](https://new.oprosso.net/p/4cb31ec3f47a4596bc758ea1861fb624) **to leave your feedback on the project**. It's anonymous and will help our team make your educational experience better. We recommend completing the survey immediately after the project.
+💡 [Нажми сюда](https://new.oprosso.net/p/4cb31ec3f47a4596bc758ea1861fb624), **чтобы поделиться с нами обратной связью на этот проект**. Это анонимно и поможет нашей команде сделать обучение лучше. Рекомендуем заполнить опрос сразу после выполнения проекта.
 
-## Contents
+## Содержание
 
-1. [Chapter I](#chapter-i) \
-   1.1. [Preamble](#11)
-2. [Chapter II](#chapter-ii) \
-   2.1. [General Rules](#21)
-3. [Chapter III](#chapter-iii) \
-   3.1. [Requirements Management](#31) \
-   3.2. [Testing](#32) \
-   3.3. [Task Management](#33)
-4. [Chapter IV](#chapter-iv) \
-   4.1. [Task 1. Haircut Appointment](#41)
-5. [Chapter V](#chapter-v) \
-   5.1. [Exercise 00 — Identification of Requirement Types](#51) \
-   5.2. [Exercise 01 — Creation of Requirements and Registration](#52) \
-   5.3. [Exercise 02 — Creating a Positive Test Case](#53) \
-   5.4. [Exercise 03 — Creating a Negative Test Case](#53) \
-   5.5. [Exercise 04 — Result Evaluation](#55)
+1. [Глава I](#chapter-i) \
+    1.1. [Введение](#11)
+2. [Глава II](#chapter-ii) \
+    2.1. [Общие правила](#21)
+3. [Глава III](#chapter-iii) \
+    3.1. [Управление требованиями](#31) \
+    3.2. [Тестирование](#32) \
+    3.3. [Управление задачами](#33)
+4. [Глава IV](#chapter-iv) \
+    4.1. [Задача 1. Запись на стрижку](#41)
+5. [Глава V](#chapter-v) \
+    5.1. [Упражнение 00 — Выделение типов требований](#51) \
+    5.2. [Упражнение 01 — Создание требований и регистрация](#52) \
+    5.3. [Упражнение 02 — Создание позитивного тест-кейса](#53) \
+    5.4. [Упражнение 03 — Создание негативного тест-кейса](#53) \
+    5.5. [Упражнение 04 — Оценка результата](#55)
 
-## Instructions 
+## Инструкции
 
-How to learn at “School 21”:
+Как учиться в «Школе 21»:
 
-- Here, you’ll find a unique learning experience with a lot of freedom. You’re given a task and left to find your own way to solve it, using whatever resources work best for you — whether that’s the Internet or AI tools like GigaChat. Just be mindful of information quality: verify, think critically, analyze, and compare.
-- Peer-to-peer (P2P) learning is the exchange of knowledge and experience with peers, where everyone acts as both mentor and student. This approach allows you to gain a deeper understanding of the material by learning from one another.
-- Feel free to ask for help: around you are peers who are also navigating this path for the first time. Share your own experience and ideas with others.  Join Rocket.Chat to stay updated with the latest community announcements. 
-- Your learning is meaningless if you just copy someone else’s solutions. When receiving help from others, always make sure you fully understand the “why”, “how”, and “purpose” behind the solution. Don’t be afraid to make mistakes. 
-- Does the task seem impossible? Take a break, get some fresh air and clear your mind — this has helped many people. Maybe after that, the solution will come to you naturally.
-- The learning process is just as important as the result. It’s not just about completing the task — it’s about understanding HOW to solve it.
+- Здесь тебя ждет уникальный образовательный опыт с большим количеством свободы. Ты получаешь задачу и самостоятельно ищешь пути решения, используя любые удобные способы поиска информации — ресурсы Интернета или нейросети (например, GigaChat). Но внимательно относись к качеству информации: проверяй, думай, анализируй, сравнивай.
+- Взаимообучение (Peer-to-Peer, P2P) — это обмен знаниями и опытом с другими пирами, где каждый выступает и учителем, и учеником. Такой подход позволяет глубже понять материал, учась друг у друга.
+- Чувствуй себя свободно и проси о помощи — вокруг тебя те, кто тоже впервые проходят этот путь. Делись своим опытом и идеями с другими. Присоединяйся к Rocket.Chat, чтобы быть в курсе всех новостей от нашего сообщества.
+- Твое обучение не будет иметь никакого смысла, если ты будешь копировать чужие решения. Если пользуешься помощью других — всегда разбирайся до конца, почему, как и зачем. Не бойся ошибиться.
+- Кажется, что задача невыполнима? Сделай перерыв, проветрись, перезагрузи голову — это помогало многим. Возможно, после этого решение придет само собой.
+- Важен не только результат обучения, но и сам процесс. Нужно не просто решить задачу, а понять, КАК ее решить.
 
-## Chapter I <div id="chapter-i"></div>
+## Глава I <div id="chapter-i"></div>
 
-![Illustration](misc/images/IMG_1814.jpg)
+![Иллюстрация к проекту](misc/images/IMG_1814.jpg)
 
-### Preamble <div id="11"></div>
+### Введение <div id="11"></div>
 
-In the survey and design phases, you have been identifying requirements. For the next stages of development, you should determine the order in which certain requirements will be developed, which functional requirements meet key stakeholder goals, business requirements, and stakeholder requirements. And what state they are in: developed, tested, or not yet in the release, not scheduled for implementation. This is what you will be dealing with in the current project. 
+На этапах обследования и проектирования ты занимался выявлением требований. Для следующих этапов разработки следует определить, в каком порядке разрабатывать те или иные требования, выявить, какие функциональные требования обеспечивают выполнение целей ключевых стейкхолдеров, бизнес-требований и требований заинтересованных сторон.
 
-The analyst defines stakeholder requirements, identifies business needs, key stakeholder objectives, and formulates success criteria. After coordinating with the customer, the analyst creates functional requirements for the system, and developers implement the software according to those requirements. Testers then test the software. After defects are corrected, testing is performed, and if the customer is satisfied with the test results, the system is put into production. 
+Аналитик определяет требования заинтересованных сторон, выявляет бизнес-требования, цели ключевых стейкхолдеров, формулирует критерии успеха. После согласования с Заказчиком аналитик создает функциональные требования к системе и по этим требованиям разработчики реализуют ПО. Далее тестировщики тестируют ПО. После исправления дефектов проводят испытания и, если Заказчика удовлетворяют результаты испытаний, передают систему в эксплуатацию.
 
-In order for the customer to confirm that the system does what it is supposed to do, it is recommended that the tests be performed by someone who has discussed the design with the customer. Or who can explain the consistency between design and implementation. In both the first and second cases, this is the analyst. In addition, the analyst advises both developers and testers during the work process.
+Чтобы Заказчик подтвердил, что система выполняет то, что было задумано, желательно проводить испытания вместе с тем, кто вместе с Заказчиком обсуждал замысел. Или можно объяснить соответствие замысла и реализации. И в первом, и во втором случае это аналитик. Кроме того, аналитик в процессе работы оказывает консультации как разработчикам, так и тестировщикам.
 
-### Literature
+### Литература
 
-1. Karl Wiegers, Joy Beatty, "Software Requirements", 3rd edition, amplified. 
-2. Philippe Kruchten "The Rational Unified Process: An Introduction". 
-3. "Requirements management tools: software and everything you need to know"  <https://businessyield.com/ru/management/requirements-management-tools/>.
-4. Manual for [Jira Software](https://www.atlassian.com/ru/software/jira/guides/getting-started/introduction).
-5. Manual for <https://weeek.net/ru/help>.
+1. Карл Вигерс, Джой Битти, «Разработка требований к программному обеспечению», издание третье, дополненное.
+2. Филипп Кратчен «Введение в Rational Unified Process».
+3. «Инструменты управления требованиями: программное обеспечение и все, что вам нужно знать» <https://businessyield.com/ru/management/requirements-management-tools/>.
+4. Индивидуальное руководство по [Jira Software](https://www.atlassian.com/ru/software/jira/guides/getting-started/introduction).
+5. Руководство по <https://weeek.net/ru/help>.
 
-## Chapter II <div id="chapter-ii"></div>
+## Глава II <div id="chapter-ii"></div>
 
-### General Rules <div id="21"></div>
+### Общие правила <div id="21"></div>
 
-Before starting, clone the project from GitLab into a repository with the same name.
+Перед выполнением проект необходимо склонировать с GitLab в одноименный репозиторий.
 
-1. Along the way, you may feel a sense of uncertainty and a severe lack of information: that's OK. Remember, the information in the repository and on Google is always with you. So are your peers and Rocket.Chat. Communicate. Search. Use common sense. Don't be afraid to make mistakes.
-2. Pay attention to sources of information. Check. Think. Analyse. Compare. 
-3. Look at the text of each assignment. Read it several times. 
-4. Read the examples carefully. There may be something in them that is not explicitly stated in the task itself.
-5. You may find inconsistencies where something new in the terms of the task or examples conflicts with something you already know. If you come across such an inconsistency, try to work it out. If not, write it down as an open question and find out as you work. Do not leave open questions unanswered. 
-6. If a task seems confusing or impossible, it only seems that way. Try to break it down. It is likely that some parts will become clear. 
-7. There will be several tasks. Those marked with an asterisk (\*) are for the more meticulous students. These tasks are more difficult and are not compulsory. But doing them will give you extra experience and knowledge.
-8. Don't try to fool the system or the people around you. You will fool yourself first.
-9. Got a question? Ask your neighbour to the right. If that doesn't help, ask your neighbour on the left.
-10. When you use help, you should always understand why and how. Otherwise the help is useless.
-11. Always push only to the _develop_ branch! The master branch will be ignored. Work in the _src_ directory.
-12. There should be no files in your directory other than those specified in the tasks.
+1. На протяжении всего курса тебя будет сопровождать чувство неопределенности и острого дефицита информации — это нормально. Не забывай, что информация в репозитории и Google всегда с тобой. Как и пиры, и Rocket.Chat. Общайся. Ищи. Опирайся на здравый смысл. Не бойся ошибиться.
+2. Будь внимателен к источникам информации. Проверяй. Думай. Анализируй. Сравнивай.
+3. Внимательно читай задания. Перечитай несколько раз.
+4. Читать примеры тоже лучше внимательно. В них может быть что-то, что не указано в явном виде в самом задании.
+5. Тебе могут встретиться несоответствия, когда что-то новое в условиях задачи или примере противоречит уже известному. Если встретилось такое — попробуй разобраться. Если не получилось — запиши вопрос в открытые вопросы и выясни в процессе работы. Не оставляй открытые вопросы неразрешенными.
+6. Если задание кажется непонятным или невыполнимым — так только кажется. Попробуй его декомпозировать. Скорее всего, отдельные части станут понятными.
+7. На пути тебе встретятся самые разные задания. Те, что помечены звездочкой (\*), подходят для более дотошных. Они повышенной сложности и необязательны к выполнению. Но если ты их сделаешь, то получишь дополнительный опыт и знания.
+8. Не пытайся обмануть систему и окружающих. В первую очередь ты обманешь себя.
+9. Есть вопрос? Спроси своего соседа справа. Если это не помогло — соседа слева.
+10. Когда пользуешься помощью — всегда разбирайся до конца: почему, как и зачем. Иначе помощь не будет иметь смысла.
+11. Всегда делай push только в ветку _develop_! Ветка master будет проигнорирована. Работай в директории _src_.
+12. В твоей директории не должно быть иных файлов, кроме тех, что обозначены в заданиях.
 
-## Chapter III <div id="chapter-iii"></div>
+## Глава III <div id="chapter-iii"></div>
 
-### 1. Requirements Management <div id="31"></div>
+### 1. Управление требованиями <div id="31"></div>
 
-In the BSA02 project, you learned about the different types of requirements, their levels, and the relationships between them. 
+В проекте BSA02 ты познакомился с разными видами требований, их уровнями и связями между ними.
 
-![](misc/images/img1_eng.png)
+![](misc/images/img1.png)
 
-In the next projects, we identified and developed different types of requirements:
+В следующих проектах выявляли, разрабатывали разные типы требований:
 
-1) Business requirements; 
-2) Stakeholder requirements;
-3) Functional requirements for the system;
-4) Non-functional requirements.
+1) Бизнес-требования;
+2) Требования заинтересованных сторон;
+3) Функциональные требования к системе;
+4) Нефункциональные требования.
 
-The requirements of the different levels are interrelated. The following shows how stakeholder requirements for separation of user functions are implemented by functional requirements for access rights to functions. 
+Требования разных уровней связаны между собой. Ниже показано, как требования заинтересованных сторон к разделению функций пользователей реализуются функциональными требованиями к правам доступа к функциям.
 
-Example: User access rights management should be developed. This requirement is described as a stakeholder requirement (which role should perform which functions):
+Пример: следует разработать управление правами доступа пользователей. Это требование описано как требование заинтересованных сторон (какая роль должна выполнять какие функции):
 
-1) which roles interact with the system; 
-2) which operations on which entities a role performs on which entities.
+1) какие роли работают с системой;
+2) какие операции над какими сущностями выполняет та или иная роль.
 
-But the access control mechanism itself is also described as a functional requirement, and possibly as several different requirements: 
+Но и сам механизм управления доступом описан как функциональные требования и, возможно, как несколько разных требований:
 
-1) where access rights information is located in the system (read access rights of roles); 
-2) what the management mechanism is (applying access rights).
+1) где в системе размещена информация о правах доступа (прочитать права доступа ролей);
+2) каков механизм управления (применить права доступа).
 
-For this purpose, stakeholder requirements for the distribution of access rights must be linked to functional requirements describing access rights management. 
+Для этого требования заинтересованных сторон о распределении прав доступа должны быть связаны с функциональными требованиями, описывающими управление правами доступа.
 
-The requirements can also be interdependent at the same level. For example, as we saw in the BSA11 project, system functions are related to screen interfaces. Or in BSA12 — quality attributes (non-functional requirements) are related to specific functions.
+Также требования могут быть зависимы друг от друга на одном уровне. Например, как мы видели в проекте BSA11, функции системы связаны с экранными интерфейсами. Или в BSA12 — атрибуты качества (нефункциональные требования) связаны с конкретными функциями.
 
-In addition, even functional requirements should be developed in a certain order so that you don't have to redesign the previously developed requirements during implementation. 
+Причем даже функциональные требования разрабатывать надо в определенном порядке, чтобы при реализации не пришлось переделывать ранее разработанное.
 
-Therefore, you should specify and control the dependencies of requirements and prioritize their development. 
+Поэтому следует указать и контролировать зависимости требований и приоритизировать разработку требований.
 
-The general scheme of the requirements management process is well illustrated in the book by F. Krachten, Chapter 9 "Requirements Management Process Flowchart". Each requirement has an identifier to provide control over requirements, relationships between requirements (tracing), status of work with requirements, and their implementation. 
+Общая схема процесса управления требованиями хорошо показана в книге Ф. Кратчена, глава 9 «Технологический процесс управления требованиями». Для обеспечения контроля над требованиями, связей между требованиями (трассировки), статуса работ с требованиями и их реализацией каждое требование имеет идентификатор.
 
-Typically, an alphanumeric identifier is used where the letters identify a group of requirements by their types (e.g., business requirements, user requirements, functional requirements, interface requirements, non-functional requirements) and the numeric part of constant length identifies the numbering within the group. 
+Обычно применяют буквенно-цифровой идентификатор, где буквы обозначают группу требований по их типам (например, бизнес-требования, требования пользователей, функциональные требования, требования к интерфейсам, нефункциональные требования), а цифровая часть постоянной длины — нумерацию внутри группы.
 
-For example, the Business Requirement Document (BRD) identifier is often used for business requirements. An example of a complete business requirement identifier is BRD000017 (not BRD17). You should also define the characteristics (attributes) and states (statuses) of the requirements. The statuses and attributes of different groups of requirements may be different. The approach to identifying and assigning attributes and states of requirements is well described in chapter 27 of K. Wiegers' book. 
+Например, для бизнес-требований часто применяют идентификатор BRD (Business Requirement Document). Пример полного идентификатора бизнес-требования: BRD000017 (а не BRD17). Также следует определить характеристики (атрибуты) и состояния (статусы) требований. Статусы и атрибуты разных групп требований могут отличаться. Подход к выделению и назначению атрибутов и состояний требований хорошо описан в главе 27 книги К. Вигерса.
 
-The description of requirements, their identifiers, attributes and states can be stored in a table or database, but it is more useful to store them in a task management tool such as Jira, WEEK or, most effectively, in a requirements management system such as DOORS, ArchiMate and the Russian development, SUTr.  An overview of requirements management systems is given in the article "Requirements management tools: software and everything you need to know" <https://businessyield.com/ru/management/requirements-management-tools/>.
+Описание требований, их идентификаторы, атрибуты и состояния можно хранить в таблице или базе данных, но более полезно — в инструменте управления заданиями, например, Jira, WEEEК или, что наиболее эффективно, — в системе управления требованиями, например, DOORS, ArchiMate и российская разработка — СУТр. Обзор систем управления требованиями приведен в статье «Инструменты управления требованиями: программное обеспечение и всё, что вам нужно знать» <https://businessyield.com/ru/management/requirements-management-tools/>.
 
-In the current project, you will identify groups of requirements, define their attributes and statuses. Describe the requirements for our tasks and perform tracking for them. 
+В текущем проекте ты выделишь группы требований, определишь их атрибуты и статусы. А затем опишешь требования к нашим задачам и выполнишь отслеживание за ними.
 
-### 2. Testing <div id="32"></div>
+### 2. Тестирование <div id="32"></div>
 
-Quality management and testing is a separate major area in software development. The purpose of testing is not to guarantee the quality of the product, but to evaluate it and provide information that can be used to improve the quality. That is, to find and report bugs. 
+Управление качеством и тестирование — отдельная большая область в разработке программного обеспечения. Задача тестирования — не гарантировать качество продукта, а оценить его и обеспечить информирование о том, а за счет чего можно исправить качество. То есть найти ошибки и сообщить о них.
 
-Since an analyst understands better than other development participants how the system should work, under what conditions what result is expected, they should understand how to prepare data for product quality testing (test cases), how to perform quality testing, and how to describe a defect in the software.
+Поскольку аналитик лучше других участников разработки понимает, как должна работать система, при каких условиях, какой результат ожидается, то он должен понимать, как подготовить данные для проверки качества продукта (тест-кейсы), как выполнить проверку качества, как описать дефект в программном обеспечении.
 
-**Software testing** is the examination of the correspondence between the real behavior of a program and its expected behavior. It is performed on a finite set of tests selected in a particular way.
+**Тестирование ПО** — проверка соответствия между реальным поведением программы и её ожидаемым поведением. Проводится на конечном наборе тестов, выбранном определенным образом.
 
-**The purpose of testing** is to confirm or detect software conformance with requirements; to identify defects that should be eliminated before they are discovered by program users.
+**Цель тестирования** — подтвердить соответствие или выявить несоответствие ПО предъявляемым требованиям; определить ошибки, которые должны быть устранены до того, как их обнаружат пользователи программы.
 
-**Error** is a human action that produces an incorrect result. 
+**Ошибка (error)** — действие человека, которое приводит к неправильному результату.
 
-**Failure** is the deviation of a component or system from expected performance, operation, or result.
+**Отказ (failure):** отклонение компонента или системы от ожидаемого выполнения, эксплуатации или результата.
 
-**Defect** is a flaw in a component or system that may cause the component or system to fail to perform a required function. A defect discovered during execution may cause the component or system to fail.
+**Дефект (defect):** изъян в компоненте или системе, который может привести компонент или систему к невозможности выполнить требуемую функцию. Дефект, обнаруженный во время выполнения, может привести к отказам компонента или системы.
 
-### 3. Task Management <div id="33"></div>
+### 3. Управление задачами <div id="33"></div>
 
-In addition to requirements management, task management systems (Jira, WEEEK, etc.) are used to manage tasks assigned to executors (analysts, developers, testers). An analyst must be able to read and work on a task assigned to him/her, pass the results to the next executor in the work chain, assign a task to another executor, for example a developer and a tester, register a requirement or an error (defect).
+Кроме ведения требований, системы управления заданиями (Jira, WEEEК, иные) применяются для ведения задач, назначенных исполнителям (аналитикам, разработчикам, тестировщикам). Аналитик должен уметь прочитать и взять в работу назначенную на него задачу, передать результаты выполнения следующему исполнителю в цепочке работ, назначить задачу на другого исполнителя, например, разработчика и тестировщика; зарегистрировать требование или ошибку (дефект).
 
-## Chapter IV <div id="chapter-iv"></div>
+## Глава IV <div id="chapter-iv"></div>
 
-### Description of tasks
+### Описание задач
 
-### Task 1. Haircut Appointment <div id="41"></div>
+### Задача 1. Запись на стрижку <div id="41"></div>
 
-The management of a chain of barbershops decided to implement an online booking system. The main objective is to develop the business by expanding the customer base through the possibility of online registration, as well as to reduce employee labour costs and manual labour by automatically informing customers through communication channels. 
+Руководство сети барбершопов приняло решение о внедрении системы, обеспечивающей онлайн-запись на прием. Основная цель — развитие бизнеса путем расширения клиентской базы за счет возможности онлайн-записи, а также снижение трудозатрат сотрудников и уменьшение ручного труда за счет автоматического информирования клиентов по каналам связи.
 
-Both registered and unregistered visitors can book an appointment on the website. When making an appointment, they can select the type of service: hairdressing or cosmetology, as well as the service itself, the master and the time from the available intervals. The system should provide automatic sending of reminders to clients through the communication channel chosen by the client (Telegram, WhatsApp, VK, SMS) according to the schedule set by the manager. After receiving a service, the system offers the client to evaluate the service and write suggestions on how to improve the work.
+Запись может осуществлять как зарегистрированный, так и незарегистрированный посетитель сайта. При записи можно выбрать услугу, мастера и время из свободных интервалов. *Система должна обеспечивать автоматическую отправку напоминаний клиентам через выбранный клиентом канал связи (Telegram, WhatsApp, VK, СМС) по настроенному менеджером расписанию.* После получения услуги система предлагает клиенту оценить услугу и написать предложения по улучшению работы.
 
-The schedule of masters and the services provided by each master should be entered by the manager, who may be more than one person. This person is also responsible for keeping the schedule up to date and adjusting it if necessary, communicating with customers manually, marking the service, charging and accepting payment, sending the payment data to the accounting department. The manager can also receive reports on completed services and view customer feedback.
+Расписание мастеров и выполняемые каждым мастером услуги должен вводить менеджер, возможно, это будет не один человек. Он же отвечает за актуальность расписания и при необходимости корректирует его, осуществляет связь с клиентами в ручном режиме, проставляет отметку о выполнении услуги, начисляет и принимает оплату, передает данные об оплате в бухгалтерию. Также менеджер может получать отчеты о выполненных услугах и просматривать отзывы клиентов.
 
-Each master has the ability to view the schedule and appointments for their services, as well as customer reviews.
+Любой мастер имеет возможность посмотреть расписание и запись на свои услуги, отзывы клиентов.
 
-Let's look at the requirements related to the following description in the task:
+Рассмотрим требования, относящиеся к следующему описанию в задаче:
 
-*The system should provide automatic sending of reminders to clients via communication channels chosen by the client (Telegram, WhatsApp, VK, SMS) according to the schedule set by the manager.* 
+*Система должна обеспечивать автоматическую отправку напоминаний клиентам через выбранный клиентом канал связи (Telegram, WhatsApp, VK, СМС) по настроенному менеджером расписанию.*
 
-**Problem:** Some clients forget that they have an appointment at a barbershop.
+**Проблема:** некоторые клиенты забывают о том, что записаны на определенное время в барбершоп.
 
-**Manager Need:** Remind clients in advance of barbershop appointments.
+**Потребность менеджера:** заранее напоминать клиентам о записи в барбешоп.
 
-**Client need**: To be reminded in advance of a barbshop appointment.
+**Потребность клиента**: заранее получать напоминание о записи в барбешоп.
 
-**Business Requirement:** Increase the number of clients who sign up for services. Reduce the number of times clients forget the time of their service appointment.
+**Бизнес-требование:** повысить посещаемость клиентов, записанных на услуги. Снизить случаи, когда клиенты забывают о времени записи на услугу.
 
-## Chapter V <div id="chapter-v"></div>
+## Глава V <div id="chapter-v"></div>
 
-### Exercise 00 — Identification of Requirement Types <div id="51"></div>
+### Упражнение 00 — Выделение типов требований <div id="51"></div>
 
-To apply to Task 1, write out the groups of requirements (by their types) that need to be tracked and define the attributes of the requirements.
+Этот проект групповой, так что ты будешь выполнять его в команде.
 
-1) Identify the types of requirements:
-   1) Choose 4 types of requirements:
-      1) Business requirements: product goals, objectives, product purpose, business rules; 
-      2) User (stakeholder) requirements: UC, US, business process diagrams and descriptions, DB schemas, etc.;
-      3) Functional system requirements (system specifications, interfaces);
-      4) Non-functional system requirements (quality attributes). 
-   2) Assign a three-letter identifier to each requirement type.
+Для применения к задачам 1 выпишите группы требований (по их типам), требующие отслеживания, и определите атрибуты требований.
 
-2. Define the requirement attributes for each type.
-   1) State:
-      1) Date, time of creation;
-      2) Date, time the requirement was transferred to its current state;
-      3) Requirement Status;
-      4) Requirement Priority;
-      5) Product version in which the requirement is included;
-      6) Patch (Sprint, Release) in which the requirement is included. 
-   2) Description and Rationale:
-      1) Short name of the requirement (no more than 50 characters);
-      2) Description of the requirement (150 characters maximum); 
-      3) Placement of requirement materials (description, schematic, other) — reference;
-      4) Verification method or acceptance criterion;
-      5) Source of the requirement, superior requirement (except for business requirements);
-      6) Relationship of the requirement. 
-   3) Responsible parties:
-      1) Current implementer;
-      2) Decision maker of the requirement;
-      3) Author of the requirement (who registered it).
-3. Determine the statuses of the requirement:
-   1) New;
-   2) Under Analysis;
-   3) In development;
-   4) In testing;
-   5) Included in Patch;
-   6) Rejected;
-   7) Postponed;
-   8) Completed.
-4. Deploy a personalized instance of https://weeek.net/ru.
-5. Create the above requirements in WEEEK.  
-6. Run a scan of WEEEK and place it in the answer.
+1. Определите типы требований.
+   1) Выберите 4 типа требований:
+      1) Бизнес-требования: цели, задачи продукта, бизнес-правила;
+      2) Требования пользователей (заинтересованных сторон): UC, US, схемы и описания бизнес-процессов, схемы БД и др.;
+      3) Функциональные требования к системе (спецификации к системе, интерфейсы);
+      4) Нефункциональные требования к системе (атрибуты качества).
+   2) Каждому типу требований назначьте трехбуквенный идентификатор.
+2. Для каждого типа определите атрибуты требований.
+   1) Состояние:
+      1) Дата, время создания;
+      2) Дата, время перевода требования в текущее состояние;
+      3) Статус требования;
+      4) Приоритет требования;
+      5) Версия продукта, в которую включено требование;
+      6) Патч (спринт, выпуск), в который включено требование.
+   2) Описание и обоснование:
+      1) Краткое наименование требования (не более 50 символов);
+      2) Описание требования (не более 150 символов);
+      3) Размещение материалов требования (описание, схема, иное) — ссылка;
+      4) Метод проверки или критерий приемки;
+      5) Источник требования, вышестоящее требование (кроме бизнес-требований);
+      6) Связи требования.
+   3) Ответственные лица:
+      1) Текущий исполнитель;
+      2) Лицо, принимающее решение по требованию;
+      3) Автор требования (кто зарегистрировал).
+3. Определите статусы требований:
+   1) Новое;
+   2) На анализе;
+   3) В разработке;
+   4) На тестировании;
+   5) Включено в патч;
+   6) Отклонено;
+   7) Отложено;
+   8) Завершено.
+4. Разверните персональный экземпляр на платформе для управления задачами, проектами и командной работой (например, https://weeek.net/ru, либо используйте аналогичные сервисы).
+5. Создайте перечисленные выше требования.
+6. Выполните скан и разместите в ответе.
+* Если ранее вами была выполнена работа в Trello, то это допустимо. При желании данные из Trello можно экспортировать в WEEEК.
 
-**Scale from 1 to 5**
+**Шкала от 1 до 5**
 
-### Exercise 01 – Creation of Requirements and Registration <div id="52"></div>
+### Упражнение 01 — Создание требований и регистрация <div id="52"></div>
 
-Describe the requirements within the highlighted portion of the sentence in Task 1. Sign up for a personal WEEEK instance and set the parameters. 
+Опишите требования в части выделенного курсором предложения задачи 1.  Зарегистрируйте в персональном экземпляре на выбранной платформе и укажите параметры.
 
-1. Describe the stakeholder requirements as UserStores and register them in WEEEK. Decompose the highlighted by cursor into:
-   1. the manager informs the customer about the service appointment;
-   2. customer's receipt of information about the service appointment;
-   3. interactions on notification channels;
-   4. customization of the notification schedule. 
-2. Describe and register in WEEEK the requirements for system functionality to meet the business requirements for:
-   1. customize schedules;
-   2. automatically sending reminders.
-3. Describe and store in WEEEK the requirements for system interfaces to meet the business requirements for:
-   1. customize schedules;
-   2. automatically send reminders.
-4. Prioritize the requirements.
-5. Specify dependencies between different requirement types in WEEEK's Source attribute.
-6. In WEEEK, specify the horizontal relationships between requirements in the Relationships attribute.
-7. Perform a scan of the WEEEK and place it in the response.
+1. Опишите в виде UserStores и зарегистрируйте требования заинтересованных лиц. Декомпозируйте выделенное курсором на:
+   1. информирование менеджером клиентов о записи на услугу;
+   2. получение клиентом информирования о записи на услугу;
+   3. взаимодействия по каналам информирования;
+   4. настройке расписания информирования.
+2. Опишите и зарегистрируйте требования к функциям системы для выполнения бизнес-требований по:
+   1. настройке расписания;
+   2. автоматической отправки напоминаний.
+3. Опишите и зарегистрируйте требования к интерфейсам системы для выполнения бизнес-требований по:
+   1. настройке расписания;
+   2. автоматической отправке напоминаний.
+4. Укажите приоритеты требований.
+5. Укажите зависимости между разными типами требований в атрибуте «Источник».
+6. Укажите горизонтальные связи между требованиями в атрибуте «Связи».
+7. Выполните скан и разместите в ответе.
+* При выполнении задачи рекомендовано использовать WEEEК, но допустимо использование иных аналогичных сервисов.
 
-**Scale from 1 to 5**
 
-### Exercise 02 – Creating a Positive Test Case <div id="53"></div>
+**Шкала от 1 до 5**
 
-For Task 1, develop positive test cases for UC02.
+### Упражнение 02 — Создание позитивного тест-кейса <div id="53"></div>
 
-For the test case, specify:
+Для задачи 1 разработайте кейсы позитивного тестирования для UC02.
 
-1. Alphanumeric identifier;
-2. Short name of the test;
-3. Priority;
-4. Prerequisite (if necessary);
-5. Select a Manager — a person from the Employee entity who has a Manager role in the Employee Role entity;
-6. Execution steps (instruction, simple and unambiguous, specifying the correct values of the required parameters when executed);
-7. Expected Result (ER);
-8. Postconditions (how to restore the state before the check);
-9. Actual Result (ER).
-10. Each case must comply with the principle of repeatability (F.I. Repeatable S.T.).
-11. Each case must comply with the principle of Atomicity/Independence (F.Independent.S.T).
-12. Presented in tabular form, stored in the cloud.
-13. Register a task for testing in WEEEK, provide a link to the test case.
+Для тест-кейса укажите:
 
-**Scale from 1 to 5**
+1. Буквенно-цифровой идентификатор;
+2. Краткое название теста;
+3. Приоритет;
+4. Предусловие (при необходимости);
+5. Выберите менеджера — лицо из сущности «Сотрудник», имеющее роль менеджера в сущности «Роль сотрудника»;
+6. Шаги выполнения (инструкция, просто и однозначно, указывая при выполнении корректные значения нужных параметров);
+7. Ожидаемый результат (ОР);
+8. Постусловия (как восстановить состояние до проверки);
+9. Фактический результат (ФР).
+10. Каждый кейс должен соответствовать принципу Повторяемость (F.I. Repeatable S.T.).
+11. Каждый кейс должен соответствовать принципу Атомарность/Независимость (F.Independent.S.T.).
+12. Представьте в табличном виде, разместите в облачном хранилище.
+13. Зарегистрируйте в WEEEK задачу на тестирование, укажите ссылку на размещение тест-кейса.
 
-### Exercise 03 — Creating a Negative Test Case <div id="54"></div>
+**Шкала от 1 до 5**
 
-For Task 1, develop negative test cases for UC02.
+### Упражнение 03 — Создание негативного тест-кейса <div id="54"></div>
 
-For each test case, specify:
+Для задачи 1 разработайте кейсы негативного тестирования для UC02.
 
-1. Alphanumeric identifier;
-2. Brief name of the test case;
-3. Priority;
-4. Precondition, if necessary;
-5. Select a manager — a person from the Employee entity who has a manager role in the Employee Role entity;
-6. Execution steps (instructions, simple and unambiguous, specifying the correct values of the required parameters when executing);
-7. Expected Result (ER);
-8. Postconditions (how to restore the state before the check);
-9. Actual Result (ER).
-10. Each case must comply with the principle of repeatability (F.I. Repeatable S.T.).
-11. Each case must comply with the principle of atomicity (F.Independent.S.T).
-12. Presented in tabular form, stored in the cloud.
-13. Register a task for testing in WEEEK, provide a link to the test case.
+Для каждого тест-кейса укажите:
 
-**Scale from 1 to 5**
+1. Буквенно-цифровой идентификатор;
+2. Краткое название теста;
+3. Приоритет;
+4. Предусловие, при необходимости;
+5. Выберите менеджера — лицо из сущности «Сотрудник», имеющее роль менеджера в сущности «Роль сотрудника»;
+6. Шаги выполнения (инструкция, просто и однозначно, указывая при выполнении корректные значения нужных параметров);
+7. Ожидаемый результат (ОР);
+8. Постусловия (как восстановить состояние до проверки);
+9. Фактический результат (ФР).
+10. Каждый кейс должен соответствовать принципу Повторяемость (F.I. Repeatable S.T.).
+11. Каждый кейс должен соответствовать принципу Атомарность/Независимость (F.Independent.S.T.).
+12. Представьте в табличном виде, разместите в облачном хранилище.
+13. Зарегистрируйте в WEEEK задачу на тестирование, укажите ссылку на размещение тест-кейса.
 
-### Exercise 04 – Result Evaluation <div id="55"></div>
+**Шкала от 1 до 5**
 
+### Упражнение 04 — Оценка результата <div id="55"></div>
 
-For UC02 Task 1, review the results of a successful test case. 
+Для задачи 1 UC02 рассмотрите результаты выполнения позитивного тест-кейса.
 
-Determine the outcome of the test case and create a defect report if necessary. 
+Определите результат тест-кейса и при необходимости создайте отчет о дефекте.
 
-1. After performing steps 1, 2:
-   1. The system reports that the selected slot is booked in the system by the client. However, when contacting the client, the client denies having booked that slot.
-   2. The system reports that the selected slot is not booked in the system by the client.
-2. After performing steps 1-5:
-   1. The system assigns the slot to the master, the slot does not appear in the list of available slots;
-   2. The system does not assign the slot to the master. This slot can also be selected from the list of free slots during further work.
-3. If the result of the test case is negative:
-   1. Create a defect report. Describe:
-      1. The defect identifier (alphanumeric);
-      2. Brief description (one sentence, "what, where, when?");
-      3. ** Precondition (if applicable);
-      4. Steps to reproduce the bug, not necessarily the same as the text case steps;
-      5. Expected Result (ER): the positive result of the test case that is expected after testing;
-      6. Actual Result (AR): the resulting performance, highlighting what is different from the ER;
-      7. \*Postconditions (how to restore the state before testing);
-      8. \*Environment (description of the environment: operating system, browser, screen resolution, etc.);
-      9. Priority (urgency of fixing the bug);
-      10. \*Importance (criticality for fulfillment);
-      11. Description;
-      12. Additional materials (screenshots, logs, documents, etc.).
-   2. Note the negative result in the AR column and specify the identifier of the registered defect.
-4. In case of a positive result of the test case, enter the positive case resolution identifier in the AR column.
+1. После выполнения п.п. 1, 2:
+   1. Система сообщает, что выбранный слот забронирован в системе клиентом. Однако при обращении к клиенту тот отрицает, что забронировал этот слот.
+   2. Система сообщает, что выбранный слот не забронирован в системе клиентом.
+2. После выполнения п.п.1-5:
+   1. Система выполняет закрепление слота за мастером, при дальнейшей работе слот не отражается в списке свободных;
+   2. Система не выполняет закрепление слота за мастером. При дальнейшей работе этот слот также можно выбрать из списка свободных.
+3. В случае отрицательного результата тест-кейса:
+   1. Создай отчет о дефекте. Опиши:
+      1. Идентификатор дефекта (буквенно-цифровой);
+      2. Краткое описание (одно предложение: «что, где, когда?»);
+      3. \*Предусловие (при необходимости);
+      4. Шаги воспроизведения дефекта (необязательно совпадает с шагами тест-кейса);
+      5. Ожидаемый результат (ОР): позитивный результат тест-кейса, который ожидали после тестирования;
+      6. Фактический результат (ФР): полученный результат выполнения (подчеркни, что отличает от ОР);
+      7. \*Постусловия (как восстановить состояние до проверки);
+      8. \*Окружение (описание среды: операционная система, браузер, разрешение экрана и пр.);
+      9. Приоритет (срочность исправления дефекта);
+      10. \*Важность (критичность для выполнения);
+      11. Описание;
+      12. Дополнительные материалы (скриншоты, логи, документы и пр.).
+   2. Укажите в графе ФР отметку об отрицательном результате и идентификатор зарегистрированного дефекта.
+4. В случае положительного результата тест-кейса укажите в графе ФР отметку о положительном выполнении кейса.
 
-**Scale from 1 to 5**
+**Шкала от 1 до 5**

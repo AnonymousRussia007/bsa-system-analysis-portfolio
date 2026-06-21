@@ -1,275 +1,263 @@
-# Domain and information model
+# Предметная область и информационная модель
 
-Summary:
-You will be introduced to the concept of "domain" and learn how to identify domain entities. You will learn what a System Information Model is, how to build one, and how to test the model using CRUD.
+Резюме:
+Ты познакомишься с понятием «предметная область» и научишься выделять сущности предметной области. Узнаешь, что такое информационная модель системы, построишь ее и научишься проверять модель по CRUD.
 
-💡 [Tap here](https://new.oprosso.net/p/4cb31ec3f47a4596bc758ea1861fb624) **to leave your feedback on the project**. It's anonymous and will help our team make your educational experience better. We recommend completing the survey immediately after the project.
+💡 [Нажми сюда](https://new.oprosso.net/p/4cb31ec3f47a4596bc758ea1861fb624), **чтобы поделиться с нами обратной связью на этот проект**. Это анонимно и поможет нашей команде сделать обучение лучше. Рекомендуем заполнить опрос сразу после выполнения проекта.
 
-## Contents
+## Содержание
 
-1. [Chapter I](#chapter-i) \
-   1.1. [Preamble](#11)
-2. [Chapter II](#chapter-ii) \
-   2.1. [General Rules](#21)
-3. [Chapter III](#chapter-iii) \
-   3.1. [Domain](#31) \
-   3.2. [Identification of Entities and Actions With Them](#32) \
-   3.3. [CRUD Entity Testing](#33) \
-   3.4. [Data Dictionary](#34) \
-   3.5. [ER Diagram](#35)
-4. [Chapter IV](#chapter-iv) \
-   4.1. [Task 1. Haircut Appointment](#41) \
-   4.2. [Task 2. Delivery of Orders](#42)
-5. [Chapter V](#chapter-v) \
-   5.1. [Exercise 00 — Entity Identification](#51) \
-   5.2. [Exercise 01 — Entity Testing by CRUD](#52) \
-   5.3. [Exercise 02 — Building a Data Dictionary](#53) \
-   5.4. [Exercise 03 — Building a Logical Data Model](#54)
+1. [Глава I](#chapter-i) \
+    1.1. [Введение](#11)
+2. [Глава II](#chapter-ii) \
+    2.1. [Общие правила](#21)
+3. [Глава III](#chapter-iii) \
+    3.1. [Предметная область](#31) \
+    3.2. [Выделение сущностей и действий над ними](#32) \
+    3.3. [Проверка сущностей по CRUD](#33) \
+    3.4. [Словарь данных](#34) \
+    3.5. [Построение ER-диаграммы](#35)
+4. [Глава IV](#chapter-iv) \
+    4.1. [Задача 1. Запись на стрижку](#41) \
+    4.2. [Задача 2. Доставка заказов](#42)
+5. [Глава V](#chapter-v) \
+    5.1. [Упражнение 00 — Выявление сущностей](#51) \
+    5.2. [Упражнение 01 — Проверка сущности по CRUD](#52) \
+    5.3. [Упражнение 02 — Построение словаря данных](#53) \
+    5.4. [Упражнение 03 — Построение логической модели данных](#54)
 
-## Chapter I <div id="chapter-i"></div>
+## Глава I <div id="chapter-i"></div>
 
 ![Illustration_04](misc/images/Illustration_04.jpg)
 
-### Preamble <div id="11"></div>
+### Введение <div id="11"></div>
 
-In the previous project, for each system under development, you identified the business requirements (high-level customer goal), got to know the stakeholders — those who are interested in the system in one way or another, learned what a context diagram is, how to build it, and how to use it. In this project, you will learn what a domain is, you will learn to recognize the domain entities with which the system works. You will learn what a CRUD model is and you will test your domain entities using the CRUD model.
+В предыдущем проекте для каждой разрабатываемой системы ты выявил бизнес-требования (высокоуровневую цель заказчика), познакомился с заинтересованными сторонами — теми, кто так или иначе заинтересован в системе, узнал, что такое контекстная диаграмма, как ее построить и как использовать. В этом проекте ты узнаешь, что такое предметная область (domain), научишься выявлять сущности предметной области, с которыми работает система. Узнаешь, что такое модель CRUD, и выполнишь проверку выделенных тобой сущностей предметной области по модели CRUD.
 
-**Literature:**
+**Литература:**
 
-1. Karl Wiegers, Joy Beatty, "Software Requirements" 3rd edition, amplified.
-2. BABOK v3 "A Guide to the Business Analysis Body of Knowledge" IIBA.
-3. Dean Leffingwell, Don Widrig "Managing Software Requirements".
+1. Карл Вигерс, Джой Битти, «Разработка требований к программному обеспечению», издание третье, дополненное.
+2. BABOK v3 «Руководство к своду знаний по бизнес-анализу» IIBA.
+3. Дин Леффингуэлл, Дон Уидриг «Принципы работы с требованиями к программному обеспечению».
 
-## Chapter II <div id="chapter-ii"></div>
+## Глава II <div id="chapter-ii"></div>
 
-### General Rules <div id="21"></div>
+### Общие правила <div id="21"></div>
 
-1. Along the way, you may feel a sense of uncertainty and a severe lack of information: that's OK. Remember, the information in the repository and on Google is always with you. So are your peers and Rocket.Chat. Communicate. Search. Use common sense. Don't be afraid to make mistakes.
-2. Pay attention to sources of information. Check. Think. Analyse. Compare. 
-3. Look at the text of each assignment. Read it several times. 
-4. Read the examples carefully. There may be something in them that is not explicitly stated in the task itself.
-5. You may find inconsistencies where something new in the terms of the task or examples conflicts with something you already know. If you come across such an inconsistency, try to work it out. If not, write it down as an open question and find out as you work. Do not leave open questions unanswered. 
-6. If a task seems confusing or impossible, it only seems that way. Try to break it down. It is likely that some parts will become clear. 
-7. There will be several tasks. Those marked with an asterisk (\*) are for the more meticulous students. These tasks are more difficult and are not compulsory. But doing them will give you extra experience and knowledge.
-8. Don't try to fool the system or the people around you. You will fool yourself first.
-9. Got a question? Ask your neighbour to the right. If that doesn't help, ask your neighbour on the left.
-10. When you use help, you should always understand why and how. Otherwise the help is useless.
-11. Always push only to the develop branch! The master branch will be ignored. Work in the src directory.
-12. There should be no files in your directory other than those specified in the tasks.
+1. На протяжении всего курса тебя будет сопровождать чувство неопределенности и острого дефицита информации — это нормально. Не забывай, что информация в репозитории и Google всегда с тобой. Как и пиры, и Rocket.Chat. Общайся. Ищи. Опирайся на здравый смысл. Не бойся ошибиться.
+2. Будь внимателен к источникам информации. Проверяй. Думай. Анализируй. Сравнивай.
+3. Внимательно читай задания. Перечитай несколько раз.
+4. Читать примеры тоже лучше внимательно. В них может быть что-то, что не указано в явном виде в самом задании.
+5. Тебе могут встретиться несоответствия, когда что-то новое в условиях задачи или примере противоречит уже известному. Если встретилось такое — попробуй разобраться. Если не получилось — запиши вопрос в открытые вопросы и выясни в процессе работы. Не оставляй открытые вопросы неразрешенными.
+6. Если задание кажется непонятным или невыполнимым — так только кажется. Попробуй его декомпозировать. Скорее всего, отдельные части станут понятными.
+7. На пути тебе встретятся самые разные задания. Те, что помечены звездочкой (\*) — подходят для более дотошных. Они повышенной сложности и необязательны к выполнению. Но если ты их сделаешь, то получишь дополнительный опыт и знания.
+8. Не пытайся обмануть систему и окружающих. В первую очередь ты обманешь себя.
+9. Есть вопрос? Спроси своего соседа справа. Если это не помогло — соседа слева.
+10. Когда пользуешься помощью — всегда разбирайся до конца: почему, как и зачем. Иначе помощь не будет иметь смысла.
+11. Всегда делай push только в ветку develop! Ветка master будет проигнорирована. Работай в директории src.
+12. В твоей директории не должно быть иных файлов, кроме тех, что обозначены в заданиях.
 
-## Chapter III <div id="chapter-iii"></div>
+## Глава III <div id="chapter-iii"></div>
 
-### 1. Domain <div id="31"></div>
+### 1. Предметная область <div id="31"></div>
+**Предметная область (domain)** — часть реального мира, рассматриваемая в некоторых пределах.
 
-**Domain** is a part of the real world that is considered within certain boundaries. 
+Это обстоятельства и условия, которые:
 
-These are circumstances and conditions that:
+- влияют на построение/изменение системы;
+- находятся под влиянием построения/изменения системы;
+- способствуют пониманию системы.
 
-- influence the design/change of the system;
-- are influenced by the design/change of the system;
-- contribute to the understanding of the system.
+К предметной области могут относиться:
 
-The domain may include
+- предметы реального мира,
+- потоки данных,
+- люди,
+- организации,
+- бизнес-процессы,
+- идеи,
+- технологии,
+- цели и задачи,
+- связи между любыми из перечисленного выше.
 
-- real world objects,
-- data flows,
-- people
-- organizations,
-- business processes,
-- ideas,
-- technologies,
-- goals and tasks,
-- relationships between any of the above.
+То есть в предметную область входит не только система и внешние сущности, с ней связанные, но и все понятия, входящие в систему и так или иначе имеющие к ней отношение. Иными словами, все, что входит в систему и окружает систему.
 
-That is, the domain includes not only the system and the external entities related to it, but also all the concepts contained in the system and somehow related to it. Everything that enters and surrounds the system. 
+На рис.1 показан контекст системы по задаче 1, зеленая область — контекст, прерывистая черта — границы контекста. В контекст мы выделили систему и то ее окружение (внешние сущности), которое непосредственно взаимодействуют с системой — это Регулятор и Санэпиднадзор.
 
-Figure 1 shows the context of the system according to Task 1, the green area is the context, the dashed line is the boundaries of the context. In the context, we have selected the system and its environment (external entities) that directly interact with the system — the regulator and the sanitary and epidemiological surveillance. 
+Обрати внимание, что понятие Контекст не имеет прямого отношения к классу Context в программировании (предоставление доступа к базовым функциям приложения).
 
-Note that the concept of context is not directly related to the Context class in programming (which provides access to the underlying functions of an application).
+*Рисунок 1.*
 
-*Figure 1.*
+![img1](misc/images/img1.png)
 
-![img1_eng](misc/images/img1_eng.png)
+Важные понятия предметной области — связи и зависимости. Именно знание понятий, понимание зависимостей, существующих в предметной области, и является ценным для аналитика, участвующего в разработке ИТ-систем. Но для того чтобы хорошо разобраться в новой предметной области (новом домене), требуется немало времени. Поэтому знания предметной области или разных предметных областей довольно высоко ценится в ИТ-командах. Более подробно о методах погружения в новый домен здесь:
 
-Relationships and dependencies are important concepts in the domain. It is the knowledge of concepts, the understanding of dependencies that exist in the domain, that is valuable for an analyst involved in the development of IT systems. But it takes a lot of time to understand a new domain well. Therefore, knowledge of one or more domains is highly valued in IT teams. Read more about methods for immersing yourself in a new domain:
+1. [Ирина Гертовская «Погружение в новую предметную область. Чек-лист аналитика»](https://rutube.ru/video/3e68d3f9e376e6a212acef561d4166ff/?ysclid=m0m7njiwmy714477779).
+2. [Марина Давыдова «Мастер-класс: исследование предметной области, как квест в работе аналитика»](https://rutube.ru/video/695293ff417d1f16dd22d98e86cd554e/).
 
-1. [Irina Gertovskaya "Immersion in a new domain. Analyst's check-list"](https://rutube.ru/video/3e68d3f9e376e6a212acef561d4166ff/?ysclid=m0m7njiwmy714477779).
-2. [Marina Davydova "Workshop: Research of the domain as a quest in the analyst's work"](https://rutube.ru/video/695293ff417d1f16dd22d98e86cd554e/).
+### 2. Выделение сущностей и действий над ними <div id="32"></div>
+Есть простой способ выделения сущностей в предметной области: в текстах, описывающих проблемы и потребности, выделяем пары «существительное — глагол» или «существительное — отглагольное существительное». Если существительное — объект реального мира (или виртуального мира, но еще не нашей системы) и встречается несколько раз — это кандидат в объекты (сущности) системы. Подробнее про порядок выделения сущностей:
 
-### 2. Identification of Entities and Actions With Them <div id="32"></div>
+1. Выделение кандидатов в сущности.
 
-There is a simple way to identify entities in a domain: in texts describing problems and needs, we distinguish "noun-verb" or "noun — verbal noun" pairs. If a noun is an object in the real world (or in the virtual world, but not yet in our system), and if it occurs several times, it is a candidate for objects (entities) in the system. Read more about the order of entity identification:
+    Выделяем, например, подчеркиванием, существительные и особенно пары существительные с глаголами или отглагольными существительными в текстах, описывающих задачу или проблему. Если над чем-то выполняются действия — это кандидат в объекты системы.
 
-1. Identifying candidates for entity.
+2. Выделение сущностей.
 
-   Underline nouns and especially noun-verb or verb-noun pairs in texts describing a task or problem. When actions are performed on something, it is a candidate for system objects.
+    Выявляем из подчеркнутых существительных объекты, события — всё, что будет представлено в данных, над чем в нашей системе будут работать пользователи или сама система. Каждая сущность должна быть целостной и логически отделенной от всех других.
 
-2. Identifying entities.
+3. Определение ключевых свойств каждой сущности.
 
-   Identify from the underlined nouns, objects, events — everything that will be present in the data on which users or the system itself will work in our system. Each entity must be coherent and logically separate from all others.
+    Определяем уникальные для каждой сущности свойства (атрибуты). Иногда в тексте это существительное, каким-то образом относящееся к существительному, выделенному как сущность. Уникальных может быть один или несколько атрибутов на каждую сущность.
 
-3. Defining the key properties of each entity.
+4. Определение связей между сущностями.
 
-   Define properties (attributes) that are unique to each entity. Sometimes in the text it is a noun that is somehow related to the noun identified as the entity. There may be one or more unique attributes for each entity. 
+    Выявляем отношения между сущностями:
+   - 1:1 (один-к-одному);
+   - 1:М (один-ко-многим);
+   - М:1 (многие-к-одному);
+   - М:М (многие-ко-многим).
 
-4. Defining relationships between entities.
+5. Сопоставление атрибутов с сущностями.
 
-   Identify relationships between entities:
-   - 1:1 (one-to-one);
-   - 1:М (one-to-many);
-   - М:1 (many-to-one);
-   - М:М (many-to-many).
+    Сопоставляем атрибуты с сущностями с учетом того, что бизнес будет использовать данные. Выявляем возможные значения атрибутов и условия, ограничения.
 
-5. Mapping attributes to entities.
+6. Назначение ключей и степени нормализации.
 
-   Mapping attributes to entities, taking into account how the business will use the data. Identification of possible attribute values and conditions, constraints.
+    Нормализация — метод организации моделей данных, в которых идентификаторы (ключи) назначаются группам данных для установления связей между ними без повторения данных.
 
-6. Assignment of keys and degrees of normalization.
+7. Завершение, проверка модели данных.
 
-   Normalization is a method of organizing data models in which identifiers (keys) are assigned to groups of data to establish relationships between them without repeating the data.
+    Моделирование — итеративный процесс, следует повторять и совершенствовать под потребности бизнеса.
 
-7. Completion, testing of the data model.
+### 3. Проверка сущностей по CRUD <div id="33"></div>
+Хорошим способом проверки полноты действий над сущностью является методика CRUD. Каждый экземпляр сущности должен быть проверен на:
+- создание (Create);
+- чтение (Read);
+- обновление (Update);
+- удаление (Delete).
 
-   Modeling is an iterative process, it should be repeated and refined to meet the needs of the business.
+Возможно, какие-то из этих действий не должны выполняться над экземплярами отдельных сущностей, например, недопустимо удаление.
+Но это должно быть сознательное решение, даже если мы хотим иметь сведения обо всех прошедших операциях, мы должны подумать: что делать, когда их станет слишком много? Возможно, вместо удаления мы можем выполнять действие «Перевод в архив».
 
-### 3. CRUD Entity Testing <div id="33"></div>
+В таблице 1 — матрица CRUD для сущности Услуга в задаче 1.
 
-A good way to check the completeness of actions on an entity is the CRUD technique. Each instance of an entity should be tested for:
+Иногда в процессе создания матрицы возникают вопросы, на которые нет ответа в тексте задачи. Мы должны уточнить эти вопросы у заказчика (если он есть) или придумать приемлемый вариант (гипотезу), отразить в дополнении к условию задачи (обязательно!) и продолжать анализ и разработку системы исходя из гипотезы.
 
-- Creation;
-- Reading;
-- Updating;
-- Deletion.
+[Подробнее про проверки по CRUD](https://conf.uml2.ru/index.php?all_classes&class_id=trebovaniya-ne-menyayutsya-eto-vy-ikh-nedovyyavili--10-tekhnik-proverki-polnoty-trebovanii).
 
-Perhaps some of these actions should not be performed on instances of individual entities, for example, deletion is not allowed. But this should be a conscious decision, because even if we want to have information about all past activities, we need to think about what to do when there are too many of them. Perhaps instead of deleting, we can perform the action Transfer to archive. 
+*Таблица 1*
 
-Table 1 shows the CRUD matrix for the Service entity in Task 1.
+|      Сущность     |     CREATE                  |                                 |     READ                            |                      |     UPDATE                |                          |     DELETE                   |                                       |
+|-------------------|-----------------------------|---------------------------------|-------------------------------------|----------------------|---------------------------|--------------------------|------------------------------|---------------------------------------|
+|                   |     Роль                    |     Действие                    |     Роль                            |     Действие         |     Роль                  |     Действие             |     Роль                     |     Действие                          |
+|     Услуга        |     Клиент, Посетитель    |     записывается на услугу    |     Мастер, Менеджер              |     просматривает    |     Клиент, Менеджер    |     изменяет услугу    |     Менеджер                 |     Переводит в архив после оплаты    |
+|     Расписание    |     Менеджер                |     создает                     |     Мастер, Клиент, Посетитель    |     просматривает    |     Менеджер              |     изменяет             |     Выяснить у заказчика     |    Выяснить у заказчика   |
 
-Sometimes, when creating the matrix, there are questions that are not answered in the task text. We should clarify these questions with the customer (if there is one) or come up with an acceptable variant (hypothesis), reflect it in an addendum to the task condition (obligatory!) and continue analyzing and developing the system based on the hypothesis.
+### 4. Словарь данных <div id="34"></div>
+**Словарь данных (Data Dictionary)** — средство, техника, позволяющая описать данные в бизнес-терминах, а также содержащая другие сведения о данных: информацию о типах и форматах данных, детализацию структур данных и нормативно-справочной информации и, возможно, других ограничений, например, по безопасности. Таким образом, словарь данных является одним из способов ведения метаданных.
 
-[Read more about CRUD testing](https://conf.uml2.ru/index.php?all_classes&class_id=trebovaniya-ne-menyayutsya-eto-vy-ikh-nedovyyavili--10-tekhnik-proverki-polnoty-trebovanii)
+|                          | Глоссарий                                                                 | Словарь данных                                                                                                                                                                                                   |
+|--------------------------|---------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Что содержит             | Термины, сокращения, понятия, бизнес-описание                             | Понятия, бизнес-описание, Техническое описание данных:<br> - типы данных,<br> - форматы данных,<br> - детализацию структуры данных,<br> - ограничения,<br> - привязку к нормативно-справочной информации,<br> - политику безопасности,<br> - и т. д. |
+| Состав                   | Атомарные понятия: один термин —   один объект предметной области         | Может содержать составные   элементы, которые включают несколько простых или тоже составных элементов                                                                                                            |
+| Специфика,   особенности | Универсальный характер, описывает   предметную область для любого проекта | Специфично для проектов   разработки, внедрения, сопровождения ИТ-систем                                                                                                                                         |
 
-*Table 1*
+### 5. Построение ER-диаграммы <div id="35"></div>
+Один из способов визуализации предметной области — модель данных ER-диаграмма (диаграмма «Сущность — связь»).
+Вспомним, что модель — упрощенное описание действительности, позволяющее исследовать или обрабатывать объект. В зависимости от цели, стоящей перед командой, мы разрабатываем такие модели данных:
+- Концептуальная модель;
+- Логическая модель;
+- Физическая модель.
 
-| Entity   | CREATE          |                        | READ                    |        | UPDATE          |                             | DELETE                |                                        |
-| -------- | --------------- | ---------------------- | ----------------------- | ------ | --------------- | --------------------------- | --------------------- | -------------------------------------- |
-|          | Role            | Action                 | Role                    | Action | Role            | Action                      | Role                  | Action                                 |
-| Service  | Client, visitor | Making an appointmnent | Master, Manager         | views  | Client, Manager | Changes the type of service | Manager               | Transfers to the archive after payment |
-| Schedule | Manager         | Creates                | Master, Client, Visitor | Views  | Manager         | Changes                     | Check with the client | Check with the client                  |
+**Концептуальная модель данных**
 
-### 4. Data Dictionary <div id="34"></div>
+Задает основные конструкции, описывает семантику домена.
+Часто используется на начальном этапе планирования, не содержит подробных сведений об атрибутах.
+Включает в себя:
+- основные сущности,
+- связи.
 
-A **data dictionary** is a tool, a technique, that allows data to be described in business terms and to contain other information about the data: information about data types and formats, details of data structures and regulatory reference information, and possibly other constraints such as security. Thus, data dictionaries are a way to maintain metadata.
+Разработка концептуальной модели данных — обязанность аналитика.
 
-|                          | Glossary                                              | Data Dictionary                                              |
-| ------------------------ | ----------------------------------------------------- | ------------------------------------------------------------ |
-| What it contains         | Terms, abbreviations, concepts, business description  | Concepts, business description, technical description of data:<br> - data types,<br> - data formats,<br> - data structure details,<br> - constraints,<br> - binding to regulatory reference information,<br> - security policy,<br> - etc. |
-| Content                  | Atomic concepts: one term - one object of the domain  | May contain composite elements that include several simple or also composite elements |
-| Specifics, peculiarities | General-purpose, describes the domain for any project | Specific to IT system development, implementation, maintenance projects |
+**Логическая модель данных**
 
-### 5. ER diagram <div id="35"></div>
+Отражает содержание и связи бизнеса, является расширением концептуальной модели. Представляет бизнес-информацию и определяется бизнес-правилами.
+Определяется конкретной технологией манипулирования данными.
+Включает в себя:
+- сущности,
+- атрибуты,
+- ключи,
+- взаимосвязи.
 
-One way to visualize the domain is through the data model of an Entity-Relationship Diagram (ER Diagram).
-Remember that a model is a simplified description of reality that allows you to explore or manipulate an object. Depending on the team's goal, we develop such data models:
+Логическую модель данных часто разрабатывает аналитик, но в сотрудничестве с архитектором или разработчиком.
 
-- Conceptual model;
-- Logical model;
-- Physical model.
+**Физическая модель данных**
 
-**Conceptual Data Model**
+Обеспечивает разработку кода и всего, что с ним связано. Привязана к конкретной СУБД.
+Включает в себя:
+- все необходимые таблицы, столбцы, связи;
+- свойства базы данных для физической реализации баз данных:
+  - производительность базы данных;
+  - стратегия индексации;
+  - физическое хранилище;
+  - денормализация.
 
-Defines the basic constructs, describes the semantics of the domain.
-It is often used in the initial planning phase and does not contain detailed attribute information.
-Includes:
+Физическую модель данных на базе логической модели разрабатывает разработчик или архитектор.
 
-- Main entities;
-- Relationships.
+## Глава IV <div id="chapter-iv"></div>
 
-The development of a conceptual data model is the responsibility of the analyst.
+### Описание задач
 
-**Logical Data Model**
+### Задача 1. Запись на стрижку <div id="41"></div>
+Руководство сети барбершопов приняло решение о внедрении системы, обеспечивающей онлайн-запись на прием. Основная цель — развитие бизнеса путем расширения клиентской базы за счет возможности онлайн-записи, а также снижение трудозатрат сотрудников и уменьшение ручного труда за счет автоматического информирования клиентов по каналам связи.
 
-Represents the content and relationships of the business and is an extension of the conceptual model. It represents business information and is defined by business rules and a specific data manipulation technology.
-Includes:
+Запись может осуществлять как зарегистрированный, так и незарегистрированный посетитель сайта. При записи можно выбрать тип услуги: парикмахерские или косметологические, а также саму услугу, мастера и время из свободных интервалов. Система должна обеспечивать автоматическую отправку напоминаний клиентам через выбранный клиентом канал связи (Telegram, WhatsApp, VK, СМС) по настроенному менеджером расписанию. После получения услуги система предлагает клиенту оценить услугу и написать предложения по улучшению работы.
 
-- Entities;
-- Attributes;
-- Keys;
-- Relationships.
+Расписание мастеров и выполняемые каждым мастером услуги должен вводить менеджер, возможно, это будет не один человек. Он же отвечает за актуальность расписания и при необходимости корректирует его, осуществляет связь с клиентами в ручном режиме, проставляет отметку о выполнении услуги, начисляет и принимает оплату, передает данные об оплате в бухгалтерию. Также менеджер может получать отчеты о выполненных услугах и просматривать отзывы клиентов.
 
-The logical data model is often developed by an analyst, but in a team with an architect or developer.
+Любой мастер имеет возможность посмотреть расписание и запись на свои услуги, отзывы клиентов.
 
-**Physical Data Model**
+### Задача 2. Доставка заказов <div id="42"></div>
+В локдаун многие продуктовые магазины и предприятия питания резко увеличили объемы онлайн-продаж, и возросла потребность в быстрой доставке мелких партий товаров индивидуальным клиентам.
 
-Provides code development and all that goes with it. Tied to a specific DBMS.
-Includes:
+Компания студентов собрались и решила создать стартап службы доставки.
 
-- All required tables, columns, relationships;
-- Database properties for physical implementation of databases:
-  - Database performance;
-  - Indexing strategy;
-  - physical repository;
-  - denormalization.
+Идея состоит в том, чтобы оперативно получать информацию о заказах, месте и сроке комплектации, месте доставки, желаемых сроках доставки и раздавать инфо курьерам, которые будут получать заказ в месте комплектации и доставлять в место доставки. Решили развернуть онлайн-систему, куда стекаются заказы и откуда курьеры оперативно разбирают заказы для выполнения. На первом этапе решили собирать заказы от магазинов и предприятий питания любым доступным способом и вводить в систему в едином формате силами оператора, но разработать мобильное приложение для курьеров.
 
-A physical data model based on a logical model is developed by a developer or architect.
+Курьер должен иметь возможность просматривать информацию о заказах, выбирать заказ из свободных, бронировать его, забирать в точке выдачи и доставлять клиенту. Результат своих действий курьер должен оперативно отражать в системе через мобильное приложение. Также в системе должен работать диспетчер, который контролирует курьеров и при необходимости переназначает заказы. Информация о поступивших заказах должна направляться в бухгалтерию (в другую ИТ-систему) для расчета с поставщиками заказов за доставку. Также в бухгалтерию должна направляться информация о доставке заказа, где будет производиться расчет оплаты курьеров. Начисленная оплата должна передаваться в систему и отражаться в личном кабинете курьера. И еще запланировано рабочее место администратора, регистрирующего курьеров и назначающего всем права доступа.
 
-## Chapter IV <div id="chapter-iv"></div>
+## Глава V <div id="chapter-v"></div>
 
-### Description of tasks
+### Упражнение 00 — Выявление сущностей <div id="51"></div>
+**Для каждой задачи:**
 
-### Task 1. Haircut Appointment <div id="41"></div>
+1. Определи не менее 7 сущностей (руководствуясь порядком выделения сущностей) с которыми будет работать система.
+2. Определи для каждой сущности название, указать назначение.
+3. Определи для каждой сущности основные (ключевые) атрибуты.
+4. Укажи свои ответы в turn-in файле ex00\_<префикс продукта>\_entity.xlsx.
 
-The management of a chain of barbershops decided to implement an online booking system. The main objective is to develop the business by expanding the customer base through the possibility of online registration, as well as to reduce employee labour costs and manual labour by automatically informing customers through communication channels. 
+### Упражнение 01 — Проверка сущности по CRUD <div id="52"></div>
+**Для задачи 1:**
 
-Both registered and unregistered visitors can book an appointment on the website. When making an appointment, they can select the type of service: hairdressing or cosmetology, as well as the service itself, the master and the time from the available intervals. The system should provide automatic sending of reminders to clients through the communication channel chosen by the client (Telegram, WhatsApp, VK, SMS) according to the schedule set by the manager. After receiving a service, the system offers the client to evaluate the service and write suggestions on how to improve the work.
+1. Для каждой сущности проведи проверку полноты операций по CRUD.
+2. Для проверки по CRUD отрази в таблице (подобной приведенной на рис. 2 в п.3. Проверка сущностей по CRUD):
+   1. Укажи в таблице роли стейкхолдеров и действия, при которых выполняется операция CRUD;
+   2. В случае если из условий задачи или интервью непонятно, кто и когда выполняет операцию, предложи гипотезу или укажи потребность уточнения у стейкхолдеров (выделить цветом).
+3. Запиши свои ответы в turn-in файле ex01\_<префикс продукта>\_crud.xlsx.
 
-The schedule of masters and the services provided by each master should be entered by the manager, who may be more than one person. This person is also responsible for keeping the schedule up to date and adjusting it if necessary, communicating with customers manually, marking the service, charging and accepting payment, sending the payment data to the accounting department. The manager can also receive reports on completed services and view customer feedback.
+### Упражнение 02 — Построение словаря данных <div id="53"></div>
+**Для каждой задачи:**
 
-Each master has the ability to view the schedule and appointments for their services, as well as customer reviews.
+1. Построй словарь данных.
+2. Включи в словарь данных название сущности, мнемонику, описание понятия, тип данных, обязательность.
+3. Размести таблицу в turn-in файле ex02\_<префикс продукта>\_dict.xxx (xxx — расширение файла).
 
-### Task 2. Delivery of Orders <div id="42"></div>
+### Упражнение 03 — Построение логической модели данных <div id="54"></div>
+**Для каждой задачи:**
 
-During the lockdown, many grocery stores and food companies dramatically increased their online sales and the need for quick delivery of small quantities to individual customers increased. 
-
-A group of students got together and decided to create a delivery service startup. The idea is to quickly receive information about orders, pickup location and time, delivery location, desired delivery dates, and distribute this information to couriers who will pick up the order at the pickup location and deliver it to the delivery location. They decided to develop an online system where orders could be collected and quickly sorted for delivery by couriers.
-
-The first step was to collect orders from stores and caterers in any way possible and have the operator enter them into the system in a consistent format, as well as developing a mobile application for the courier. The courier should be able to view order information, select an order from those available, book it, pick it up at the collection point and deliver it to the customer. The result of the courier's actions should be immediately reflected in the system via a mobile application. The system should also include a dispatcher who controls the couriers and reassigns orders if necessary. Information on received orders should be sent to the accounting department (to another IT system) to calculate delivery charges with order suppliers. Order delivery information should also be sent to the accounting department to calculate payment to couriers. Accrued payment should be transferred to the system and displayed in the courier's personal account. And there should also be an administrator's workstation, where couriers are registered and access rights are assigned to all of them.
-
-## Chapter V <div id="chapter-v"></div>
-
-### Exercise 00 — Entity Identification <div id="51"></div>
-
-**For each task:**
-
-1. Identify at least 7 entities (following the order of entity selection) with which the system will work.
-2. Define a name for each entity, specify the purpose.
-3. Define the main (key) attributes for each entity.
-4. Indicate your answers in the turn-in file ex00\_<product predix>\_entity.xlsx.
-
-### Exercise 01 — Entity Testing by CRUD <div id="52"></div>
-
-**For task 1:**
-
-1. Perform a CRUD test of the completeness of actions for each entity.
-2. Specify in a table (similar to the one shown in Fig. 2 in item 3) for CRUD testing:
-   1. Specify in the table the stakeholder roles and actions under which the CRUD operation is performed;
-   2. In case it is not clear from the task or interview conditions who performs the operation and when, suggest a hypothesis or indicate the need for clarification from stakeholders (highlight in color).
-3. Indicate your answers in the turn-in file ex01\_<product prefix>\_crud.xlsx.
-
-### Exercise 02 — Building a Data Dictionary <div id="53"></div>
-
-**For each task:**
-
-1. Build a data dictionary.
-2. Include entity name, mnemonics, concept description, data type, and obligingness in the data dictionary.
-3. Place the table in the turn-in file ex02\_<product prefix>\_dict.xxx (xxx is an extension).
-
-### Exercise 03 — Building a Logical Data Model <div id="54"></div>
-
-**For each task:**
-
-1. Build an ER diagram — a logical data model.
-2. Include your selected entities in the ER diagram, supporting directories and decoupling tables for M:M relationships.
-3. Specify the multiplicity of relationships between entities in the ER diagram.
-4. Describe with verbs the relationships between entities in the ER diagram.
-5. Place the diagram in the turn-in файле ex03\_<product prefix>\_model.xxx (xxx is an extension).
+1. Построй ER-диаграмму — логическую модель данных.
+2. Включи в ER-диаграмму выбранные тобой сущности, поддерживающие справочники и развязочные таблицы для связей М:М.
+3. В ER-диаграмме укажи множественность связей между сущностями.
+4. Опиши глаголами связи между сущностями в ER-диаграмме.
+5. Размести диаграмму в turn-in файле ex03\_<префикс продукта>\_model.xxx (xxx — расширение файла).

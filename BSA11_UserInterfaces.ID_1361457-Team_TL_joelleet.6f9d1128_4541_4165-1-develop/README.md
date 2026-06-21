@@ -1,427 +1,429 @@
-# User Interaction Design
+# Проектирование пользовательского взаимодействия
 
-Summary:
-Designing visual forms is the responsibility of the UI designer. But usually the UI designer is not familiar with the importance of this task. The content of the screen forms and the movement between them is the responsibility of the analyst or UX designer, if there is one on the team. In this project, you will look at UI design from the analyst's perspective, and what the analyst should delegate to the designer to make visual interfaces user-friendly.
+Резюме:
+Разработка визуальных форм — зона ответственности UI-дизайнера. Но, как правило, UI-дизайнер не знаком со смыслом задачи. Содержание экранных форм и движение между ними — зона ответственности аналитика или UX-дизайнера, если он есть в команде. В этом проекте ты рассмотришь проектирование пользовательского интерфейса с точки зрения аналитика: что аналитик должен передать дизайнеру, чтобы визуальные интерфейсы были удобными и полезными.
 
-💡 [Tap here](https://new.oprosso.net/p/4cb31ec3f47a4596bc758ea1861fb624) **to leave your feedback on the project**. It's anonymous and will help our team make your educational experience better. We recommend completing the survey immediately after the project.
+💡 [Нажми сюда](https://new.oprosso.net/p/4cb31ec3f47a4596bc758ea1861fb624), **чтобы поделиться с нами обратной связью на этот проект**. Это анонимно и поможет нашей команде сделать обучение лучше. Рекомендуем заполнить опрос сразу после выполнения проекта.
 
-## Contents
+## Содержание
 
-- [Chapter I](#chapter-i)
-   - [Preamble](#preamble)
-- [Chapter II](#chapter-ii)
-   - [General Rules](#general-rules)
-- [Chapter III](#chapter-iii)
-   - [1. Data Presentation Form](#1-data-presentation-form)
-   - [2. Roles and Key Scenarios](#2-roles-and-key-scenarios)
-   - [3. Screen Forms](#3-screen-forms)
-- [Chapter IV](#chapter-iv)
-   - [Description of tasks](#description-of-tasks)
-   - [Task 1. Haircut Appointment](#task-1-haircut-appointment)
-- [Chapter V](#chapter-v)
-   - [Exercise 00 — Choosing the Form of Product Presentation](#exercise-00--choosing-the-form-of-product-presentation)
-   - [Exercise 01 — Screen Forms of Classifiers and References](#exercise-01--screen-forms-of-classifiers-and-references)
-   - [Exercise 02 — Data on the Screen Forms of Classifiers and References](#exercise-02--data-on-the-screen-forms-of-classifiers-and-references)
-   - [Exercise 03 — Key Role Scenarios](#exercise-03--key-role-scenarios)
-   - [Exercise 04 — List of Screen Forms](#exercise-04--list-of-screen-forms)
-   - [Exercise 05 — Screen Forms](#exercise-05--screen-forms)
-   - [Exercise 06 — Controls Description](#exercise-06--controls-description)
+- [Глава I](#глава-i)
+   - [Введение](#введение)
+- [Глава II](#глава-ii)
+   - [Общие правила](#общие-правила)
+- [Глава III](#глава-iii)
+   - [1. Форма представления данных](#1-форма-представления-данных)
+   - [2. Роли и ключевые сценарии](#2-роли-и-ключевые-сценарии)
+   - [3. Экранные формы](#3-экранные-формы)
+- [Глава IV](#глава-iv)
+   - [Описание задач](#описание-задач)
+   - [Задача 1. Запись на стрижку](#задача-1-запись-на-стрижку)
+- [Глава V](#глава-v)
+   - [Упражнение 00 — Выбор формы представления продукта](#упражнение-00--выбор-формы-представления-продукта)
+   - [Упражнение 01 — Экранные формы классификаторов и справочников](#упражнение-01--экранные-формы-классификаторов-и-справочников)
+   - [Упражнение 02 — Данные на экранных формах классификаторов и справочников](#упражнение-02--данные-на-экранных-формах-классификаторов-и-справочников)
+   - [Упражнение 03 — Ключевые сценарии ролей](#упражнение-03--ключевые-сценарии-ролей)
+   - [Упражнение 04 — Список экранных форм](#упражнение-04--список-экранных-форм)
+   - [Упражнение 05 — Макеты экранных форм](#упражнение-05--макеты-экранных-форм)
+   - [Упражнение 06 — Описание контролей](#упражнение-06--описание-контролей)
 
-## Chapter I
+## Глава I
 
 ![Illustration](misc/images/IMG_6494.jpg)
 
-### Preamble
+### Введение
+Часто считают, что пользовательский интерфейс — это экранные формы. На самом деле, визуальные формы — только часть пользовательского интерфейса.
 
-Often the user interface is thought of as screen forms. In fact, visual forms are only one part of the user interface. 
+При проектировании пользовательского взаимодействия для ИТ-систем сочетаются три составляющих:
 
-When designing the UI for IT systems, three components come together: 
+- форма, в которой представляются данные;
+- ролевое поведение пользователей в системе;
+- контент — те или иные данные, над которыми выполняются действия.
 
-- The form in which data is presented;
-- The role behavior of users in the system; 
-- Content — the data on which actions are performed.
+Всем этим комплексом занимается **UX/UI-дизайн**, то есть проектирует любые пользовательские интерфейсы, в которых удобство использования так же важно, как и внешний вид.
 
-**UX/UI design** deals with all of these. It is the design of any user interface where usability is as important as appearance.
+**UX** — это **User Experience** (дословно: «опыт пользователя»). То есть это то, какой опыт/впечатление получает пользователь от работы с твоим интерфейсом. Удается ли ему достичь цели и насколько просто или сложно это сделать.
 
-**UX** means user experience. In other words, it's what kind of experience/impression the user gets from working with your interface. Whether he/she is able to achieve a goal and how easy or difficult it is to do so.
+**UI** — это **User Interface** (дословно «пользовательский интерфейс») — то, как выглядит интерфейс, и то, какие имеет визуальные и тактильные свойства. Определяет цветовую гамму, удобство передачи сигналов, читабельность текстов и прочее.
 
-**UI** means user interface. What the interface looks like and what visual and tactile properties it has. It determines the color scheme, the usability of signals, the readability of text, and so on.
+### Литература:
 
-### Literature:
-
-1. Karl Wiegers, Joy Beatty, "Software Requirements" 3rd edition, amplified. 
-2. Alan Cooper, Robert Reimann, David Cronin "About Face: The Essentials of Interaction Design".
-3. Y. Kupriyanov "[Requirements don't change, you're the one who failed to identify them. 10 techniques for checking the completeness of requirements](https://conf.uml2.ru/class/trebovaniya-ne-menyayutsya-eto-vy-ikh-nedovyyavili--10-tekhnik-proverki-polnoty-trebovanii.html)" LAF, 2018.
+1. Карл Вигерс, Джой Битти, «Разработка требований к программному обеспечению», издание третье, дополненное.
+2. Алан Купер, Роберт Рейман, Девид Кронин «Об интерфейсе. Основы проектирования взаимодействия».
+3. Ю.Куприянов, [«Требования не меняются, это вы их недовыявили. 10 техник проверки полноты требований»](https://conf.uml2.ru/class/trebovaniya-ne-menyayutsya-eto-vy-ikh-nedovyyavili--10-tekhnik-proverki-polnoty-trebovanii.html)», ЛАФ, 2018 г.
 4. https://rutube.ru/video/e2575de02c74c784e1c3fd970bdcc018/?ysclid=m0m8n58e56609048185
 5. https://www.internet-technologies.ru/articles/kak-sozdat-poleznyy-wireframe.html
 6. https://habr.com/ru/post/158399/
-7. Balsamiq и Figma [1/17 Welcome to the course! Balsamiq and Figma. Layout course for analysts — YouTube](https://rutube.ru/video/e2575de02c74c784e1c3fd970bdcc018/?ysclid=m0m8n58e56609048185).
+7. Balsamiq и Figma. [1/17 Добро пожаловать на курс! Balsamiq и Figma. Курс по макетам для аналитиков — YouTube](https://rutube.ru/video/e2575de02c74c784e1c3fd970bdcc018/?ysclid=m0m8n58e56609048185).
 
-## Chapter II
+## Глава II
 
-### General Rules
+### Общие правила
 
-1. Along the way, you may feel a sense of uncertainty and a severe lack of information: that's OK. Remember, the information in the repository and on Google is always with you. So are your peers and Rocket.Chat. Communicate. Search. Use common sense. Don't be afraid to make mistakes.
-2. Pay attention to sources of information. Check. Think. Analyse. Compare. 
-3. Look at the text of each assignment. Read it several times. 
-4. Read the examples carefully. There may be something in them that is not explicitly stated in the task itself.
-5. You may find inconsistencies where something new in the terms of the task or examples conflicts with something you already know. If you come across such an inconsistency, try to work it out. If not, write it down as an open question and find out as you work. Do not leave open questions unanswered. 
-6. If a task seems confusing or impossible, it only seems that way. Try to break it down. It is likely that some parts will become clear. 
-7. There will be several tasks. Those marked with an asterisk (\*) are for the more meticulous students. These tasks are more difficult and are not compulsory. But doing them will give you extra experience and knowledge.
-8. Don't try to fool the system or the people around you. You will fool yourself first.
-9. Got a question? Ask your neighbour to the right. If that doesn't help, ask your neighbour on the left.
-10. When you use help, you should always understand why and how. Otherwise the help is useless.
-11. Always push only to the develop branch! The master branch will be ignored. Work in the src directory.
-12. There should be no files in your directory other than those specified in the tasks.
+1. На протяжении всего курса тебя будет сопровождать чувство неопределенности и острого дефицита информации — это нормально. Не забывай, что информация в репозитории и Google всегда с тобой. Как и пиры, и Rocket.Chat. Общайся. Ищи. Опирайся на здравый смысл. Не бойся ошибиться.
+2. Будь внимателен к источникам информации. Проверяй. Думай. Анализируй. Сравнивай.
+3. Внимательно читай задания. Перечитай несколько раз.
+4. Читать примеры тоже лучше внимательно. В них может быть что-то, что не указано в явном виде в самом задании.
+5. Тебе могут встретиться несоответствия, когда что-то новое в условиях задачи или примере противоречит уже известному. Если встретилось такое — попробуй разобраться. Если не получилось — запиши вопрос в открытые вопросы и выясни в процессе работы. Не оставляй открытые вопросы неразрешенными.
+6. Если задание кажется непонятным или невыполнимым — так только кажется. Попробуй его декомпозировать. Скорее всего, отдельные части станут понятными.
+7. На пути тебе встретятся самые разные задания. Те, что помечены звездочкой (\*), подходят для более дотошных. Они повышенной сложности и необязательны к выполнению. Но если ты их сделаешь, то получишь дополнительный опыт и знания.
+8. Не пытайся обмануть систему и окружающих. В первую очередь ты обманешь себя.
+9. Есть вопрос? Спроси своего соседа справа. Если это не помогло — соседа слева.
+10. Когда пользуешься помощью — всегда разбирайся до конца: почему, как и зачем. Иначе помощь не будет иметь смысла.
+11. Всегда делай push только в ветку develop! Ветка master будет проигнорирована. Работай в директории src.
+12. В твоей директории не должно быть иных файлов, кроме тех, что обозначены в заданиях.
 
-## Chapter III 
+## Глава III
 
-### 1. Data Presentation Form
+### 1. Форма представления данных
 
-The user experience depends largely on whether the application is appropriate for the device on which it runs and whether the device meets the user's needs. For example, calling a taxi or buying movie tickets using only a desktop computer and a high-resolution monitor is unlikely to satisfy the general public, and using a graphics editor on a mobile phone is unlikely to appeal to computer graphics specialists. Or sometimes it is important that the interface allows working in limited lighting conditions. The analyst should describe these parameters to the designer and, if necessary, specify several factors. For example, the system should work both on a desktop computer and on a mobile phone, and in this case designers often create two different visual interfaces.
+Удобство работы пользователя во многом зависит от того, соответствует ли приложение устройству, на котором работает, и соответствует ли устройство потребности пользователя. Так, вызов такси или покупка билетов в кино только со стационарного компьютера и монитора с высоким разрешением вряд ли удовлетворит широкую публику, а использование графического редактора на мобильном телефоне вряд ли будет пользоваться широкой популярностью для специалистов компьютерной графики. Или иногда важно, чтобы интерфейс позволял работать в условиях ограниченной освещенности. Аналитик должен описать дизайнеру эти параметры и указать, если требуется, несколько факторов. Например, что система должна работать и на стационарном компьютере, и на мобильном телефоне, и в этом случае дизайнеры часто создают два разных визуальных интерфейса.
 
-Therefore, the form of data presentation should be described as follows
+Поэтому следует описать форму представления данных:
 
-1. The form factor of the product being designed. What kind of systems and devices it will be used on:
-   - An application for everyday use at home on a cell phone; 
-   - A specialized application for a computer with a high resolution monitor;
-   - An application on a laptop/tablet for clients with a backlit keyboard;
-   - A system for a kiosk in a public place.
-2. Type of application: marketplace, enterprise system, gaming application, highly specialized system.
-3. Control method: keyboard, mouse, joystick, voice call.
-4. Localization requirements: geographical, language, time zone, other.
-5. Special features: special features for disabled users.
+1) Форм-фактор проектируемого продукта. Что за система и на каких устройствах будет использоваться:
+   - приложение для постоянного применения в быту на мобильном телефоне;
+   - специальное приложение для компьютера с монитором высокого разрешения;
+   - приложение на ноутбуке/планшете для выезда к клиенту с подсветкой клавиатуры;
+   - система для киоска в общественном месте.
+2) Тип приложения: маркетплейс, корпоративная система, игровое приложение, узкопрофессиональная система.
+3) Способ управления: клавиатура, мышь, джойстик, голосовой вызов.
+4) Потребности локализации: географические, языковые, часовые пояса, иные.
+5) Специальные особенности: специальные возможности для пользователей с ограничениями, например, по зрению и др.
 
-### 2. Roles and Key Scenarios
+### 2. Роли и ключевые сценарии
 
-Scenario is a visual schematic representation of how the user solves his/her task with the help of the site/program, what helps him/her and what prevents him/her from achieving the goal.
+Сценарий — наглядное схематическое представление того, как пользователь решает свою задачу с помощью сайта/программы, что ему помогает и что мешает в достижении цели.
 
-A key scenario is the interaction of a user in a particular role with the system in the context of his/her target tasks. For example, for a barbershop client, the target task is to book a service. And the registration task is not the target task, but only the one that provides the ability to book the service after registration.
+Ключевой сценарий — взаимодействие пользователя в определенной роли с системой в рамках своих целевых задач. Например, для клиента барбершопа целевой задачей является бронирование услуги. А задача регистрации — не целевая, а только обеспечивающая возможность забронировать услугу после регистрации.
 
-When working out the key scenarios, sketches of tasks or parts of tasks are created. They are linked together to get a holistic picture of the process. An example of a key scenario is the dialog box map shown in Chapter 12 of Karl Wiegers' book.
+При проработке ключевых сценариев уже создаются эскизы экранов, на которых выполняются те или иные задачи или части задач. Эскизы экранов связываются для получения целостной картины процесса. Примером ключевого сценария можно считать карту диалоговых окон, показанную в главе 12 Карла Вигерса «Разработка требований к программному обеспечению».
 
-### 3. Screen Forms
+### 3. Экранные формы
 
-Depending on the team environment, the analyst may develop layouts (sketches), prototypes, and describe functions called in the screen interface, referring to standards adopted by the team.
+Аналитик разрабатывает макеты (эскизы) и прототипы и описывает функции, вызываемые в экранном интерфейсе.
 
-When two or more roles use the same data, even with different functions such as reading and correcting, it is better if both screens and data are similar in visualization. This is useful so that when a person changes roles, they don't have to get used to a different interface all over again.
+В зависимости от условий в команде аналитик может разрабатывать макеты (эскизы), прототипы и описывать функции, вызываемые в экранном интерфейсе, ссылаться на принятые в команде стандарты.
 
-Usually, the screen is divided into separate areas — frames. Each frame contains:
+В случае если две или более роли пользуются одними и теми же данными, даже с разными функциями, например, чтение и корректировка, лучше, если и экраны, и данные будут приближенными по визуализации. Это полезно, чтобы при переходе в другую роль человек не начинал привыкать заново к другому интерфейсу.
 
-1) a list of instances of an entity (object) with a list of attributes by which an individual instance can be easily identified;
-2) a card with attributes of an instance;
-3) related entities (list or card) or transition to related objects.
+Обычно экран делят на отдельные области — фреймы. На отдельных фреймах размещают:
 
-Additional operations should be provided:
+1) список экземпляров сущности (объекта) с перечнем атрибутов, по которым легко идентифицировать отдельный экземпляр;
+2) карточку с атрибутами одного экземпляра;
+3) связанные сущности (список или карточка) или переход на связанные объекты.
 
-- searching,
-- filtering,
-- sorting.
+Следует указать, какие вспомогательные операции нужно предусмотреть:
+- поиск,
+- фильтрация,
+- сортировка.
 
-Also specify:
+А также указать:
 
-1) searching/filtering/sorting fields,
-2) for searching: match accuracy,
-3) for filtering/sorting: whether to save the filter/sorting or not.
+1) поля поиска/фильтрации/сортировки;
+2) для поиска: точность совпадения;
+3) для фильтрации/сортировки: сохранять ли фильтр/сортировку.
 
-It is useful to draw a UI sketch even by hand, scan it and attach it to the description. Comfortable sketches (layouts, mocaps) can be done with Balsamiq and Figma tools.
+Полезно нарисовать эскиз пользовательского интерфейса даже от руки, отсканировать и приложить к описанию. Удобные эскизы (макеты, мокапы) можно выполнить с помощью средств Balsamiq и Figma.
 
-## Chapter IV 
+## Глава IV
 
-### Description of tasks
+### Описание задач
 
-### Task 1. Haircut Appointment 
+### Задача 1. Запись на стрижку
 
-The management of a chain of barbershops decided to implement an online booking system. The main objective is to develop the business by expanding the customer base through the possibility of online registration, as well as to reduce employee labour costs and manual labour by automatically informing customers through communication channels. 
+Руководство сети барбершопов приняло решение о внедрении системы, обеспечивающей онлайн-запись на прием. Основная цель — развитие бизнеса путем расширения клиентской базы за счет возможности онлайн-записи, а также снижение трудозатрат сотрудников и уменьшение ручного труда за счет автоматического информирования клиентов по каналам связи.
 
-Both registered and unregistered visitors can book an appointment on the website. When making an appointment, they can select the type of service: hairdressing or cosmetology, as well as the service itself, the master and the time from the available intervals. The system should provide automatic sending of reminders to clients through the communication channel chosen by the client (Telegram, WhatsApp, VK, SMS) according to the schedule set by the manager. After receiving a service, the system offers the client to evaluate the service and write suggestions on how to improve the work.
+Запись может осуществлять как зарегистрированный, так и незарегистрированный посетитель сайта. При записи можно выбрать услугу, мастера и время из свободных интервалов. Система должна обеспечивать автоматическую отправку напоминаний клиентам через выбранный клиентом канал связи (Telegram, WhatsApp, VK, СМС) по настроенному менеджером расписанию. После получения услуги система предлагает клиенту оценить услугу и написать предложения по улучшению работы.
 
-The schedule of masters and the services provided by each master should be entered by the manager, who may be more than one person. This person is also responsible for keeping the schedule up to date and adjusting it if necessary, communicating with customers manually, marking the service, charging and accepting payment, sending the payment data to the accounting department. The manager can also receive reports on completed services and view customer feedback.
+Расписание мастеров и выполняемые каждым мастером услуги должен вводить менеджер, возможно, это будет не один человек. Он же отвечает за актуальность расписания и при необходимости корректирует его, осуществляет связь с клиентами в ручном режиме, проставляет отметку о выполнении услуги, начисляет и принимает оплату, передает данные об оплате в бухгалтерию. Также менеджер может получать отчеты о выполненных услугах и просматривать отзывы клиентов.
 
-Each master has the ability to view the schedule and appointments for their services, as well as customer reviews.  
+Любой мастер имеет возможность посмотреть расписание и запись на свои услуги, отзывы клиентов.
 
-**Terms**
+**Сокращения**
 
-**Slot**: 1 hour time period, initial time is indicated.
+**Слот**: период времени длительностью 1 час, указано начальное время.
 
-**UC01 Register a client (self-registration)**
+**UC01. Зарегистрироваться клиенту (саморегистрация)**
 
-**Use context:** Client registers to sign up for service.
+**Контекст использования:** клиент регистрируется, чтобы записаться на обслуживание.
 
-**Scope:** Barbershop, providing services.
+**Область действия:** барбершоп, оказание услуг клиентам.
 
-**Level:** User goal.
+**Уровень:** цель пользователя.
 
-**Main Actor:** Client.
+**Основное действующее лицо:** клиент.
 
-**Preconditions:** The client has entered the website.
+**Предусловия:** клиент зашел на сайт.
 
-**Main scenario:**
+**Основной сценарий:**
 
-1. The client opens the registration page.
-2. The client enters their phone number and name (patronymic).
-3. The system confirms that the phone is not registered in the system.
-4. The client enters the preferred password.
-5. The system informs the password level (weak, medium, high).
-6. The system registers the client, sends SMS to the client about registration with name and login.
+1. Клиент открывает страницу регистрации.
+2. Клиент вводит номер телефона и имя (отчество).
+3. Система подтверждает, что телефон не зарегистрирован в системе.
+4. Клиент вводит предпочитаемый пароль.
+5. Система сообщает уровень пароля (слабый, средний, высокий).
+6. Система регистрирует клиента, направляет СМС по телефону клиента о регистрации с указанием имени и логина.
 
-**Alternative scenario:**
+**Альтернативный сценарий:**
 
-1. The entered phone number is registered in the system:
-   1. The system reports that such a phone number is registered in the system.
-   2. The client enters another phone number (2.) or refuses to register.
+1. Введенный номер телефона зарегистрирован в системе:
+   1. Система сообщает, что такой номер телефона зарегистрирован в системе.
+   2. Клиент вводит другой номер телефона (2.) или отказывается от регистрации.
 
-**UC04 Register Client (Manager)**
+**UC04. Зарегистрировать клиента (менеджер)**
 
-**Use context:** A manager, when communicating with a client over the phone, registers the client to book a service.
+**Контекст использования:** менеджер, при общении с клиентом по телефону, регистрирует клиента, чтобы записать на обслуживание.
 
-**Scope:** barbershop, providing services to clients.
+**Область действия:** барбершоп, оказание услуг клиентам.
 
-**Level:** User goal.
+**Уровень:** цель пользователя.
 
-**Main actor:** Manager.
+**Основное действующее лицо:** менеджер.
 
-**Preconditions:** A client called the manager. The manager accessed the barbershop's website.
+**Предусловия:** клиент позвонил менеджеру. Менеджер зашел на сайт барбершопа.
 
-**Main scenario:**
+**Основной сценарий:**
 
-1. The manager opens the client registration page.
-2. The manager enters the phone number and name provided by the client over the phone.
-3. The system confirms that the phone is not registered in the system.
-4. The system registers the client, generates a temporary password, sends a SMS to the client's phone about registration with name, login, temporary password.
+1. Менеджер открывает страницу регистрации клиента.
+2. Менеджер вводит номер телефона и имя, которое клиент сообщил по телефону.
+3. Система подтверждает, что телефон не зарегистрирован в системе.
+4. Система регистрирует клиента, генерирует временный пароль, направляет СМС по телефону клиента о регистрации с указанием имени, логина, временного пароля.
 
-**Alternative scenario:**
+**Альтернативный сценарий:**
 
-1. The entered phone is registered in the system:
-   1. The system informs that this such phone number is registered in the system.
-   2. Client enters another phone number (2.) or refuses to register.
+1. Введенный телефон зарегистрирован в системе:
+   1. Система сообщает, что такой номер телефона зарегистрирован в системе.
+   2. Клиент вводит другой номер телефона (2.) или отказывается от регистрации.
 
-**UC02 Create master schedule**
+**UC02. Сформировать расписание мастера**
 
-**Use context:** Manager creates a master schedule in the form of slots for clients to select.
+**Контекст использования:** менеджер создает расписание работы мастера в виде слотов для выбора клиентами.
 
-**Scope:** barbershop, providing services to clients.
+**Область действия:** барбершоп, оказание услуг клиентам.
 
-**Level:** User goal.
+**Уровень:** цель пользователя.
 
-**Main actor:** manager.
+**Основное действующее лицо:** менеджер.
 
-**Prerequisites:** The manager received a schedule of masters. The manager accessed the website.
+**Предусловия:** менеджер получил график работы мастеров. Менеджер зашел на сайт.
 
-**Main scenario:**
+**Основной сценарий:**
 
-1. Manager opens the page for entering master slots.
-2. The manager selects a date and a slot (a time period of 1 hour, the start time is indicated), selects a master from the Employees entity, to which the Master role is indicated in the Employee Role entity.
-3. The system confirms that the selected slot is not booked in the system by the client.
-4. The manager confirms that the time is reserved for the master.
-5. The system assigns the slot: date, time, master.
+1. Менеджер открывает страницу ввода слотов мастеров на обслуживание.
+2. Менеджер выбирает дату и слот (период времени длительностью 1 час, указано начальное время), выбирает мастера из сущности «Сотрудники», которым указана роль «Мастер» в сущности «Роль сотрудника».
+3. Система подтверждает, что выбранный слот не забронирован в системе клиентом.
+4. Менеджер подтверждает закрепление времени за мастером.
+5. Система закрепляет слот: дата, время, мастер.
 
-**Alternative scenario:**
+**Альтернативный сценарий:**
 
-1. The selected slot is booked in the system by the client. 
-   1. The system reports that the selected slot is booked in the system by the client. 
-   2. The manager contacts the client by phone and arranges to reschedule the visit to another time or to another master, enters the information into the system. 
-   3. The system sends an SMS to the client about the change of time and/or master of the visit.
+1. Выбранный слот забронирован в системе клиентом:
+   1. Система сообщает, что выбранный слот забронирован в системе клиентом.
+   2. Менеджер связывается по телефону с клиентом и договаривается о переносе визита на другое время или к другому мастеру, вносит информацию в систему.
+   3. Система направляет СМС по телефону клиента об изменении времени и/или мастера визита.
 
-**UC03 Book a service slot**
+**UC03. Забронировать слот на обслуживание**
 
-**Use context:** Client wants to book a barbershop visit.
+**Контекст использования:** клиент хочет забронировать визит в барбершоп для получения услуги.
 
-**Scope:** barbershop, providing services to clients.
+**Область действия:** барбершоп, оказание услуг клиентам.
 
-**Level:** User goal.
+**Уровень:** цель пользователя.
 
-**Main actor:** client.
+**Основное действующее лицо:** клиент.
 
-**Preconditions:** The client has logged into the website.
+**Предусловия:** Клиент зашел на сайт.
 
-**Main scenario:**
+**Основной сценарий:**
 
-1. The client opens the slot selection page.
-2. The system generates a list of available slots.
-3. The client selects a time service slot (date, time) from the available slots.
-4. The system generates a list of services to choose from.
-5. The client selects a service from the available ones.
-6. The system generates a list of selectable masters.
-7. The client selects one of the available masters.
-8. The system confirms that the selected slot is not booked in the system by another client.
-9. The client confirms the slot reservation.
-10. The system allocates the slot: date, time, master, service.
-11. The system sends the client an SMS about the service reservation to the phone number specified during registration.
+1. Клиент открывает страницу выбора слотов.
+2. Система формирует список свободных слотов.
+3. Клиент выбирает слот обслуживания по времени (дата, время) из свободных.
+4. Система формирует список допустимых к выбору услуг.
+5. Клиент выбирает услугу из допустимых к выбору.
+6. Система формирует список мастеров, допустимых к выбору.
+7. Клиент выбирает мастера из допустимых к выбору.
+8. Система подтверждает, что выбранный слот не забронирован в системе другим клиентом.
+9. Клиент подтверждает бронирование слота.
+10. Система закрепляет слот: дата, время, мастер, услуга.
+11. Система направляет клиенту СМС о бронировании услуги по номеру телефона, указанному при регистрации.
 
-**Alternative scenarios:**
+**Альтернативные сценарии:**
 
-1. Slot selection by service:
-   1. The client selects a service from the list of services provided by specialists from the Employee Role entity.
-   2. The client selects a free service slot for the master.
-   3. The system displays free slots in the master's schedule.
-   4. The client can view the schedule.
-   5. The client selects one of the available slots.
-   6. The system sends an SMS to the client's phone number about booking a slot (date, time).
-2. Slot selection by the master.
-
-## Chapter V
-
-### Exercise 00 — Choosing the Form of Product Presentation
+1. Выбор слота по услуге:
+   1. Клиент выбирает услугу из списка услуг, которые оказывают мастера из сущности Роли сотрудника.
+   2. Клиент выбирает свободный слот обслуживания по мастеру.
+   3. Система показывает свободные слоты в расписании мастера.
+   4. Клиент может посмотреть расписание.
+   5. Клиент выбирает слот из свободных.
+   6. Система направляет СМС по телефону клиента о бронировании слота (дата, время).
+2. Выбор слота по мастеру.
+
+## Глава V
+
+### Упражнение 00 — Выбор формы представления продукта
+
+Этот проект групповой, так что ты будешь выполнять его в команде.
 
-For task 1, specify the form of product presentation:
+Для задачи 1 укажите форму представления продукта:
 
-1. Specify the device(s) on which the software product will be used. 
-2. Specify the type of the software product.
-3. Specify the method(s) for managing the product.
-4. Specify the localization need(s).
-5. Present in tabular form.
-
-### Exercise 01 — Screen Forms of Classifiers and References
-
-For Task 1, describe the screen forms of classifiers and references.
-
-1. Make a list of classifiers and references, specify:
-   1. name of the classifier/reference; 
-   2. related references and classifiers that are required to be filled in.
-2. Develop (draw by any method) layouts (sketches) of the screen forms of classifiers/references:
-   1. specify the name of the classifier/references;
-   2. select the frame of the list form;
-   3. specify the frame of operations (main and supporting);
-   4. specify the calls of operations, transition further and refusal from the operation. 
-3. Describe the basic operations for classifiers and references:
-   1. access rights by roles to operations;
-   2. conditions of operations execution;
-   3. the result of the operation depending on the conditions:
-      1. in the classifier;
-      2. in other parts of the system. 
-4. Describe additional operations:
-   1. sorting, sorting fields, default state;
-   2. filtering, filter fields, saving filters, no result messages;
-   3. searching, search fields, match accuracy, no result messages;
-   4. duplication from another record when adding (if any);
-   5. calculating sums (if any).
-5. Specify logging:
-   1. operations that require logging;
-   2. attributes stored during logging;
-   3. command fields that require logging (date, time, user, other).
-6. Submit results in tabular form in multiple tables.
-
-### Exercise 02 — Data on the Screen Forms of Classifiers and References
-
-For Task 1, describe the data on the screen forms of the classifiers and references. For each classifier and reference, specify:
-
-1. The fields on the list screen:
-   1. short name of the field;
-   2. description;
-   3. presentation format:
-      1. type;
-      2. length (if text);
-      3. mandatory or not;
-      4. default value;
-      5. visualization of fields in case of undefined values;
-      6. method of visualization in case of fields exceeding the screen boundaries;
-      7. selection from the classifier/reference;
-      8. conditions/restrictions/checks;
-      9. error/warning messages.
-2. Describe the needs for:
-   1. pagination (numbering of records);
-   2. calculation of sums (number of records / sum / average / etc.).
-3. Checks and error messages for incorrect data entry.
-4. Submit the result in tabular form.
-
-### Exercise 03 — Key Role Scenarios
-
-For Task 1: 
-
-1. Develop key process scenarios of main processes for each role:
-   1. manager,
-   2. master,
-   3. client.
-2. Develop task diagrams of the main processes for each role:
-   1. Illustrate tasks with rectangles;
-   2. Illustrate the transition of the main successful scenario between tasks with arrows.
-3. Create key scripts for executing the main processes of each role:
-   1. Illustrate the screen forms in rectangles;
-   2. Indicate each permissible transition possibility as an arrow;
-   3. Specify the condition of transition (action or transition to action) on the arrows in a form that is clear enough for development;
-   4. Provide for exit before the end of the process, without saving the results;
-   5. Specify the main purpose of each screen.
-4. Indicate the beginning and end with the corresponding elements.
-
-### Exercise 04 — List of Screen Forms
-
-For Task 1: 
-
-1. Describe the main process screens for the roles:
-   1. manager,
-   2. master,
-   3. client.
-2. Make a list of screen forms, specify:
-   1. screen identifier;
-   2. main purpose (main action) by role;
-   3. other actions of the role;
-   4. data required to perform the action; 
-   5. access rights of each role to the data represented in the screen.
-3. Submit in tabular form.
-
-### Exercise 05 — Screen Forms
-
-For Task 1, for each screen form listed in Ex.04:
-
-1. Develop (draw by any method) the layout (sketch) of the screen form, specify:
-   1. the name of the form;
-   2. the frame(s) of the main operation;
-   3. frame(s) of other operations;
-   4. calls of operations, transition and cancel operations;
-   5. data frames (list and card);
-   6. the role(s) of the users to whom the screen is accessible.
-2. Describe main operations:
-   1. access rights by roles to the operation;
-   2. conditions of operations execution;
-   3. the result of the operation depending on the conditions:
-      1. on the data in the current window,
-      2. in other parts of the system. 
-3. Describe additional operations:
-   1. sorting, sort fields, default state;
-   2. filtering, filter fields, saving filters, messages in case of no result;
-   3. searching, search fields, match accuracy, messages in case of no result;
-   4. duplication from another record when adding (if any);
-   5. calculation of totals (if any).
-4. Data description:
-   1. specify the object / class of data;
-   2. describe the form of the data list:
-      1. pagination,
-      2. short name of the field,
-      3. mnemonics (if any),
-      4. description,
-      5. presentation format (see ex.02, 1.c.);
-   3. describe the form of the data card:
-      1. pagination,
-      2. short name of the field,
-      3. description,
-      4. presentation format (see ex.02, 1.c.).
-5. Specify logging:
-   1. operations requiring logging;
-   2. attributes stored during logging;
-   3. service fields requiring logging.  
-6. Present the results in tabular form, possibly in several tables.
-
-### Exercise 06 — Controls Description
-
-For Task 1, describe the controls for inputting and correcting on screen forms.
-
-1. For each screen form containing input/correction operations, specify:
-   1. screen identifier;
-   2. role(s);
-   3. the main purpose (main action) in the context of the role(s);
-   4. object (class) containing the data presented on the screen.
-2. Description of controls:
-   1. pagination,
-   2. field name,
-   3. field mnemonic (if any),
-   4. control description,
-   5. error message in case of negative control completion,
-   6. result of the operation in case of negative control completion,
-   7. result of the operation in case of positive completion of the control.
-3. Specify the need for logging in case of negative control completion. 
-4. Specify logging parameters:
-   1. operations requiring logging;
-   2. attributes stored during logging;
-   3. service fields requiring logging.  
-5. Present in tabular form.
+1. Укажите устройство(-а), на котором предполагается использовать программный продукт.
+2. Укажите тип программного продукта.
+3. Укажите способ(-ы) управления продуктом.
+4. Укажите потребность(-и) локализации.
+5. Представьте в табличном виде.
+
+### Упражнение 01 — Экранные формы классификаторов и справочников
+
+Для задачи 1 опишите экранные формы классификаторов и справочников.
+
+1. Составьте список классификаторов и справочников, укажи:
+   1. наименование классификатора/справочника;
+   2. связанные справочники и классификаторы, которые требуются для заполнения.
+2. Разработайте (нарисуйте любым способом) макеты (эскизы) экранных форм классификаторов/справочников:
+   1. Укажите название классификатора/справочника;
+   2. Выделите фрейм формы списка;
+   3. Выделите фрейм операций (основных и обеспечивающих);
+   4. Укажите вызовы операций, перехода далее и отказа от операции.
+3. Опишите основные операции для классификаторов и справочников:
+   1. права доступа по ролям к операциям;
+   2. условия выполнения операций;
+   3. результат операции в зависимости от условий:
+      1. в классификаторе;
+      2. в других частях системы.
+4. Опишите обеспечивающие операции:
+   1. сортировка, поля сортировки, состояние по умолчанию;
+   2. фильтрация, поля фильтрации, сохранение фильтров, сообщения при отсутствии результата;
+   3. поиск, поля поиска, точность совпадения, сообщения при отсутствии результата;
+   4. дублирование из другой записи при добавлении (если есть);
+   5. расчет итогов (если есть).
+5. Укажите логирование:
+   1. операции, требующие логирования;
+   2. атрибуты, сохраняемые при логировании;
+   3. служебные поля, требующие логирования (дата, время, пользователь, иное).
+6. Результаты представьте в табличном виде в нескольких таблицах.
+
+### Упражнение 02 — Данные на экранных формах классификаторов и справочников
+
+Для задачи 1 опишите данные на экранных формах классификаторов и справочников. Для каждого классификатора и справочника укажите:
+
+1. Укажите поля на экранной форме списка:
+   1. краткое наименование поля;
+   2. описание;
+   3. формат представления:
+      1. тип;
+      2. длина (если текстовое);
+      3. обязательность;
+      4. значение по умолчанию;
+      5. визуализация полей в случае неопределенных значений;
+      6. способ отражения в случае выхода полей за границы экрана;
+      7. выбор из классификатора/справочника;
+      8. условия/ограничения/проверки;
+      9. сообщение об ошибках/предупреждениях.
+2. Опишите потребности:
+   1. пагинации (нумерации записей);
+   2. расчета сумм (количество записей / сумма / среднее и т. д).
+3. Укажите проверки и сообщения об ошибках при вводе некорректных данных.
+4. Результат представьте в табличном виде.
+
+### Упражнение 03 — Ключевые сценарии ролей
+
+Для задачи 1:
+
+1. Разработайте ключевые сценарии основных процессов для каждой роли:
+   1. менеджер,
+   2. мастер,
+   3. клиент.
+2. Разработайте схемы задач основных процессов для каждой роли:
+   1. задачи отрази прямоугольниками;
+   2. перемещение по основному успешному сценарию между задачами отрази стрелками.
+3. Составьте ключевые сценарии для выполнения основных процессов каждой роли:
+   1. экранные формы отразите в прямоугольниках;
+   2. каждую допустимую возможность перемещения укажите как стрелку;
+   3. на стрелках отразите условие перехода (действие или переход к действию) в виде, достаточно понятном для разработки;
+   4. предусмотрите выход до окончания процесса, без сохранения результатов;
+   5. для каждого экрана укажите основное предназначение.
+4. Начало и окончание укажите соответствующими элементами.
+
+### Упражнение 04 — Список экранных форм
+
+Для задачи 1:
+
+1. Опишите экранные формы основных процессов для ролей:
+   1. менеджер,
+   2. мастер,
+   3. клиент.
+2. Составьте список экранных форм, укажите:
+   1. идентификатор экрана;
+   2. основное назначение (главное действие) в разрезе роли;
+   3. другие действия роли;
+   4. данные, необходимые для выполнения действия;
+   5. право доступа каждой роли к данным, представленным в окне.
+3. Представьте в табличном виде.
+
+### Упражнение 05 — Макеты экранных форм
+
+Для задачи 1 для каждой экранной формы из перечисленных в Ex.04:
+
+1. Разработайте (нарисуйте любым способом) макет (эскиз) экранной формы, укажи:
+   1. название формы;
+   2. фрейм главной операции;
+   3. фрейм(-ы) других операций;
+   4. вызовы операций, перехода далее и отказа от операции;
+   5. фреймы данных (списком и карточкой);
+   6. роль(-и) пользователей, которым доступен экран.
+2. Опишите основные операции:
+   1. права доступа по ролям к операции;
+   2. условия выполнения операций;
+   3. результат операции в зависимости от условий:
+      1. над данными в текущем окне,
+      2. в других частях системы.
+3. Опишите обеспечивающие операции:
+   1. сортировка, поля сортировки, состояние по умолчанию;
+   2. фильтрация, поля фильтрации, сохранение фильтров, сообщения при отсутствии результата;
+   3. поиск, поля поиска, точность совпадения, сообщения при отсутствии результата;
+   4. дублирование из другой записи при добавлении (если есть);
+   5. расчет итогов (если есть).
+4. Опишите данные:
+   1. Укажите объект/класс данных;
+   2. Опишите форму списка данных:
+      1. пагинация,
+      2. краткое наименование поля,
+      3. мнемоника (если есть),
+      4. описание,
+      5. формат представления (см. ex.02, 1.с.);
+   3. Опишите форму карточки данных:
+      1. пагинация,
+      2. краткое наименование поля,
+      3. описание,
+      4. формат представления (см. ex.02, 1.с.).
+5. Укажите логирование:
+   1. операции, требующие логирования;
+   2. атрибуты, сохраняемые при логировании;
+   3. служебные поля, требующие логирования.
+6. Результаты представьте в табличном виде, допустимо в нескольких таблицах.
+
+### Упражнение 06 — Описание контролей
+
+Для задачи 1 опишите контроли при вводе и корректировке на экранных формах.
+
+1. Для каждой экранной формы, содержащей операции ввода/корректировки, укажите:
+   1. идентификатор экрана;
+   2. роль(-и);
+   3. основное назначение (главное действие) в разрезе роли(-ей;
+   4. объект (класс), содержащий данные, представленные на экране.
+2. Опишите контроли:
+   1. пагинация,
+   2. наименование поля,
+   3. мнемоника поля (если есть),
+   4. описание контроля,
+   5. сообщение об ошибке при негативном завершении контроля,
+   6. результат операции при негативном завершении контроля,
+   7. результат операции при позитивном завершении контроля.
+3. Укажите потребность логирования в случае негативного завершения контроля.
+4. Укажите параметры логирования:
+   1. операции, требующие логирования;
+   2. атрибуты, сохраняемые при логировании;
+   3. служебные поля, требующие логирования.
+5. Представьте в табличном виде.

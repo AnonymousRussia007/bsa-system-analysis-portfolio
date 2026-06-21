@@ -1,19 +1,26 @@
-# Validation notes
+# Проверка репозитория
 
-This repository is documentation-first. There is no application build or automated software test suite.
+Репозиторий содержит аналитическую документацию, а не исполняемое приложение. Поэтому для него неприменимы сборка приложения, запуск сервиса и автоматизированные программные тесты.
 
-## Appropriate checks
+## Выполняемые проверки
 
-- open every `.docx` and `.xlsx` container and enumerate its content structure;
-- extract text from the PDF and confirm its page count;
-- parse Draw.io XML sources;
-- decode/render PNG and JPEG artifacts;
-- confirm local Markdown links resolve;
-- compare suspected duplicate folders by relative path and SHA-256 hash;
-- scan filenames and readable content for obvious credential patterns;
-- check the repository for unexpectedly large files and generated caches.
+- открытие каждого контейнера `.docx` и `.xlsx` и чтение его структуры;
+- извлечение текста из PDF, подсчет страниц и визуальный просмотр страниц;
+- разбор XML в исходниках Draw.io;
+- декодирование и отображение PNG- и JPEG-файлов;
+- проверка существования целей локальных Markdown-ссылок;
+- сравнение предполагаемых дубликатов по относительным путям и SHA-256;
+- поиск файлов и читаемого содержимого с очевидными признаками учетных данных;
+- поиск неожиданно крупных файлов, временных данных и каталогов кеша;
+- проверка того, что основным README каждого модуля является русская версия задания.
 
-## Interpretation limits
+## Границы интерпретации
 
-These checks establish file integrity and traceability between briefs and submissions. They do not establish business acceptance, correctness against undocumented stakeholder intent, a course grade, production readiness, or runtime behavior.
+Эти проверки подтверждают техническую целостность файлов и прослеживаемость между заданиями и результатами. Они не подтверждают:
+
+- соответствие недокументированным ожиданиям реальных стейкхолдеров;
+- получение учебной оценки;
+- формальную приемку требований;
+- готовность к промышленной эксплуатации;
+- работоспособность приложения, поскольку приложение в репозитории отсутствует.
 
