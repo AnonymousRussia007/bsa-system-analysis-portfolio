@@ -16,13 +16,9 @@
 - `artifacts/ex00_BRS_entity.xlsx`, `ex00_DLV_entity.xlsx` — перечни сущностей;
 - `artifacts/ex01_BRS_crud.xlsx` — CRUD-матрица;
 - `artifacts/ex02_BRS_dict.xlsx`, `ex02_DLV_dict.xlsx` — словари данных;
-- `artifacts/ex03_BRS_model.*`, `ex03_DLV_model.*` — модели в PNG и Draw.io.
-
-## Как смотреть
-
-Сначала открыть `ex03_BRS_model.png`, затем словарь данных и редактируемый Draw.io-исходник.
+- `artifacts/ex03_BRS_model.*`, `ex03_DLV_model.*` — модели в PNG и Draw.io;
+- основной фокус — логическая модель, словарь данных и Draw.io-исходник.
 
 ## Статус
 
 Учебный кейс моделирования. Модель не является схемой промышленной базы данных.
-
